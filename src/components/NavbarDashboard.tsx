@@ -1,8 +1,95 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
+// TypeScript interfaces
+interface MenuItem {
+  id: string;
+  label: string;
+  href: string;
+  icon?: string;
+}
+
+interface BottomNavItem {
+  id: string;
+  label: string;
+  href: string;
+  icon: string;
+  isActive?: boolean;
+}
+
+interface UserProfile {
+  name: string;
+  role: string;
+  avatar: string;
+}
+
+// JSON data
+const dropdownMenuItems: MenuItem[] = [
+  {
+    id: "my-courses",
+    label: "My Courses",
+    href: "#",
+  },
+  {
+    id: "subscriptions",
+    label: "Subscriptions",
+    href: "my-subscriptions.html",
+  },
+  {
+    id: "logout",
+    label: "Logout",
+    href: "index.html",
+  },
+];
+
+const bottomNavItems: BottomNavItem[] = [
+  {
+    id: "overview",
+    label: "Overview",
+    href: "#",
+    icon: "/src/assets/images/icons/home-trend-up.svg",
+    isActive: false,
+  },
+  {
+    id: "courses",
+    label: "Courses",
+    href: "#",
+    icon: "/src/assets/images/icons/note-favorite.svg",
+    isActive: true,
+  },
+  {
+    id: "quizzes",
+    label: "Quizzess",
+    href: "#",
+    icon: "/src/assets/images/icons/message-programming.svg",
+    isActive: false,
+  },
+  {
+    id: "certificates",
+    label: "Certificates",
+    href: "#",
+    icon: "/src/assets/images/icons/cup.svg",
+    isActive: false,
+  },
+  {
+    id: "portfolios",
+    label: "Portfolios",
+    href: "#",
+    icon: "/src/assets/images/icons/ruler&pen.svg",
+    isActive: false,
+  },
+];
+
+const userProfile: UserProfile = {
+  name: "Tamara Utami",
+  role: "Programmer UI",
+  avatar: "/src/assets/images/photos/sami.png",
+};
 
 export default function NavbarDashboard() {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDrawer = (): void => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -12,13 +99,41 @@ export default function NavbarDashboard() {
     setIsDrawerOpen(false);
   };
 
+  const toggleDropdown = (): void => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = (): void => {
+    setIsDropdownOpen(false);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   return (
-    <>
+    <div className="flex flex-col h-full fixed top-0 left-0 w-full">
       <nav
         id="nav-guest"
-        className="flex fixed top-0 left-0 w-full bg-white border-b border-obito-grey"
+        className="flex bg-white border-b border-obito-grey"
       >
-        <div className="flex px-4 w-full lg:max-w-[1280px] lg:px-[75px] py-5 items-center justify-between mx-auto">
+        <div className="container-max-w-1280 container-padding-x flex w-full py-5 items-center justify-between mx-auto">
           <div className="flex items-center gap-4 lg:gap-[50px] w-full md:w-auto justify-between md:justify-start">
             <Link to="/" className="flex shrink-0">
               <img
@@ -38,12 +153,12 @@ export default function NavbarDashboard() {
                   type="text"
                   name=""
                   id=""
-                  className="appearance-none outline-none ring-1 ring-obito-grey rounded-full w-full min-w-0 md:w-[300px] lg:w-[400px] py-2.5 px-3 xs:py-2 xs:px-4 sm:py-[14px] sm:px-5 bg-white font-bold placeholder:font-normal placeholder:text-obito-text-secondary group-focus-within:ring-obito-green transition-all duration-300 pr-12 xs:pr-10 sm:pr-[50px] text-sm sm:text-base"
+                  className="appearance-none outline-none ring-1 ring-obito-grey rounded-full w-full min-w-0 md:w-[300px] lg:w-[400px] py-2.5 px-3 md:py-[14px] md:px-5 bg-white font-bold placeholder:font-normal placeholder:text-obito-text-secondary group-focus-within:ring-obito-green transition-all duration-300 pr-12 xs:pr-10 md:pr-[50px] text-sm md:text-base"
                   placeholder="Search course by name"
                 />
                 <button
                   type="submit"
-                  className="absolute h-7 w-7 xs:h-10 xs:w-10 sm:h-[52px] sm:w-[52px] top-1/2 -translate-y-1/2 right-2"
+                  className="absolute h-7 w-7 md:h-[52px] md:w-[52px] top-1/2 -translate-y-1/2 right-2 md:-right-1"
                 >
                   <img
                     src="/src/assets/images/icons/search-normal-green-fill.svg"
@@ -98,42 +213,56 @@ export default function NavbarDashboard() {
             <div className="items-center gap-5 hidden md:flex">
               <div
                 id="profile-dropdown"
+                ref={dropdownRef}
                 className="relative flex items-center gap-[14px]"
               >
                 <div className="flex shrink-0 w-[50px] h-[50px] rounded-full overflow-hidden bg-obito-grey">
                   <img
-                    src="/src/assets/images/photos/sami.png"
+                    src={userProfile.avatar}
                     className="w-full h-full object-cover"
                     alt="photo"
                   />
                 </div>
                 <div>
-                  <p className="font-semibold text-lg">Tamara Utami</p>
+                  <p className="font-semibold text-lg">{userProfile.name}</p>
                   <p className="text-sm text-obito-text-secondary">
-                    Programmer UI
+                    {userProfile.role}
                   </p>
                 </div>
-                <button id="dropdown-opener" className="flex shrink-0 w-6 h-6">
+                <button
+                  id="dropdown-opener"
+                  className="flex shrink-0 w-6 h-6"
+                  onClick={toggleDropdown}
+                  aria-expanded={isDropdownOpen}
+                  aria-label="Toggle profile dropdown"
+                >
                   <img
                     src="/src/assets/images/icons/arrow-circle-down.svg"
-                    className="w-6 h-6"
+                    className={`w-6 h-6 transition-transform duration-300 ${
+                      isDropdownOpen ? "rotate-180" : ""
+                    }`}
                     alt="icon"
                   />
                 </button>
                 <div
                   id="dropdown"
-                  className="absolute top-full right-0 mt-[7px] w-[170px] h-fit bg-white rounded-xl border border-obito-grey py-4 px-5 shadow-[0px_10px_30px_0px_#B8B8B840] z-10 hidden"
+                  className={`absolute top-full right-0 mt-[7px] w-[170px] h-fit bg-white rounded-xl border border-obito-grey py-4 px-5 shadow-[0px_10px_30px_0px_#B8B8B840] z-10 transition-all duration-300 ${
+                    isDropdownOpen
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible"
+                  }`}
                 >
                   <ul className="flex flex-col gap-[14px]">
-                    <li className="hover:text-obito-green transition-all duration-300">
-                      <a href="#">My Courses</a>
-                    </li>
-                    <li className="hover:text-obito-green transition-all duration-300">
-                      <a href="my-subscriptions.html">Subscriptions</a>
-                    </li>
-                    <li className="hover:text-obito-green transition-all duration-300">
-                      <a href="index.html">Logout</a>
-                    </li>
+                    {dropdownMenuItems.map((item: MenuItem) => (
+                      <li
+                        key={item.id}
+                        className="hover:text-obito-green transition-all duration-300"
+                      >
+                        <a href={item.href} onClick={closeDropdown}>
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -204,7 +333,19 @@ export default function NavbarDashboard() {
 
           {/* Drawer Menu Items */}
           <div className="flex-1 p-6">
-            <ul className="space-y-6"></ul>
+            <ul className="space-y-6">
+              {dropdownMenuItems.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    onClick={closeDrawer}
+                    className={`block py-3 px-4 rounded-lg transition-all duration-300 hover:bg-obito-grey/30 hover:font-semibold`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Drawer Footer */}
@@ -212,21 +353,48 @@ export default function NavbarDashboard() {
             <div className="flex items-center gap-4">
               <div className="flex shrink-0 w-[50px] h-[50px] rounded-full overflow-hidden bg-obito-grey">
                 <img
-                  src="/src/assets/images/photos/sami.png"
+                  src={userProfile.avatar}
                   className="w-full h-full object-cover"
                   alt="photo"
                 />
               </div>
               <div>
-                <p className="font-semibold text-lg">Tamara Utami</p>
+                <p className="font-semibold text-lg">{userProfile.name}</p>
                 <p className="text-sm text-obito-text-secondary">
-                  Programmer UI
+                  {userProfile.role}
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Nav Bottom */}
+      <nav
+        id="bottom-nav"
+        className="container-max-w-1280 container-padding-x flex w-full bg-white border-b border-obito-grey py-[14px]"
+      >
+        <ul className="flex w-full gap-2 md:gap-3 overflow-x-auto no-scrollbar">
+          {bottomNavItems.map((item) => (
+            <li
+              key={item.id}
+              className={`group ${item.isActive ? "active" : ""}`}
+            >
+              <Link
+                to={item.href}
+                className="flex items-center gap-2 rounded-full border border-obito-grey py-1.5 px-3 md:px-[14px] hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-light-green group-[.active]:border-obito-light-green"
+              >
+                <img
+                  src={item.icon}
+                  className="flex shrink-0 w-4 md:w-[20px]"
+                  alt="icon"
+                />
+                <span className="text-sm md:text-base">{item.label}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
