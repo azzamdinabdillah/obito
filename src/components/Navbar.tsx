@@ -1,7 +1,9 @@
 import { useState, type JSX } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar(): JSX.Element {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+  const location = useLocation();
 
   const toggleDrawer = (): void => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -18,10 +20,22 @@ export default function Navbar(): JSX.Element {
   }
 
   const menuItems: MenuItem[] = [
-    { href: "index.html", label: "Home", isActive: true },
-    { href: "pricing.html", label: "Pricing", isActive: false },
-    { href: "#", label: "Features", isActive: false },
-    { href: "#", label: "Testimonials", isActive: false },
+    { href: "/", label: "Home", isActive: location.pathname === "/" },
+    {
+      href: "/pricing",
+      label: "Pricing",
+      isActive: location.pathname === "/pricing",
+    },
+    {
+      href: "/features",
+      label: "Features",
+      isActive: location.pathname === "/features",
+    },
+    {
+      href: "/testimonials",
+      label: "Testimonials",
+      isActive: location.pathname === "/testimonials",
+    },
   ];
 
   return (
@@ -32,13 +46,13 @@ export default function Navbar(): JSX.Element {
       >
         <div className="flex px-4 w-full lg:max-w-[1280px] lg:px-[75px] py-5 items-center justify-between mx-auto">
           <div className="flex items-center gap-[50px]">
-            <a href="index.html" className="flex shrink-0">
+            <Link to="/" className="flex shrink-0">
               <img
                 src="/src/assets/images/logos/logo.svg"
                 className="flex shrink-0"
                 alt="logo"
               />
-            </a>
+            </Link>
             <ul className="items-center gap-10 hidden lg:flex">
               {menuItems.map((item, index) => (
                 <li
@@ -47,7 +61,7 @@ export default function Navbar(): JSX.Element {
                     item.isActive ? "font-semibold" : ""
                   }`}
                 >
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -62,18 +76,18 @@ export default function Navbar(): JSX.Element {
             </a>
             <div className="h-[50px] flex shrink-0 bg-obito-grey w-px" />
             <div className="hidden lg:flex items-center gap-3">
-              <a
-                href="signup.html"
+              <Link
+                to="/signup"
                 className="rounded-full border border-obito-grey py-3 px-5 gap-[10px] bg-white hover:border-obito-green transition-all duration-300"
               >
                 <span className="font-semibold">Sign Up</span>
-              </a>
-              <a
-                href="signin.html"
+              </Link>
+              <Link
+                to="/signin"
                 className="rounded-full py-3 px-5 gap-[10px] bg-obito-green hover:drop-shadow-effect transition-all duration-300"
               >
                 <span className="font-semibold text-white">My Account</span>
-              </a>
+              </Link>
             </div>
 
             <button
@@ -143,11 +157,13 @@ export default function Navbar(): JSX.Element {
         <div className="flex flex-col h-full">
           {/* Drawer Header */}
           <div className="flex items-center justify-between p-6 border-b border-obito-grey">
-            <img
-              src="/src/assets/images/logos/logo.svg"
-              className="h-8"
-              alt="logo"
-            />
+            <Link to="/" onClick={closeDrawer}>
+              <img
+                src="/src/assets/images/logos/logo.svg"
+                className="h-8"
+                alt="logo"
+              />
+            </Link>
             <button
               onClick={closeDrawer}
               className="p-2 rounded-md hover:bg-obito-grey/30 transition-all duration-200"
@@ -188,8 +204,8 @@ export default function Navbar(): JSX.Element {
             <ul className="space-y-6">
               {menuItems.map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     onClick={closeDrawer}
                     className={`block py-3 px-4 rounded-lg transition-all duration-300 ${
                       item.isActive
@@ -198,7 +214,7 @@ export default function Navbar(): JSX.Element {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -206,20 +222,20 @@ export default function Navbar(): JSX.Element {
 
           {/* Drawer Footer */}
           <div className="p-6 border-t border-obito-grey space-y-4">
-            <a
-              href="signup.html"
+            <Link
+              to="/signup"
               onClick={closeDrawer}
               className="block w-full text-center rounded-full border border-obito-grey py-3 px-5 bg-white hover:border-obito-green transition-all duration-300"
             >
               <span className="font-semibold">Sign Up</span>
-            </a>
-            <a
-              href="signin.html"
+            </Link>
+            <Link
+              to="/signin"
               onClick={closeDrawer}
               className="block w-full text-center rounded-full py-3 px-5 bg-obito-green hover:drop-shadow-effect transition-all duration-300"
             >
               <span className="font-semibold text-white">My Account</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

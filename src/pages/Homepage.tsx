@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 export default function index() {
@@ -30,14 +31,14 @@ export default function index() {
                   </p>
                 </div>
                 <div className="flex items-stretch sm:items-center gap-2 sm:gap-[18px] w-full">
-                  <a
-                    href="pricing.html"
+                  <Link
+                    to="/course-catalog"
                     className="flex items-center rounded-full h-12 md:h-[60px] lg:h-[67px] py-3 md:py-5 px-5 md:px-8 lg:px-[30px] gap-2 md:gap-[10px] bg-obito-green hover:drop-shadow-effect transition-all duration-300"
                   >
                     <span className="text-white font-semibold text-base md:text-lg">
                       Get Started
                     </span>
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="flex items-center rounded-full h-12 md:h-[60px] lg:h-[67px] border border-obito-grey py-3 md:py-5 px-5 md:px-8 lg:px-[30px] bg-white gap-2 md:gap-[10px] hover:border-obito-green transition-all duration-300"
