@@ -387,7 +387,7 @@ export default function NavbarDashboard() {
                     className="flex shrink-0 w-4 md:w-[20px]"
                     alt="icon"
                   />
-                  <span className="text-sm md:text-base">{item.label}</span>
+                  <span className="text-sm md:text-base text-obito-black">{item.label}</span>
                 </Link>
               </li>
             ))}

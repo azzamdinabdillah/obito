@@ -63,15 +63,15 @@
   bottom: -1px;
   position: relative;
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
   cursor: pointer;
   background: transparent;
 }
 
 .react-tabs__tab--selected {
-  background: transparent;
-  border-color: transparent;
-  color: inherit;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: inherit !important;
 }
 
 .react-tabs__tab--selected .rounded-full {

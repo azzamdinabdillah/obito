@@ -1,7 +1,10 @@
+import type React from "react";
+import SyntaxHighlighter from "../components/SyntaxHighlighter";
+
 export type CourseLesson = {
   id: string;
   title: string;
-  content: string; // one-line paragraph content for example purposes
+  content: React.ReactNode; // one-line paragraph content for example purposes
 };
 
 export type CourseSection = {
@@ -27,8 +30,84 @@ export const courseDetailsData: CourseDetailsData = {
         {
           id: "demo-project",
           title: "Demo Project",
-          content:
-            "Pengantar singkat tentang gambaran besar course dan cara menggunakannya.",
+          content: (
+            <article>
+              <div className="content-ebook flex flex-col gap-3 md:gap-4 lg:gap-5">
+                <h1 className="">
+                  Membangun Website Cepat dan Mudah dengan Laravel
+                </h1>
+                <p>
+                  Performance atau kecepatan website adalah salah satu elemen
+                  penting dalam website development. Website yang lambat dapat
+                  membuat pengunjung frustrasi, bahkan bisa saja meninggalkan
+                  halaman sebelum mereka benar-benar menjelajahinya..
+                </p>
+
+                <SyntaxHighlighter
+                  code={` public function searchCourses(string $keyword)
+    {
+        return $this->courseRepository->searchByKeyword($keyword);
+    }
+
+    public function getCoursesGroupedByCategory()
+    {
+        $courses = $this->courseRepository->getAllWithCategory();
+
+        return $courses->groupBy(function ($course) {
+            return $course->category->name ?? 'Uncategorized';
+        });
+    }`}
+                  language="php"
+                  // showLineNumbers={true}
+                />
+
+                {/* <p>Penjelasan:</p> */}
+                <ul>
+                  <li>
+                    Dengan membuat service provider custom, Anda bisa
+                    menambahkan layanan spesifik untuk aplikasi Anda.
+                  </li>
+                  <li>
+                    Lifecycle memastikan service ini hanya di-load saat
+                    dibutuhkan.
+                  </li>
+                </ul>
+                <h4>Memahami Cara Response Dibentuk</h4>
+                <ol>
+                  <li>
+                    Penggunaan Bebas untuk Proyek Komersial&nbsp;Laravel dapat
+                    digunakan untuk membangun proyek berbayar, termasuk yang
+                    Anda kerjakan sebagai freelancer.
+                  </li>
+                  <li>
+                    Hak Modifikasi&nbsp;Anda diperbolehkan memodifikasi
+                    framework Laravel sesuai kebutuhan proyek Anda. Ini sangat
+                    berguna jika Anda ingin menyesuaikan
+                  </li>
+                </ol>
+                <p>
+                  Performance atau kecepatan website adalah salah satu elemen
+                  penting dalam web development. Website yang lambat dapat
+                  membuat pengunjung frustrasi, bahkan meninggalkan halaman
+                  sebelum mereka benar-benar menjelajahinya. Sebaliknya, website
+                  dengan loading cepat menciptakan pengalaman pengguna yang
+                  positif.
+                </p>
+                <img
+                  src="/src/assets/images/thumbnails/course-learning-2.png"
+                  alt="image"
+                />
+                <p>
+                  Kecepatan website memengaruhi user experience secara langsung.
+                  Ketika pengunjung dapat dengan cepat mengakses informasi yang
+                  mereka butuhkan, mereka lebih cenderung untuk tetap berada di
+                  website Anda lebih lama. Hal ini tidak hanya meningkatkan
+                  tingkat kepuasan, tetapi juga dapat berkontribusi pada
+                  meningkatnya conversion rate
+                </p>
+              </div>
+            </article>
+          ),
         },
         {
           id: "software-installation",

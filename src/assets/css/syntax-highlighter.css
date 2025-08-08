@@ -1,0 +1,172 @@
+.syntax-highlighter {
+  display: flex;
+  background-color: #282c34;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #404040;
+  font-family: Consolas !important;
+  color: #abb2bf;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.syntax-highlighter * {
+  font-family: Consolas !important;
+}
+
+.syntax-highlighter .line-numbers-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #2d2d2d;
+  border-right: 1px solid #404040;
+  padding: 1rem 0.75rem;
+  min-width: 3rem;
+  text-align: right;
+  user-select: none;
+}
+
+.syntax-highlighter .line-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.syntax-highlighter .line-number {
+  color: #858585;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+.syntax-highlighter .code-container {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+
+.syntax-highlighter .code-container code {
+  background-color: #1a1b26 !important;
+  padding: 20px !important;
+  border-radius: 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  overflow: auto !important;
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  color: #abb2bf !important;
+}
+
+/* Syntax highlighting colors matching the image exactly */
+.syntax-highlighter .hljs-keyword,
+.syntax-highlighter .hljs-selector-tag,
+.syntax-highlighter .hljs-literal {
+  color: #bb9af7 !important; /* Purple for keywords like namespace, use, class, public, function, extends, return */
+}
+
+.syntax-highlighter .hljs-built_in,
+.syntax-highlighter .hljs-type,
+.syntax-highlighter .hljs-title {
+  color: #56b6c2 !important; /* Light blue for types and class names */
+}
+
+.syntax-highlighter .hljs-variable,
+.syntax-highlighter .hljs-name {
+  color: #e06c75 !important; /* Orange/red for variables like $this->app */
+}
+
+.syntax-highlighter .hljs-string,
+.syntax-highlighter .hljs-regexp {
+  color: #98c379 !important; /* Green for strings */
+}
+
+.syntax-highlighter .hljs-comment {
+  color: #5c6370 !important; /* Grey for comments */
+}
+
+.syntax-highlighter .hljs-punctuation,
+.syntax-highlighter .hljs-operator {
+  color: #abb2bf !important; /* Light grey for punctuation and operators */
+}
+
+.syntax-highlighter .hljs-function {
+  color: #61afef !important; /* Blue for functions */
+}
+
+.syntax-highlighter .hljs-class {
+  color: #e5c07b !important; /* Yellow for classes */
+}
+
+.syntax-highlighter .hljs-namespace {
+  color: #56b6c2 !important; /* Light blue for namespaces */
+}
+
+.syntax-highlighter .hljs-property {
+  color: #e06c75 !important; /* Orange for properties */
+}
+
+.syntax-highlighter .hljs-attr {
+  color: #d19a66 !important; /* Orange for attributes */
+}
+
+/* Dark theme as default */
+.syntax-highlighter.dark {
+  background-color: #282c34;
+  border-color: #404040;
+}
+
+.syntax-highlighter.dark .line-numbers-container {
+  background-color: #2d2d2d;
+  border-right-color: #404040;
+}
+
+.syntax-highlighter.dark .line-number {
+  color: #858585;
+}
+
+/* Light theme variant */
+.syntax-highlighter.light {
+  background-color: #f6f8fa;
+  border-color: #e1e4e8;
+  color: #24292e;
+}
+
+.syntax-highlighter.light .line-numbers-container {
+  background-color: #f1f3f4;
+  border-right-color: #e1e4e8;
+}
+
+.syntax-highlighter.light .line-number {
+  color: #6a737d;
+}
+
+.syntax-highlighter.light .code-container {
+  background-color: #f6f8fa;
+}
+
+.syntax-highlighter.light .code-container code {
+  background-color: #f6f8fa !important;
+  color: #24292e !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .syntax-highlighter {
+    font-size: 0.75rem;
+  }
+
+  .syntax-highlighter .code-container code {
+    font-size: 0.75rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .syntax-highlighter .line-numbers-container {
+    padding: 0.75rem 0.5rem;
+    min-width: 2.5rem;
+  }
+
+  .syntax-highlighter .line-number {
+    font-size: 0.625rem;
+  }
+}

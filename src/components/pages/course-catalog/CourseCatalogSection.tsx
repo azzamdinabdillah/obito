@@ -49,7 +49,7 @@ function CourseCatalog() {
           {courseCategories.map((category: CourseCategory) => (
             <Tab key={category.id}>
               <div className="rounded-full border border-obito-grey py-1.5 px-3 text-sm md:py-2 md:px-4 md:text-base hover:border-obito-green lg:mb-[2px] bg-white transition-all duration-300">
-                <span className="w-full whitespace-nowrap">
+                <span className="w-full whitespace-nowrap text-obito-black">
                   {category.label}
                 </span>
               </div>

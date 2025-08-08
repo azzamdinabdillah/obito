@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
-import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
+import { Tabs, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { courseDetailsData } from "../../data/courseDetails";
+import { Link } from "react-router-dom";
 
 type FlattenedLesson = {
   id: string;
@@ -37,11 +38,11 @@ function CourseDetails() {
   }, [lessonsFlat]);
 
   const Sidebar = () => (
-    <aside className="flex flex-col border border-obito-grey bg-white w-[260px] h-full">
-      <div className="w-[260px] pb-[20px] h-[280px] px-5 pt-5 flex flex-col gap-5">
+    <aside className="flex flex-col border border-obito-grey bg-white w-full h-full lg:w-[260px]">
+      <div className="w-full pb-[20px] h-[280px] px-5 pt-5 flex flex-col gap-5">
         <ul>
           <li>
-            <a href="#">
+            <Link to="/course-catalog">
               <div className="flex items-center gap-2 py-[10px] px-[14px] rounded-full border border-obito-grey bg-white hover:border-obito-green transition-all duration-300">
                 <img
                   src="/src/assets/images/icons/home-trend-up.svg"
@@ -50,7 +51,7 @@ function CourseDetails() {
                 />
                 <p>Back to Dashboard</p>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
         <header className="flex flex-col gap-[12px]">
@@ -67,7 +68,7 @@ function CourseDetails() {
       </div>
       <div
         id="lessons-container"
-        className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden w-[260px]"
+        className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden w-full mt-2"
       >
         <nav className="px-5 pb-[33px] flex flex-col gap-5">
           <Accordion.Root type="multiple" className="flex flex-col gap-5">
@@ -124,20 +125,22 @@ function CourseDetails() {
   );
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-[#F8FAF9]">
       {/* Static sidebar on large screens */}
       <div className="hidden lg:block h-full">
         <Sidebar />
       </div>
 
       {/* Drawer opener on mobile/tablet */}
-      <button
-        type="button"
-        className="lg:hidden fixed top-4 left-4 z-40 rounded-full border border-obito-grey bg-white px-4 py-2 text-sm font-semibold hover:border-obito-green transition-all duration-300"
-        onClick={() => setIsDrawerOpen(true)}
-      >
-        Menu
-      </button>
+      <div className="lg:hidden fixed top-0 p-4 w-full left-0 z-40 bg-white">
+        <button
+          type="button"
+          className="rounded-full border border-obito-grey bg-white px-4 py-2 text-sm font-semibold hover:border-obito-green transition-all duration-300"
+          onClick={() => setIsDrawerOpen(true)}
+        >
+          Menu
+        </button>
+      </div>
 
       {/* Drawer overlay */}
       {isDrawerOpen && (
@@ -146,7 +149,7 @@ function CourseDetails() {
             className="absolute inset-0 bg-black/40"
             onClick={() => setIsDrawerOpen(false)}
           />
-          <div className="absolute left-0 top-0 h-full w-[85%] max-w-[320px] bg-white shadow-xl animate-[slideIn_0.2s_ease-out]">
+          <div className="absolute left-0 top-0 h-full w-[85%] max-w-[300px] bg-white shadow-xl animate-[slideIn_0.2s_ease-out]">
             <Sidebar />
           </div>
         </div>
@@ -154,27 +157,21 @@ function CourseDetails() {
 
       {/* Content */}
       <div className="flex-grow overflow-y-auto">
-        <main className="pt-[30px] pb-[118px] pl-[50px] pr-4">
+        <main className="pt-[60px] lg:pt-[6px] pb-[118px] px-4 md:px-6 lg:pl-[50px] lg:pr-4">
           <article>
             <div className="content-ebook">
               <Tabs selectedIndex={selectedIndex} onSelect={setSelectedIndex}>
-                {/* Hide TabList visually; we switch via sidebar */}
-                {/* <TabList className="hidden">
-                  {lessonsFlat.map((l) => (
-                    <Tab key={l.id}>{l.title}</Tab>
-                  ))}
-                </TabList> */}
                 {lessonsFlat.map((l) => (
                   <TabPanel key={l.id}>
-                    <h1 className="mb-5">{l.title}</h1>
-                    <p>{l.content}</p>
+                    {/* <h1 className="mb-2 md:mb-4 lg:mb-5">{l.title}</h1> */}
+                    <div className="">{l.content}</div>
                   </TabPanel>
                 ))}
               </Tabs>
             </div>
           </article>
         </main>
-        <nav className="fixed hidden lg:block bottom-0 left-auto right-0 z-30 mx-auto w-full lg:w-[calc(100%-260px)] pt-5 pb-[30px] bg-[#F8FAF9]">
+        <nav className="fixed hidden lg:block bottom-0 left-auto right-0 z-30 mx-auto w-full lg:w-[calc(100%-260px)] pt-5 pb-[30px]">
           <div className="px-[30px]">
             <div className="content border border-obito-grey rounded-[20px] bg-white p-[12px] flex items-center justify-between">
               <p className="text-obito-text-secondary">
