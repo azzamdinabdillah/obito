@@ -7,10 +7,13 @@
   font-family: Consolas !important;
   color: #abb2bf;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 100%;
 }
 
 .syntax-highlighter * {
   font-family: Consolas !important;
+  font-weight: 400;
 }
 
 .syntax-highlighter .line-numbers-container {
@@ -43,6 +46,39 @@
   margin: 0;
   padding: 0;
   background-color: #282c34;
+  overflow: auto;
+  min-width: 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #282c34;
+  touch-action: pan-x pan-y;
+}
+
+.syntax-highlighter .code-container pre {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* Custom scrollbar for webkit browsers */
+.syntax-highlighter .code-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.syntax-highlighter .code-container::-webkit-scrollbar-track {
+  background: #282c34;
+}
+
+.syntax-highlighter .code-container::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+.syntax-highlighter .code-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .syntax-highlighter .code-container code {
@@ -51,11 +87,13 @@
   border-radius: 0 !important;
   font-size: 0.875rem !important;
   line-height: 1.5 !important;
-  overflow: auto !important;
+  overflow: visible !important;
   display: block;
   white-space: pre;
   word-wrap: normal;
   color: #abb2bf !important;
+  min-width: max-content;
+  margin: 0;
 }
 
 /* Syntax highlighting colors matching the image exactly */
@@ -68,7 +106,7 @@
 .syntax-highlighter .hljs-built_in,
 .syntax-highlighter .hljs-type,
 .syntax-highlighter .hljs-title {
-  color: #56b6c2 !important; /* Light blue for types and class names */
+  color: #7dcfff !important; /* Light blue for types and class names */
 }
 
 .syntax-highlighter .hljs-variable,
@@ -154,11 +192,19 @@
 @media (max-width: 768px) {
   .syntax-highlighter {
     font-size: 0.75rem;
+    flex-direction: column;
+  }
+
+  .syntax-highlighter .code-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .syntax-highlighter .code-container code {
     font-size: 0.75rem !important;
     padding: 0.75rem !important;
+    min-width: max-content;
   }
 
   .syntax-highlighter .line-numbers-container {
@@ -168,5 +214,13 @@
 
   .syntax-highlighter .line-number {
     font-size: 0.625rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .syntax-highlighter * {
+    font-family: Consolas !important;
+    font-weight: 600;
+    line-height: 25px;
   }
 }

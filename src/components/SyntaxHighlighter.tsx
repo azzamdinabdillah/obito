@@ -8,21 +8,13 @@ interface SyntaxHighlighterProps {
   language?: string;
   className?: string;
   showLineNumbers?: boolean;
-  theme?:
-    | "github"
-    | "vs"
-    | "vs2015"
-    | "xcode"
-    | "androidstudio"
-    | "atom-one-dark";
 }
 
 const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
   code,
   language = "javascript",
   className = "",
-  showLineNumbers = false,
-  theme = "theme-tokyo-night-dark",
+  showLineNumbers = false
 }) => {
   const codeRef = useRef<HTMLElement>(null);
 
