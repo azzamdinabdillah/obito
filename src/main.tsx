@@ -8,6 +8,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <App />
+      {/* <div className="h-[100vh]"></div> */}
     </BrowserRouter>
   </StrictMode>
 );

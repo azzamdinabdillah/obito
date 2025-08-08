@@ -128,11 +128,8 @@ export default function NavbarDashboard() {
   }, [isDropdownOpen]);
 
   return (
-    <div className="flex flex-col h-full fixed top-0 left-0 w-full">
-      <nav
-        id="nav-guest"
-        className="flex bg-white border-b border-obito-grey"
-      >
+    <div className="flex flex-col fixed top-0 left-0 w-full z-20">
+      <nav id="nav-guest" className="flex bg-white border-b border-obito-grey">
         <div className="container-max-w-1280 container-padding-x flex w-full py-5 items-center justify-between mx-auto">
           <div className="flex items-center gap-4 lg:gap-[50px] w-full md:w-auto justify-between md:justify-start">
             <Link to="/" className="flex shrink-0">
@@ -370,30 +367,32 @@ export default function NavbarDashboard() {
       </div>
 
       {/* Nav Bottom */}
-      <nav
-        id="bottom-nav"
-        className="container-max-w-1280 container-padding-x flex w-full bg-white border-b border-obito-grey py-[14px]"
-      >
-        <ul className="flex w-full gap-2 md:gap-3 overflow-x-auto no-scrollbar">
-          {bottomNavItems.map((item) => (
-            <li
-              key={item.id}
-              className={`group ${item.isActive ? "active" : ""}`}
-            >
-              <Link
-                to={item.href}
-                className="flex items-center gap-2 rounded-full border border-obito-grey py-1.5 px-3 md:px-[14px] hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-light-green group-[.active]:border-obito-light-green"
+      <nav className="bg-white border-b border-obito-grey">
+        <div
+          id="bottom-nav"
+          className="container-max-w-1280 container-padding-x flex w-full  py-[14px]"
+        >
+          <ul className="flex w-full gap-2 md:gap-3 overflow-x-auto no-scrollbar">
+            {bottomNavItems.map((item) => (
+              <li
+                key={item.id}
+                className={`group ${item.isActive ? "active" : ""}`}
               >
-                <img
-                  src={item.icon}
-                  className="flex shrink-0 w-4 md:w-[20px]"
-                  alt="icon"
-                />
-                <span className="text-sm md:text-base">{item.label}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <Link
+                  to={item.href}
+                  className="flex items-center gap-2 rounded-full border border-obito-grey py-1.5 px-3 md:px-[14px] hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-light-green group-[.active]:border-obito-light-green"
+                >
+                  <img
+                    src={item.icon}
+                    className="flex shrink-0 w-4 md:w-[20px]"
+                    alt="icon"
+                  />
+                  <span className="text-sm md:text-base">{item.label}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </div>
   );
