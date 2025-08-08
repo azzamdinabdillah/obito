@@ -33,6 +33,14 @@
   @apply px-4 md:px-8 lg:px-[75px];
 }
 
+.container-padding-y {
+  @apply py-4 md:py-8 lg:py-[39px];
+}
+
+.title-22 {
+  @apply font-bold leading-normal text-lg md:text-xl lg:text-[22px];
+}
+
 /* React Tabs Custom Styles */
 .react-tabs {
   -webkit-tap-highlight-color: transparent;

@@ -3,6 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import type { Course, CourseCategory } from "../components/CourseCard";
 import CourseCard from "../components/CourseCard";
 import { coursesData } from "../data/courses";
+import CardRoadmap from "../components/CardRoadmap";
+import { roadmapData } from "../data/roadmap";
 
 // Function to filter courses by category
 const getCoursesByCategory = (category: string): Course[] => {
@@ -43,19 +45,27 @@ export default function CourseCatalog() {
     <div>
       <NavbarDashboard />
       <div className="pt-[10rem] lg:pt-[12rem] pb-6 md:pb-10 bg-[#F8FAF9]">
+        <section className="container-max-w-1280 container-padding-x flex flex-col w-full gap-3 lg:gap-4">
+          <h1 className="title-22">Popular Roadmap</h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-5">
+            {roadmapData.map((roadmap) => (
+              <CardRoadmap key={roadmap.title} {...roadmap} />
+            ))}
+          </div>
+        </section>
+
         <section
           id="catalog"
-          className="container-max-w-1280 container-padding-x flex flex-col w-full gap-3 lg:gap-4"
+          className="container-max-w-1280 container-padding-y container-padding-x flex flex-col w-full gap-3 lg:gap-4"
         >
-          <h1 className="font-bold leading-normal text-lg md:text-xl lg:text-[22px]">
-            Course Catalog
-          </h1>
+          <h1 className="title-22">Course Catalog</h1>
 
           <Tabs>
             <TabList className="flex gap-2 overflow-x-auto no-scrollbar">
               {courseCategories.map((category: CourseCategory) => (
                 <Tab key={category.id}>
-                  <div className="rounded-full border border-obito-grey py-1.5 px-3 text-sm md:py-2 md:px-4 md:text-base hover:border-obito-green mb-[2px] bg-white transition-all duration-300">
+                  <div className="rounded-full border border-obito-grey py-1.5 px-3 text-sm md:py-2 md:px-4 md:text-base hover:border-obito-green lg:mb-[2px] bg-white transition-all duration-300">
                     <span className="w-full whitespace-nowrap">
                       {category.label}
                     </span>
