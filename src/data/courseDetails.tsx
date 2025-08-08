@@ -61,7 +61,7 @@ export const courseDetailsData: CourseDetailsData = {
                   // showLineNumbers={true}
                 />
 
-                {/* <p>Penjelasan:</p> */}
+                <p>Penjelasan:</p>
                 <ul>
                   <li>
                     Dengan membuat service provider custom, Anda bisa
