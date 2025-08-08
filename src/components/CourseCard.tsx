@@ -1,4 +1,5 @@
 import { type JSX } from "react";
+import { Link } from "react-router-dom";
 
 export interface Course {
   id: string;
@@ -23,7 +24,7 @@ export interface CourseCategory {
 function CourseCard({ course }: { course: Course }): JSX.Element {
   return (
     <div className="h-full">
-      <a href="course-details.html" className="card h-full">
+      <Link to={`/course-details`} className="card h-full">
         <div className="course-card h-full flex flex-col rounded-[16px] md:rounded-[18px] lg:rounded-[20px] border border-obito-grey hover:border-obito-green transition-all duration-300 bg-white overflow-hidden">
           <div className="thumbnail-container p-2.5 md:p-3 lg:p-[10px]">
             <div className="relative w-full h-[110px] md:h-[130px] lg:h-[150px] rounded-[10px] md:rounded-[12px] lg:rounded-[14px] overflow-hidden bg-obito-grey">
@@ -78,7 +79,7 @@ function CourseCard({ course }: { course: Course }): JSX.Element {
             </p>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

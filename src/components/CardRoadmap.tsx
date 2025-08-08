@@ -1,4 +1,5 @@
 import { type JSX } from "react";
+import { Link } from "react-router-dom";
 
 export type CardRoadmapProps = {
   href?: string;
@@ -24,7 +25,7 @@ function CardRoadmap({
   className,
 }: CardRoadmapProps): JSX.Element {
   return (
-    <a href={href} className={`card ${className ?? ""}`.trim()}>
+    <Link to={href} className={className}>
       <div className="roadmap-card flex flex-col md:flex-row items-start md:items-center rounded-[14px] md:rounded-[18px] lg:rounded-[20px] border border-obito-grey p-2.5 md:p-3 lg:p-[10px] md:pr-4 gap-3 md:gap-4 bg-white hover:border-obito-green transition-all duration-300">
         <div className="relative flex shrink-0 w-full h-[150px] md:w-[180px] xl:w-[240px] rounded-[10px] md:rounded-[12px] lg:rounded-[14px] overflow-hidden bg-obito-grey">
           <img
@@ -75,7 +76,7 @@ function CardRoadmap({
           ) : null}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

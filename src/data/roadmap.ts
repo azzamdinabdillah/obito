@@ -2,7 +2,7 @@ import type { CardRoadmapProps } from "../components/CardRoadmap";
 
 export const roadmapData: CardRoadmapProps[] = [
   {
-    href: "/roadmap/frontend",
+    href: "/course-details",
     thumbnailSrc: "/src/assets/images/thumbnails/thumbnail-1.png",
     thumbnailAlt: "Frontend Developer Roadmap",
     badgeIconSrc: "/src/assets/images/icons/cup.svg",
@@ -12,7 +12,7 @@ export const roadmapData: CardRoadmapProps[] = [
     coursesCount: 156,
   },
   {
-    href: "/roadmap/data-science",
+    href: "/course-details",
     thumbnailSrc: "/src/assets/images/thumbnails/thumbnail-2.png",
     thumbnailAlt: "Data Science Roadmap",
     badgeIconSrc: "/src/assets/images/icons/crown-green.svg",
