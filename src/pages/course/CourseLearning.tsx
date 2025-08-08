@@ -2,8 +2,9 @@ import { useMemo, useState, useEffect } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Tabs, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { courseDetailsData } from "../../data/courseDetails";
+import { courseDetailsData } from "../../data/courseLearning";
 import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 
 type FlattenedLesson = {
   id: string;
@@ -151,7 +152,7 @@ function CourseDetails() {
                     </Accordion.Trigger>
                   </Accordion.Header>
                   <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
-                    <ul className="flex flex-col gap-4 pt-2">
+                    <ul className="flex flex-col gap-4">
                       {section.lessons.map((lesson) => (
                         <li key={lesson.id} className="group">
                           <button
@@ -244,17 +245,11 @@ function CourseDetails() {
                 kelas
               </p>
               <div className="buttons flex items-center gap-[12px]">
-                <a
-                  href="#"
-                  className="rounded-full border border-obito-grey px-5 py-[10px] hover:border-obito-green transition-all duration-300"
-                >
-                  <span className="font-semibold">Ask Mentor</span>
+                <a href="#" className="">
+                  <Button variant="outline">Ask Mentor</Button>
                 </a>
-                <a
-                  href="#"
-                  className="rounded-full border bg-obito-green text-white px-5 py-[10px] hover:drop-shadow-effect transition-all duration-300"
-                >
-                  <span className="font-semibold">Next Lesson</span>
+                <a href="#" className="">
+                  <Button variant="green">Next Lesson</Button>
                 </a>
               </div>
             </div>

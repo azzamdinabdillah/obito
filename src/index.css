@@ -26,6 +26,10 @@
   scrollbar-width: none;
 }
 
+.flex-center{
+  @apply flex justify-center items-center;
+}
+
 .container-max-w-1280 {
   @apply max-w-[1280px] mx-auto;
 }

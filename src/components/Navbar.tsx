@@ -1,5 +1,6 @@
 import { useState, type JSX } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Button from "./Button";
 
 export default function Navbar(): JSX.Element {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
@@ -76,17 +77,15 @@ export default function Navbar(): JSX.Element {
             </a>
             <div className="h-[50px] flex shrink-0 bg-obito-grey w-px" />
             <div className="hidden lg:flex items-center gap-3">
-              <Link
-                to="/signup"
-                className="rounded-full border border-obito-grey py-3 px-5 gap-[10px] bg-white hover:border-obito-green transition-all duration-300"
-              >
-                <span className="font-semibold">Sign Up</span>
+              <Link to="/signin">
+                <Button variant="outline" className="lg:!py-3">
+                  Sign Up
+                </Button>
               </Link>
-              <Link
-                to="/signin"
-                className="rounded-full py-3 px-5 gap-[10px] bg-obito-green hover:drop-shadow-effect transition-all duration-300"
-              >
-                <span className="font-semibold text-white">My Account</span>
+              <Link to="/signin">
+                <Button variant="green" className="lg:!py-3">
+                  My Account
+                </Button>
               </Link>
             </div>
 
@@ -221,20 +220,23 @@ export default function Navbar(): JSX.Element {
           </div>
 
           {/* Drawer Footer */}
-          <div className="p-6 border-t border-obito-grey space-y-4">
-            <Link
-              to="/signup"
-              onClick={closeDrawer}
-              className="block w-full text-center rounded-full border border-obito-grey py-3 px-5 bg-white hover:border-obito-green transition-all duration-300"
-            >
-              <span className="font-semibold">Sign Up</span>
+          <div className="p-6 border-t border-obito-grey flex gap-4 flex-col">
+            <Link to="/signin">
+              <Button
+                variant="outline"
+                className="py-3 px-5 !text-base w-full flex-center"
+              >
+                Sign Up
+              </Button>
             </Link>
-            <Link
-              to="/signin"
-              onClick={closeDrawer}
-              className="block w-full text-center rounded-full py-3 px-5 bg-obito-green hover:drop-shadow-effect transition-all duration-300"
-            >
-              <span className="font-semibold text-white">My Account</span>
+
+            <Link to="/signin">
+              <Button
+                variant="green"
+                className="py-3 px-5 !text-base w-full flex-center"
+              >
+                My Account
+              </Button>
             </Link>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 
 export default function index() {
   return (
@@ -31,25 +32,27 @@ export default function index() {
                   </p>
                 </div>
                 <div className="flex items-stretch sm:items-center gap-2 sm:gap-[18px] w-full">
-                  <Link
-                    to="/course-catalog"
-                    className="flex items-center rounded-full h-12 md:h-[60px] lg:h-[67px] py-3 md:py-5 px-5 md:px-8 lg:px-[30px] gap-2 md:gap-[10px] bg-obito-green hover:drop-shadow-effect transition-all duration-300"
-                  >
-                    <span className="text-white font-semibold text-base md:text-lg">
+                  <Link to="/course-catalog" className="">
+                    <Button
+                      variant="green"
+                      className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"
+                    >
                       Get Started
-                    </span>
+                    </Button>
                   </Link>
-                  <a
-                    href="#"
-                    className="flex items-center rounded-full h-12 md:h-[60px] lg:h-[67px] border border-obito-grey py-3 md:py-5 px-5 md:px-8 lg:px-[30px] bg-white gap-2 md:gap-[10px] hover:border-obito-green transition-all duration-300"
-                  >
-                    <img
-                      src="/src/assets/images/icons/play-circle-fill.svg"
-                      className="w-7 h-7 md:w-8 md:h-8 flex shrink-0"
-                      alt="icon"
-                    />
-                    <span className="font-semibold text-base md:text-lg">How It Works</span>
-                  </a>
+                  <Link to="/course-catalog" className="">
+                    <Button
+                      variant="outline"
+                      className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"
+                    >
+                      <img
+                        src="/src/assets/images/icons/play-circle-fill.svg"
+                        className="w-7 h-7 md:w-8 md:h-8 flex shrink-0"
+                        alt="icon"
+                      />
+                      How It Works
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-[14px]">
