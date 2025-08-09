@@ -1,10 +1,40 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import NavbarDashboard from "../../components/NavbarDashboard";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import * as Accordion from "@radix-ui/react-accordion";
 
 function CourseDetails() {
+  const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
+  const [videoSrc, setVideoSrc] = useState<string>("");
+
+  const openVideo = () => {
+    // Ganti ID video di bawah ini jika diperlukan
+    setVideoSrc("https://www.youtube.com/embed/AmkkHXYM7eQ?si=Q1Tsl8sCc5mWB2hg");
+    setIsVideoOpen(true);
+  };
+
+  const closeVideo = () => {
+    setIsVideoOpen(false);
+    setVideoSrc("");
+  };
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeVideo();
+    };
+    if (isVideoOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", onKeyDown);
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isVideoOpen]);
   return (
     <div className="bg-[#F8FAF9] pt-[10rem] md:pt-[11rem] lg:pt-[12rem] px-4 md:px-6 lg:px-8 pb-10">
       <NavbarDashboard />
@@ -29,11 +59,13 @@ function CourseDetails() {
             </p>
             <button
               type="button"
+              aria-label="Play preview video"
+              onClick={openVideo}
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10"
             >
               <img
                 src="/src/assets/images/icons/video-circle-green-fill.svg"
-                className="flex w-12 h-12 md:w-[60px] md:h-[60px] shrink-0"
+                className="flex w-12 h-12 md:w-[60px] md:h-[60px] shrink-0 animate-pulse"
                 alt="icon"
               />
             </button>
@@ -125,41 +157,54 @@ function CourseDetails() {
           id="details"
           className="flex flex-col w-full max-w-[1000px] gap-4 mx-auto"
         >
-          <h2 className="title-22">
-            Upgrade Your Skills
-          </h2>
+          <h2 className="title-22">Upgrade Your Skills</h2>
           <div id="contents" className="flex flex-col gap-5">
             <Tabs>
               <TabList className="flex flex-wrap items-center gap-2 md:gap-3">
-                <Tab className="tab-btn group cursor-pointer" selectedClassName="active">
+                <Tab
+                  className="tab-btn group cursor-pointer"
+                  selectedClassName="active"
+                >
                   <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
                     <span className="font-semibold group-[.active]:text-white">
                       About
                     </span>
                   </p>
                 </Tab>
-                <Tab className="tab-btn group cursor-pointer" selectedClassName="active">
+                <Tab
+                  className="tab-btn group cursor-pointer"
+                  selectedClassName="active"
+                >
                   <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
                     <span className="font-semibold group-[.active]:text-white">
                       Lessons
                     </span>
                   </p>
                 </Tab>
-                <Tab className="tab-btn group cursor-pointer" selectedClassName="active">
+                <Tab
+                  className="tab-btn group cursor-pointer"
+                  selectedClassName="active"
+                >
                   <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
                     <span className="font-semibold group-[.active]:text-white">
                       Testimonials
                     </span>
                   </p>
                 </Tab>
-                <Tab className="tab-btn group cursor-pointer" selectedClassName="active">
+                <Tab
+                  className="tab-btn group cursor-pointer"
+                  selectedClassName="active"
+                >
                   <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
                     <span className="font-semibold group-[.active]:text-white">
                       Portfolios
                     </span>
                   </p>
                 </Tab>
-                <Tab className="tab-btn group cursor-pointer" selectedClassName="active">
+                <Tab
+                  className="tab-btn group cursor-pointer"
+                  selectedClassName="active"
+                >
                   <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
                     <span className="font-semibold group-[.active]:text-white">
                       Rewards
@@ -1002,6 +1047,43 @@ function CourseDetails() {
           </div>
         </section>
       </div>
+
+      {isVideoOpen && (
+        <div
+          onClick={closeVideo}
+          className="fixed inset-0 z-[1000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+          aria-modal="true"
+          role="dialog"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-4xl"
+          >
+            <button
+              type="button"
+              onClick={closeVideo}
+              aria-label="Close video"
+              className="absolute -top-3 -right-3 md:top-0 md:right-0 z-10 rounded-full bg-white text-obito-black w-8 h-8 flex items-center justify-center shadow hover:bg-obito-black hover:text-white transition"
+            >
+              ×
+            </button>
+            <div
+              className="w-full bg-black rounded-xl overflow-hidden shadow-lg"
+              style={{ aspectRatio: "16 / 9" }}
+            >
+              {videoSrc && (
+                <iframe
+                  className="w-full h-full"
+                  src={videoSrc}
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
