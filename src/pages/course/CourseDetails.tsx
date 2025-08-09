@@ -11,7 +11,9 @@ function CourseDetails() {
 
   const openVideo = () => {
     // Ganti ID video di bawah ini jika diperlukan
-    setVideoSrc("https://www.youtube.com/embed/AmkkHXYM7eQ?si=Q1Tsl8sCc5mWB2hg");
+    setVideoSrc(
+      "https://www.youtube.com/embed/AmkkHXYM7eQ?si=Q1Tsl8sCc5mWB2hg"
+    );
     setIsVideoOpen(true);
   };
 
@@ -35,6 +37,7 @@ function CourseDetails() {
       document.body.style.overflow = "";
     };
   }, [isVideoOpen]);
+
   return (
     <div className="bg-[#F8FAF9] pt-[10rem] md:pt-[11rem] lg:pt-[12rem] px-4 md:px-6 lg:px-8 pb-10">
       <NavbarDashboard />
@@ -77,14 +80,14 @@ function CourseDetails() {
             <div className="flex flex-col gap-[10px]">
               <p
                 id="badge"
-                className="flex items-center bg-custom-gradient gap-[6px] rounded-[14px] py-[6px] px-2 w-fit"
+                className="flex items-center bg-custom-gradient gap-[6px] rounded-[14px] py-[6px] px-2 md:py-2 md:px-3 w-fit"
               >
                 <img
                   src="/src/assets/images/icons/cup-white.svg"
                   className="w-5 flex shrink-0"
                   alt="icon"
                 />
-                <span className="font-semibold text-xs text-white">
+                <span className="font-semibold text-xs md:text-sm text-white">
                   This Course is Popular This Year
                 </span>
               </p>
@@ -100,7 +103,7 @@ function CourseDetails() {
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
-                  <span className="font-semibold text-sm leading-[21px]">
+                  <span className="font-semibold text-sm md:text-base leading-[21px] md:leading-6">
                     Digital Marketing
                   </span>
                 </p>
@@ -110,7 +113,7 @@ function CourseDetails() {
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
-                  <span className="font-semibold text-sm leading-[21px]">
+                  <span className="font-semibold text-sm md:text-base leading-[21px] md:leading-6">
                     182 Lessons
                   </span>
                 </p>
@@ -122,7 +125,7 @@ function CourseDetails() {
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
-                  <span className="font-semibold text-sm leading-[21px]">
+                  <span className="font-semibold text-sm md:text-base leading-[21px] md:leading-6">
                     Ready to Work
                   </span>
                 </p>
@@ -132,13 +135,13 @@ function CourseDetails() {
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
-                  <span className="font-semibold text-sm leading-[21px]">
+                  <span className="font-semibold text-sm md:text-base leading-[21px] md:leading-6">
                     Beginner Level
                   </span>
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-4">
               <Link to="/course-learning" className="w-full md:w-auto">
                 <Button className="w-full flex-center" variant="green">
                   Start Learning Now
@@ -155,7 +158,7 @@ function CourseDetails() {
 
         <section
           id="details"
-          className="flex flex-col w-full max-w-[1000px] gap-4 mx-auto"
+          className="flex flex-col w-full max-w-[1000px] gap-4 md:gap-6 mx-auto"
         >
           <h2 className="title-22">Upgrade Your Skills</h2>
           <div id="contents" className="flex flex-col gap-5">
@@ -165,8 +168,8 @@ function CourseDetails() {
                   className="tab-btn group cursor-pointer"
                   selectedClassName="active"
                 >
-                  <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
-                    <span className="font-semibold group-[.active]:text-white">
+                  <p className="rounded-full border border-obito-grey py-2 px-4 md:py-3 md:px-5 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
+                    <span className="font-semibold text-sm md:text-base group-[.active]:text-white">
                       About
                     </span>
                   </p>
@@ -175,8 +178,8 @@ function CourseDetails() {
                   className="tab-btn group cursor-pointer"
                   selectedClassName="active"
                 >
-                  <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
-                    <span className="font-semibold group-[.active]:text-white">
+                  <p className="rounded-full border border-obito-grey py-2 px-4 md:py-3 md:px-5 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
+                    <span className="font-semibold text-sm md:text-base group-[.active]:text-white">
                       Lessons
                     </span>
                   </p>
@@ -185,8 +188,8 @@ function CourseDetails() {
                   className="tab-btn group cursor-pointer"
                   selectedClassName="active"
                 >
-                  <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
-                    <span className="font-semibold group-[.active]:text-white">
+                  <p className="rounded-full border border-obito-grey py-2 px-4 md:py-3 md:px-5 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
+                    <span className="font-semibold text-sm md:text-base group-[.active]:text-white">
                       Testimonials
                     </span>
                   </p>
@@ -195,8 +198,8 @@ function CourseDetails() {
                   className="tab-btn group cursor-pointer"
                   selectedClassName="active"
                 >
-                  <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
-                    <span className="font-semibold group-[.active]:text-white">
+                  <p className="rounded-full border border-obito-grey py-2 px-4 md:py-3 md:px-5 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
+                    <span className="font-semibold text-sm md:text-base group-[.active]:text-white">
                       Portfolios
                     </span>
                   </p>
@@ -205,8 +208,8 @@ function CourseDetails() {
                   className="tab-btn group cursor-pointer"
                   selectedClassName="active"
                 >
-                  <p className="rounded-full border border-obito-grey py-2 px-4 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
-                    <span className="font-semibold group-[.active]:text-white">
+                  <p className="rounded-full border border-obito-grey py-2 px-4 md:py-3 md:px-5 hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-black">
+                    <span className="font-semibold text-sm md:text-base group-[.active]:text-white">
                       Rewards
                     </span>
                   </p>
@@ -214,10 +217,10 @@ function CourseDetails() {
               </TabList>
 
               <TabPanel>
-                <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-5 md:gap-[30px]">
                   <div
                     id="description"
-                    className="flex flex-col gap-4 leading-7 w-full max-w-[844px]"
+                    className="flex flex-col gap-4 leading-7 w-full max-w-[844px] text-sm md:text-base"
                   >
                     <p>
                       Laravel 11 adalah framework PHP yang menjadi favorit para
@@ -236,11 +239,11 @@ function CourseDetails() {
                     </p>
                   </div>
                   <div id="what-you-learn" className="flex flex-col gap-4">
-                    <h3 className="font-semibold text-lg">
+                    <h3 className="font-semibold text-base md:text-lg">
                       What Will You Learn
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-[30px] w-full max-w-[700px]">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
                         <img
                           src="/src/assets/images/icons/tick-circle-green-fill.svg"
                           className="w-6 flex shrink-0"
@@ -251,7 +254,7 @@ function CourseDetails() {
                           para developer
                         </p>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
                         <img
                           src="/src/assets/images/icons/tick-circle-green-fill.svg"
                           className="w-6 flex shrink-0"
@@ -262,7 +265,7 @@ function CourseDetails() {
                           para developer
                         </p>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
                         <img
                           src="/src/assets/images/icons/tick-circle-green-fill.svg"
                           className="w-6 flex shrink-0"
@@ -273,7 +276,7 @@ function CourseDetails() {
                           para developer
                         </p>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
                         <img
                           src="/src/assets/images/icons/tick-circle-green-fill.svg"
                           className="w-6 flex shrink-0"
@@ -288,15 +291,15 @@ function CourseDetails() {
                   </div>
                   <div
                     id="instructors"
-                    className="flex flex-col w-full max-w-[900px] rounded-[20px] border border-obito-grey p-5 gap-4 bg-white"
+                    className="flex flex-col w-full max-w-[900px] rounded-[20px] border border-obito-grey p-4 md:p-5 gap-4 md:gap-5 bg-white"
                   >
-                    <h3 className="font-semibold text-lg">
+                    <h3 className="font-semibold text-base md:text-lg">
                       Course Instructors
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
-                        <div className="flex items-center justify-between flex-wrap gap-3">
-                          <div className="flex items-center gap-3">
+                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
+                        <div className="flex items-center justify-between flex-wrap gap-3 md:gap-4">
+                          <div className="flex items-center gap-3 md:gap-4">
                             <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden">
                               <img
                                 src="/src/assets/images/photos/anggaphoto.png"
@@ -305,8 +308,10 @@ function CourseDetails() {
                               />
                             </div>
                             <div>
-                              <p className="font-semibold">Angga Risky</p>
-                              <p className="text-sm text-obito-text-secondary">
+                              <p className="font-semibold text-sm md:text-base">
+                                Angga Risky
+                              </p>
+                              <p className="text-xs md:text-sm text-obito-text-secondary">
                                 Full Stack Developer
                               </p>
                             </div>
@@ -340,16 +345,16 @@ function CourseDetails() {
                           </div>
                         </div>
                         <hr className="border-obito-grey" />
-                        <p className="leading-7">
+                        <p className="leading-7 text-sm md:text-base">
                           Angga Risky Setiawan adalah seorang desainer UI
                           berpengalaman dengan lebih dari 7 tahun pengalaman di
                           industri ini. Ia memiliki keahlian mendalam dalam
                           menciptakan.
                         </p>
                       </div>
-                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
-                        <div className="flex items-center justify-between flex-wrap gap-3">
-                          <div className="flex items-center gap-3">
+                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
+                        <div className="flex items-center justify-between flex-wrap gap-3 md:gap-4">
+                          <div className="flex items-center gap-3 md:gap-4">
                             <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden">
                               <img
                                 src="/src/assets/images/photos/sami.png"
@@ -358,8 +363,10 @@ function CourseDetails() {
                               />
                             </div>
                             <div>
-                              <p className="font-semibold">Angga Risky</p>
-                              <p className="text-sm text-obito-text-secondary">
+                              <p className="font-semibold text-sm md:text-base">
+                                Angga Risky
+                              </p>
+                              <p className="text-xs md:text-sm text-obito-text-secondary">
                                 Full Stack Developer
                               </p>
                             </div>
@@ -393,16 +400,16 @@ function CourseDetails() {
                           </div>
                         </div>
                         <hr className="border-obito-grey" />
-                        <p className="leading-7">
+                        <p className="leading-7 text-sm md:text-base">
                           Angga Risky Setiawan adalah seorang desainer UI
                           berpengalaman dengan lebih dari 7 tahun pengalaman di
                           industri ini. Ia memiliki keahlian mendalam dalam
                           menciptakan.
                         </p>
                       </div>
-                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
-                        <div className="flex items-center justify-between flex-wrap gap-3">
-                          <div className="flex items-center gap-3">
+                      <div className="instructors-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
+                        <div className="flex items-center justify-between flex-wrap gap-3 md:gap-4">
+                          <div className="flex items-center gap-3 md:gap-4">
                             <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden">
                               <img
                                 src="/src/assets/images/photos/3rdPerson.png"
@@ -411,8 +418,10 @@ function CourseDetails() {
                               />
                             </div>
                             <div>
-                              <p className="font-semibold">Angga Risky</p>
-                              <p className="text-sm text-obito-text-secondary">
+                              <p className="font-semibold text-sm md:text-base">
+                                Angga Risky
+                              </p>
+                              <p className="text-xs md:text-sm text-obito-text-secondary">
                                 Full Stack Developer
                               </p>
                             </div>
@@ -446,7 +455,7 @@ function CourseDetails() {
                           </div>
                         </div>
                         <hr className="border-obito-grey" />
-                        <p className="leading-7">
+                        <p className="leading-7 text-sm md:text-base">
                           Angga Risky Setiawan adalah seorang desainer UI
                           berpengalaman dengan lebih dari 7 tahun pengalaman di
                           industri ini. Ia memiliki keahlian mendalam dalam
@@ -464,15 +473,17 @@ function CourseDetails() {
                     type="single"
                     collapsible
                     defaultValue="WarmingUp"
-                    className="flex flex-col gap-5"
+                    className="flex flex-col gap-4 md:gap-5"
                   >
                     <Accordion.Item
                       value="WarmingUp"
                       className="rounded-[20px] border border-obito-grey bg-white"
                     >
                       <Accordion.Header>
-                        <Accordion.Trigger className="w-full flex items-center justify-between p-5 group">
-                          <p className="font-semibold text-lg">Warming Up</p>
+                        <Accordion.Trigger className="w-full flex items-center justify-between p-4 md:p-5 group">
+                          <p className="font-semibold text-base md:text-lg">
+                            Warming Up
+                          </p>
                           <img
                             src="/src/assets/images/icons/arrow-circle-down.svg"
                             alt="icon"
@@ -481,8 +492,8 @@ function CourseDetails() {
                         </Accordion.Trigger>
                       </Accordion.Header>
                       <Accordion.Content className="radix-accordion-content overflow-hidden">
-                        <div className="px-5 pb-5 flex flex-col gap-4">
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                        <div className="px-4 md:px-5 pb-4 md:pb-5 flex flex-col gap-3 md:gap-4">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -490,7 +501,7 @@ function CourseDetails() {
                             />
                             <p className="font-semibold">Demo Project</p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -500,7 +511,7 @@ function CourseDetails() {
                               Software Installation
                             </p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -519,8 +530,8 @@ function CourseDetails() {
                       className="rounded-[20px] border border-obito-grey bg-white"
                     >
                       <Accordion.Header>
-                        <Accordion.Trigger className="w-full flex items-center justify-between p-5 group">
-                          <p className="font-semibold text-lg">
+                        <Accordion.Trigger className="w-full flex items-center justify-between p-4 md:p-5 group">
+                          <p className="font-semibold text-base md:text-lg">
                             New Project Coming
                           </p>
                           <img
@@ -531,8 +542,8 @@ function CourseDetails() {
                         </Accordion.Trigger>
                       </Accordion.Header>
                       <Accordion.Content className="radix-accordion-content overflow-hidden">
-                        <div className="px-5 pb-5 flex flex-col gap-4">
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                        <div className="px-4 md:px-5 pb-4 md:pb-5 flex flex-col gap-3 md:gap-4">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -549,8 +560,8 @@ function CourseDetails() {
                       className="rounded-[20px] border border-obito-grey bg-white"
                     >
                       <Accordion.Header>
-                        <Accordion.Trigger className="w-full flex items-center justify-between p-5 group">
-                          <p className="font-semibold text-lg">
+                        <Accordion.Trigger className="w-full flex items-center justify-between p-4 md:p-5 group">
+                          <p className="font-semibold text-base md:text-lg">
                             Deep Dive into coding
                           </p>
                           <img
@@ -561,8 +572,8 @@ function CourseDetails() {
                         </Accordion.Trigger>
                       </Accordion.Header>
                       <Accordion.Content className="radix-accordion-content overflow-hidden">
-                        <div className="px-5 pb-5 flex flex-col gap-4">
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                        <div className="px-4 md:px-5 pb-4 md:pb-5 flex flex-col gap-3 md:gap-4">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -572,7 +583,7 @@ function CourseDetails() {
                               AB Testing Heading Website
                             </p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -582,7 +593,7 @@ function CourseDetails() {
                               Marketing AI Integration
                             </p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -601,8 +612,8 @@ function CourseDetails() {
                       className="rounded-[20px] border border-obito-grey bg-white"
                     >
                       <Accordion.Header>
-                        <Accordion.Trigger className="w-full flex items-center justify-between p-5 group">
-                          <p className="font-semibold text-lg">
+                        <Accordion.Trigger className="w-full flex items-center justify-between p-4 md:p-5 group">
+                          <p className="font-semibold text-base md:text-lg">
                             New Project Coming
                           </p>
                           <img
@@ -613,8 +624,8 @@ function CourseDetails() {
                         </Accordion.Trigger>
                       </Accordion.Header>
                       <Accordion.Content className="radix-accordion-content overflow-hidden">
-                        <div className="px-5 pb-5 flex flex-col gap-4">
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                        <div className="px-4 md:px-5 pb-4 md:pb-5 flex flex-col gap-3 md:gap-4">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -631,8 +642,8 @@ function CourseDetails() {
                       className="rounded-[20px] border border-obito-grey bg-white"
                     >
                       <Accordion.Header>
-                        <Accordion.Trigger className="w-full flex items-center justify-between p-5 group">
-                          <p className="font-semibold text-lg">
+                        <Accordion.Trigger className="w-full flex items-center justify-between p-4 md:p-5 group">
+                          <p className="font-semibold text-base md:text-lg">
                             Deep Dive into coding
                           </p>
                           <img
@@ -643,8 +654,8 @@ function CourseDetails() {
                         </Accordion.Trigger>
                       </Accordion.Header>
                       <Accordion.Content className="radix-accordion-content overflow-hidden">
-                        <div className="px-5 pb-5 flex flex-col gap-4">
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                        <div className="px-4 md:px-5 pb-4 md:pb-5 flex flex-col gap-3 md:gap-4">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -654,7 +665,7 @@ function CourseDetails() {
                               AB Testing Heading Website
                             </p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -664,7 +675,7 @@ function CourseDetails() {
                               Marketing AI Integration
                             </p>
                           </div>
-                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 bg-white">
+                          <div className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white">
                             <img
                               src="/src/assets/images/icons/menu-board.svg"
                               className="size-6 flex shrink-0"
@@ -683,7 +694,7 @@ function CourseDetails() {
 
               <TabPanel>
                 <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[860px] gap-4 md:gap-5">
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -711,7 +722,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
@@ -732,7 +743,7 @@ function CourseDetails() {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -760,7 +771,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
@@ -781,7 +792,7 @@ function CourseDetails() {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -809,7 +820,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
@@ -830,7 +841,7 @@ function CourseDetails() {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -858,7 +869,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
@@ -879,7 +890,7 @@ function CourseDetails() {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -907,7 +918,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
@@ -928,7 +939,7 @@ function CourseDetails() {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+                  <div className="testimonial-card flex flex-col rounded-[20px] border border-obito-grey p-4 md:p-5 gap-3 md:gap-4 bg-white">
                     <div className="flex items-center">
                       <img
                         src="/src/assets/images/icons/Star 1.svg"
@@ -956,7 +967,7 @@ function CourseDetails() {
                         alt="icon"
                       />
                     </div>
-                    <p className="leading-7">
+                    <p className="leading-7 text-sm md:text-base">
                       Asik banget belajar di sini dapat contoh kasus sesuai
                       kebutuhan perusahaan saat ini proses adaptasi jadi lebih
                       cepat dan produktif.
