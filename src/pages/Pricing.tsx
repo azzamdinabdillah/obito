@@ -2,110 +2,203 @@ import Navbar from "../components/Navbar";
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="">
       <Navbar />
-      <div className="pt-20 px-4 lg:px-[75px]">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center py-16">
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Pricing Plans
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose the perfect plan for your learning journey
-            </p>
+      <section
+        id="pricing"
+        className="flex flex-col items-center gap-6 md:gap-8 lg:gap-10 pt-[7rem] md:pt-[8rem] lg:pt-[9rem] pb-20 px-4 md:px-6"
+      >
+        <div className="flex flex-col items-center gap-2 md:gap-3 max-w-[500px] w-full">
+          <p className="flex items-center gap-1 md:gap-2 w-fit rounded-full py-2 px-[14px] bg-obito-light-green">
+            <img
+              src="/src/assets/images/icons/crown-green.svg"
+              className="flex shrink-0 w-4 md:w-5"
+              alt="icon"
+            />
+            <span className="font-bold text-xs md:text-sm">
+              UNLOCK PRO JOURNEY
+            </span>
+          </p>
+          <h1 className="font-bold text-2xl md:text-[28px] leading-8 md:leading-[42px] text-center">
+            Pricing For Everyone
+          </h1>
+          <p className="text-sm md:text-base leading-6 md:leading-[28px] text-obito-text-secondary text-center">
+            Harga yang kami tetapkan tergolong murah namun mentor tetap
+            memberikan kualitas standard internasional
+          </p>
+        </div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:items-center md:max-w-[776px] lg:max-w-[982px] mx-auto">
+          <div className="price-card-reguler flex flex-col h-fit w-full rounded-[20px] p-4 md:p-5 border border-obito-grey gap-4 md:gap-5 bg-white">
+            <div className="flex items-center gap-3 md:gap-4">
+              <img
+                src="/src/assets/images/icons/award-black-fill.svg"
+                className="flex w-10 md:w-[60px] shrink-0"
+                alt="icon"
+              />
+              <h2 className="font-bold text-lg md:text-[22px] leading-7 md:leading-[33px]">
+                Beasiswa
+              </h2>
+            </div>
+            <div className="price">
+              <p className="font-bold text-2xl md:text-[28px] lg:text-[32px] leading-8 md:leading-[42px] lg:leading-[48px]">
+                Rp 0
+              </p>
+              <p className="mt-[6px] text-sm md:text-base text-obito-text-secondary">
+                3 months duration
+              </p>
+            </div>
+            <hr className="border-obito-grey" />
+            <div className="flex flex-col gap-3 md:gap-4">
+              <p className="flex items-center gap-2 md:gap-3">
+                <img
+                  src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                  className="flex shrink-0 w-4 md:w-5"
+                  alt="icon"
+                />
+                <span className="font-semibold text-sm md:text-base">
+                  Access 100+ Online Courses
+                </span>
+              </p>
+              <p className="flex items-center gap-2 md:gap-3">
+                <img
+                  src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                  className="flex shrink-0 w-4 md:w-5"
+                  alt="icon"
+                />
+                <span className="font-semibold text-sm md:text-base">
+                  Get Premium Certifications
+                </span>
+              </p>
+            </div>
+            <hr className="border-obito-grey" />
+            <a className="w-full h-10 md:h-11 rounded-full pt-[10px] px-5 bg-obito-grey text-center">
+              <span className="font-semibold text-sm md:text-base text-obito-text-grey">
+                Sold Out
+              </span>
+            </a>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Basic Plan */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">
-                $9<span className="text-lg text-gray-600">/month</span>
+          <div className="price-card-popular flex flex-col h-fit w-full rounded-[20px] border-2 border-obito-green gap-4 md:gap-5 bg-white overflow-hidden md:order-2 lg:order-none">
+            <p className="popular-badge text-center font-semibold text-white py-[6px] bg-obito-green text-sm md:text-base">
+              Most Popular Package
+            </p>
+            <div className="flex flex-col gap-4 md:gap-5 p-4 md:p-5 pt-0">
+              <div className="flex items-center gap-3 md:gap-4">
+                <img
+                  src="/src/assets/images/icons/cup-green-fill.svg"
+                  className="flex w-10 md:w-[60px] shrink-0"
+                  alt="icon"
+                />
+                <h2 className="font-bold text-lg md:text-[22px] leading-7 md:leading-[33px]">
+                  Pro Talent
+                </h2>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Access to basic courses
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Community support
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Progress tracking
-                </li>
-              </ul>
-              <button className="w-full bg-obito-green text-white py-3 px-6 rounded-full font-semibold hover:drop-shadow-effect transition-all duration-300">
-                Get Started
-              </button>
+              <div className="price">
+                <p className="font-bold text-2xl md:text-[28px] lg:text-[32px] leading-8 md:leading-[42px] lg:leading-[48px]">
+                  Rp 1.899.000
+                </p>
+                <p className="mt-[6px] text-sm md:text-base text-obito-text-secondary">
+                  3 months duration
+                </p>
+              </div>
+              <hr className="border-obito-grey" />
+              <div className="flex flex-col gap-3 md:gap-4">
+                <p className="flex items-center gap-2 md:gap-3">
+                  <img
+                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    className="flex shrink-0 w-4 md:w-5"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-sm md:text-base">
+                    Access 1500+ Online Courses
+                  </span>
+                </p>
+                <p className="flex items-center gap-2 md:gap-3">
+                  <img
+                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    className="flex shrink-0 w-4 md:w-5"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-sm md:text-base">
+                    Get Premium Certifications
+                  </span>
+                </p>
+                <p className="flex items-center gap-2 md:gap-3">
+                  <img
+                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    className="flex shrink-0 w-4 md:w-5"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-sm md:text-base">
+                    High Quality Work Portfolio
+                  </span>
+                </p>
+                <p className="flex items-center gap-2 md:gap-3">
+                  <img
+                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    className="flex shrink-0 w-4 md:w-5"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-sm md:text-base">
+                    Career Consultation 2025
+                  </span>
+                </p>
+                <p className="flex items-center gap-2 md:gap-3">
+                  <img
+                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    className="flex shrink-0 w-4 md:w-5"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-sm md:text-base">
+                    Support learning 24/7
+                  </span>
+                </p>
+              </div>
+              <hr className="border-obito-grey" />
+              <a
+                href="checkout.html"
+                className="w-full h-10 md:h-11 rounded-full py-[10px] px-5 bg-obito-green text-center hover:drop-shadow-effect transition-all duration-300"
+              >
+                <span className="font-semibold text-sm md:text-base text-white">
+                  Get Pro
+                </span>
+              </a>
             </div>
-
-            {/* Pro Plan */}
-            <div className="bg-obito-green text-white border border-obito-green rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-obito-green px-4 py-2 rounded-full text-sm font-semibold">
-                Most Popular
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Pro</h3>
-              <div className="text-4xl font-bold mb-6">
-                $19<span className="text-lg opacity-80">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <span className="text-white mr-3">✓</span>
-                  Everything in Basic
-                </li>
-                <li className="flex items-center">
-                  <span className="text-white mr-3">✓</span>
-                  Premium courses
-                </li>
-                <li className="flex items-center">
-                  <span className="text-white mr-3">✓</span>
-                  Priority support
-                </li>
-                <li className="flex items-center">
-                  <span className="text-white mr-3">✓</span>
-                  Certificates
-                </li>
-              </ul>
-              <button className="w-full bg-white text-obito-green py-3 px-6 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                Get Started
-              </button>
+          </div>
+          <div className="price-card-reguler flex flex-col h-fit w-full rounded-[20px] p-4 md:p-5 border border-obito-grey gap-4 md:gap-5 bg-white">
+            <div className="flex items-center gap-3 md:gap-4">
+              <img
+                src="/src/assets/images/icons/buildings-green-fill.svg"
+                className="flex w-10 md:w-[60px] shrink-0"
+                alt="icon"
+              />
+              <h2 className="font-bold text-lg md:text-[22px] leading-7 md:leading-[33px]">
+                Business
+              </h2>
             </div>
-
-            {/* Enterprise Plan */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Enterprise
-              </h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">
-                $49<span className="text-lg text-gray-600">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Everything in Pro
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Custom learning paths
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Team management
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Advanced analytics
-                </li>
-              </ul>
-              <button className="w-full bg-obito-green text-white py-3 px-6 rounded-full font-semibold hover:drop-shadow-effect transition-all duration-300">
-                Get Started
-              </button>
+            <hr className="border-obito-grey" />
+            <div className="price">
+              <p className="font-bold text-base md:text-lg leading-6 md:leading-[27px]">
+                Customizing easily without paying too much money
+              </p>
             </div>
+            <div className="flex flex-col gap-3 md:gap-4">
+              <p className="text-sm md:text-base leading-6 md:leading-7 text-obito-text-secondary">
+                Kami bantu siapkan materi ajar sesuai kebutuhan pertumbuhan
+                perusahaan anda saat ini.
+              </p>
+            </div>
+            <hr className="border-obito-grey" />
+            <a
+              href="#"
+              className="w-full h-10 md:h-11 rounded-full pt-[10px] px-5 bg-white text-center border border-obito-grey hover:border-obito-green transition-all duration-300"
+            >
+              <span className="font-semibold text-sm md:text-base">
+                Contact Sales
+              </span>
+            </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
