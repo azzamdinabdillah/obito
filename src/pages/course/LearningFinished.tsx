@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 
 export default function LearningFinished() {
   return (
-    <div className="relative flex justify-center">
+    <div className="relative flex justify-center pb-10">
       <div id="backgroundImage" className="absolute top-0 left-0 right-0">
         <img
           src="/src/assets/images/backgrounds/learning-finished.png"
@@ -11,13 +11,13 @@ export default function LearningFinished() {
           className="h-[400px] sm:h-[600px] md:h-[777px] object-cover object-bottom w-full"
         />
       </div>
-      <main className="relative mt-[100px] sm:mt-[150px] md:mt-[178px] flex flex-col gap-[20px] sm:gap-[25px] md:gap-[30px] p-[20px] sm:p-[25px] md:p-[30px] w-[90%] sm:w-[480px] md:w-[560px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] border bg-white border-obito-grey">
+      <main className="relative mt-[100px] sm:mt-[150px] md:mt-[178px] flex flex-col gap-[20px] sm:gap-[25px] md:gap-[30px] p-[20px] sm:p-[25px] md:p-[30px] w-[90%] sm:w-[500px] md:w-[560px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] border bg-white border-obito-grey">
         <img
           src="/src/assets/images/icons/cup-green-fill.svg"
           alt="icon"
           className="size-[50px] sm:size-[55px] md:size-[60px] shrink-0 mx-auto"
         />
-        <div className="mx-auto flex w-full sm:w-[450px] md:w-[500px] flex-col gap-[8px] sm:gap-[10px] items-center">
+        <div className="mx-auto flex w-full flex-col gap-[8px] sm:gap-[10px] items-center">
           <h1 className="text-center font-bold text-[22px] sm:text-[25px] md:text-[28px] leading-[32px] sm:leading-[36px] md:leading-[42px]">
             What a Day! Now
             <br />
@@ -40,7 +40,7 @@ export default function LearningFinished() {
             />
           </div>
           <div className="flex flex-col gap-[8px] sm:gap-[10px] w-full sm:w-auto">
-            <h2 className="font-bold text-[16px] sm:text-[18px] md:text-base">
+            <h2 className="font-bold text-[16px] md:text-base">
               Data Science Pipelines Building Marketing Decision
             </h2>
             <div className="flex items-center gap-[6px]">
@@ -74,7 +74,7 @@ export default function LearningFinished() {
               Get My Certificate
             </Button>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/course-catalog"}>
             <Button
               className="w-full flex-center"
               variant="green"
