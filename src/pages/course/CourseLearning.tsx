@@ -14,7 +14,7 @@ type FlattenedLesson = {
   sectionTitle: string;
 };
 
-function CourseDetails() {
+function CourseLearning() {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [openAccordions, setOpenAccordions] = useState<string[]>([]);
@@ -260,4 +260,4 @@ function CourseDetails() {
   );
 }
 
-export default CourseDetails;
+export default CourseLearning;
