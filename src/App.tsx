@@ -10,6 +10,7 @@ import CourseDetails from "./pages/course/CourseDetails";
 import SignUp from "./pages/auth/SignUp";
 import SignIn from "./pages/auth/SignIn";
 import Checkout from "./pages/Checkout";
+import SuccessCheckout from "./pages/SuccessCheckout";
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
       <Route path="/" element={<Homepage />} />
       <Route path="/pricing">
         <Route index element={<Pricing />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="checkout">
+          <Route index element={<Checkout />} />
+          <Route path="success" element={<SuccessCheckout />} />
+        </Route>
       </Route>
       <Route path="/features" element={<Features />} />
       <Route path="/testimonials" element={<Testimonials />} />

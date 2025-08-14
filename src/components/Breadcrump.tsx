@@ -30,10 +30,10 @@ export default function Breadcrump() {
       id="path"
       className="flex w-full bg-white border-b border-obito-grey py-4 md:py-[14px]"
     >
-      <div className="flex items-center w-full max-w-[1280px] px-4 md:px-[75px] mx-auto gap-3 md:gap-5 flex-wrap">
+      <div className="flex items-center w-full max-w-[1280px] px-4 md:px-[75px] mx-auto gap-3 md:gap-5 overflow-x-auto no-scrollbar">
         <button
           onClick={() => window.history.back()}
-          className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-obito-green hover:bg-obito-green/80 transition-colors cursor-pointer"
+          className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-obito-green hover:bg-obito-green/80 transition-colors cursor-pointer shrink-0"
           aria-label="Kembali"
           type="button"
         >

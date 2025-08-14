@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 export default function Checkout() {
   return (
-    <section className="flex flex-1 justify-center py-3 md:py-4 lg:py-5 items-center pb-10">
+    <section className="flex flex-1 justify-center py-3 md:py-4 lg:py-5 items-center !pb-10 md:!pb-20">
       <NavbarDashboard breadcrump />
       <div className="mt-[10rem] md:mt-[11rem] lg:mt-[11rem] mx-4 md:mx-6 lg:mx-8 flex w-full max-w-[1000px] !h-fit rounded-[12px] md:rounded-[16px] lg:rounded-[20px] border border-obito-grey gap-[20px] md:gap-[30px] lg:gap-[40px] bg-white items-center p-3 md:p-4 lg:p-5 flex-col lg:flex-row">
         <form
@@ -140,7 +140,7 @@ export default function Checkout() {
                 Cancel
               </Button>
             </Link>
-            <Link to="/checkout">
+            <Link to="/pricing/checkout/success">
               <Button className="w-full flex-center">Pay Now</Button>
             </Link>
           </div>
