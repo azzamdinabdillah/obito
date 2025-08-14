@@ -199,6 +199,606 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      <section id="testimonials" className="mt-[50px] w-full pb-[66px]">
+        <div
+          id="testimonial-slide"
+          className="w-full flex flex-nowrap overflow-x-hidden"
+        >
+          <div className="slide-container flex gap-5 pl-5 flex-nowrap animate-[slide_50s_linear_infinite]">
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/anggaphoto.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/sami.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/3rdPerson.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/anggaphoto.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/sami.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/3rdPerson.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="slide-container flex gap-5 pl-5 flex-nowrap animate-[slide_50s_linear_infinite]">
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/anggaphoto.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/sami.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/3rdPerson.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/anggaphoto.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/sami.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card flex flex-col w-[359px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white">
+              <div className="flex">
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+                <img
+                  src="assets/images/icons/Star 1.svg"
+                  className="flex shrink-0 w-5"
+                  alt="star"
+                />
+              </div>
+              <p className="leading-7">
+                Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan
+                perusahaan saat ini proses adaptasi jadi lebih cepat dan
+                produktif.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex w-[50px] h-[50px] shrink-0 rounded-full overflow-hidden bg-obito-grey">
+                  <img
+                    src="assets/images/photos/3rdPerson.png"
+                    className="w-full h-full object-cover"
+                    alt="photo profile"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Angga Risky</p>
+                  <p className="text-sm text-obito-text-secondary">
+                    Full Stack Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
