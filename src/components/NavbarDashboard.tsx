@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Breadcrump from "./Breadcrump";
 
 // TypeScript interfaces
 interface MenuItem {
@@ -86,7 +87,11 @@ const userProfile: UserProfile = {
   avatar: "/src/assets/images/photos/sami.png",
 };
 
-export default function NavbarDashboard() {
+export default function NavbarDashboard({
+  breadcrump,
+}: {
+  breadcrump?: boolean;
+}) {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -366,34 +371,39 @@ export default function NavbarDashboard() {
         </div>
       </div>
 
-      {/* Nav Bottom */}
-      <nav className="bg-white border-b border-obito-grey">
-        <div
-          id="bottom-nav"
-          className="container-max-w-1280 container-padding-x flex w-full  py-[14px]"
-        >
-          <ul className="flex w-full gap-2 md:gap-3 overflow-x-auto no-scrollbar">
-            {bottomNavItems.map((item) => (
-              <li
-                key={item.id}
-                className={`group ${item.isActive ? "active" : ""}`}
-              >
-                <Link
-                  to={item.href}
-                  className="flex items-center gap-2 rounded-full border border-obito-grey py-1.5 px-3 md:px-[14px] hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-light-green group-[.active]:border-obito-light-green"
+      {breadcrump ? (
+        <Breadcrump />
+      ) : (
+        <nav className="bg-white border-b border-obito-grey">
+          <div
+            id="bottom-nav"
+            className="container-max-w-1280 container-padding-x flex w-full  py-[14px]"
+          >
+            <ul className="flex w-full gap-2 md:gap-3 overflow-x-auto no-scrollbar">
+              {bottomNavItems.map((item) => (
+                <li
+                  key={item.id}
+                  className={`group ${item.isActive ? "active" : ""}`}
                 >
-                  <img
-                    src={item.icon}
-                    className="flex shrink-0 w-4 md:w-[20px]"
-                    alt="icon"
-                  />
-                  <span className="text-sm md:text-base text-obito-black">{item.label}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+                  <Link
+                    to={item.href}
+                    className="flex items-center gap-2 rounded-full border border-obito-grey py-1.5 px-3 md:px-[14px] hover:border-obito-green bg-white transition-all duration-300 group-[.active]:bg-obito-light-green group-[.active]:border-obito-light-green"
+                  >
+                    <img
+                      src={item.icon}
+                      className="flex shrink-0 w-4 md:w-[20px]"
+                      alt="icon"
+                    />
+                    <span className="text-sm md:text-base text-obito-black">
+                      {item.label}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      )}
     </div>
   );
 }

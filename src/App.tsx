@@ -9,12 +9,16 @@ import LearningFinished from "./pages/course/LearningFinished";
 import CourseDetails from "./pages/course/CourseDetails";
 import SignUp from "./pages/auth/SignUp";
 import SignIn from "./pages/auth/SignIn";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/pricing">
+        <Route index element={<Pricing />} />
+        <Route path="checkout" element={<Checkout />} />
+      </Route>
       <Route path="/features" element={<Features />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/course-catalog" element={<CourseCatalog />} />

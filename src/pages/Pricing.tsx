@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
 import { testimonials } from "../data/testimonials";
+import Button from "../components/Button";
 
 export default function Pricing() {
   return (
@@ -73,11 +75,11 @@ export default function Pricing() {
               </p>
             </div>
             <hr className="border-obito-grey" />
-            <a className="w-full h-10 md:h-11 rounded-full pt-[10px] px-5 bg-obito-grey text-center">
-              <span className="font-semibold text-sm md:text-base text-obito-text-grey">
+            <Link to="/pricing/checkout">
+              <Button variant="disabled" className="flex-center w-full">
                 Sold Out
-              </span>
-            </a>
+              </Button>
+            </Link>
           </div>
           <div className="price-card-popular flex flex-col h-fit w-full rounded-[20px] border-2 border-obito-green gap-4 md:gap-5 bg-white overflow-hidden md:order-2 lg:order-none">
             <p className="popular-badge text-center font-semibold text-white py-[6px] bg-obito-green text-sm md:text-base">
@@ -156,14 +158,11 @@ export default function Pricing() {
                 </p>
               </div>
               <hr className="border-obito-grey" />
-              <a
-                href="checkout.html"
-                className="w-full h-10 md:h-11 rounded-full py-[10px] px-5 bg-obito-green text-center hover:drop-shadow-effect transition-all duration-300"
-              >
-                <span className="font-semibold text-sm md:text-base text-white">
+              <Link to="/pricing/checkout">
+                <Button variant="green" className="flex-center w-full">
                   Get Pro
-                </span>
-              </a>
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="price-card-reguler flex flex-col h-fit w-full rounded-[20px] p-4 md:p-5 border border-obito-grey gap-4 md:gap-5 bg-white">
@@ -190,14 +189,11 @@ export default function Pricing() {
               </p>
             </div>
             <hr className="border-obito-grey" />
-            <a
-              href="#"
-              className="w-full h-10 md:h-11 rounded-full pt-[10px] px-5 bg-white text-center border border-obito-grey hover:border-obito-green transition-all duration-300"
-            >
-              <span className="font-semibold text-sm md:text-base">
+            <Link to="/pricing/checkout">
+              <Button variant="outline" className="flex-center w-full">
                 Contact Sales
-              </span>
-            </a>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
