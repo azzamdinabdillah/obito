@@ -77,9 +77,9 @@ export default function Navbar(): JSX.Element {
             </a>
             <div className="h-[50px] flex shrink-0 bg-obito-grey w-px" />
             <div className="hidden lg:flex items-center gap-3">
-              <Link to="/signup">
+              <Link to="/signin">
                 <Button variant="outline" className="lg:!py-3">
-                  Sign Up
+                  Sign In
                 </Button>
               </Link>
               <Link to="/signin">
@@ -221,12 +221,12 @@ export default function Navbar(): JSX.Element {
 
           {/* Drawer Footer */}
           <div className="p-6 border-t border-obito-grey flex gap-4 flex-col">
-            <Link to="/signup">
+            <Link to="/signin">
               <Button
                 variant="outline"
                 className="py-3 px-5 !text-base w-full flex-center"
               >
-                Sign Up
+                Sign In
               </Button>
             </Link>
 

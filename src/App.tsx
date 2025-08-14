@@ -8,6 +8,7 @@ import CourseLearning from "./pages/course/CourseLearning";
 import LearningFinished from "./pages/course/LearningFinished";
 import CourseDetails from "./pages/course/CourseDetails";
 import SignUp from "./pages/auth/SignUp";
+import SignIn from "./pages/auth/SignIn";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/course-details" element={<CourseDetails />} />
       <Route path="/learning-finished" element={<LearningFinished />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
       {/* Add more routes here as needed */}
     </Routes>
   );

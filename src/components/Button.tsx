@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   const baseClasses =
-    "rounded-full border transition-all duration-300 px-3 py-2 md:px-4 md:py-2 lg:px-5 lg:py-[10px] text-sm md:text-base font-semibold flex items-center gap-2 md:gap-[10px]"
+    "rounded-full border transition-all duration-300 px-3 py-2 md:px-4 md:py-2 lg:px-5 lg:py-[14px] text-sm md:text-base font-semibold flex items-center gap-2 md:gap-[10px]"
 
   const variantClasses = {
     outline:
