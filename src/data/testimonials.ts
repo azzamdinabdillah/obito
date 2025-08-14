@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Asik banget belajar di sini dapat contoh kasus sesuai kebutuhan perusahaan saat ini proses adaptasi jadi lebih cepat dan produktif.",
-    userPhoto: "/src/assets/images/photos/sami.png",
+    userPhoto: "https://randomuser.me/api/portraits/men/32.jpg",
     userName: "Angga Risky",
     userJob: "Full Stack Developer",
   },
@@ -22,7 +22,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Materi yang disajikan sangat relevan dengan industri saat ini. Mentor sangat membantu dan responsive dalam menjawab pertanyaan.",
-    userPhoto: "/src/assets/images/photos/4thPerson.png",
+    userPhoto: "https://randomuser.me/api/portraits/women/44.jpg",
     userName: "Sarah Amanda",
     userJob: "Frontend Developer",
   },
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Belajar di sini sangat efektif, dari basic sampai advanced. Project-based learning membuat skill langsung terasah.",
-    userPhoto: "/src/assets/images/photos/anggaphoto.png",
+    userPhoto: "https://randomuser.me/api/portraits/men/65.jpg",
     userName: "Budi Santoso",
     userJob: "Backend Developer",
   },
@@ -40,7 +40,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Platform yang sangat user-friendly dan materi yang up-to-date. Sangat recommended untuk yang ingin switch career ke tech.",
-    userPhoto: "/src/assets/images/photos/sami.png",
+    userPhoto: "https://randomuser.me/api/portraits/women/68.jpg",
     userName: "Diana Putri",
     userJob: "UI/UX Designer",
   },
@@ -49,7 +49,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Komunitas yang sangat supportive dan mentor yang berpengalaman. Belajar jadi lebih menyenangkan dan tidak membosankan.",
-    userPhoto: "/src/assets/images/photos/5thPerson.png",
+    userPhoto: "https://randomuser.me/api/portraits/men/77.jpg",
     userName: "Rizki Pratama",
     userJob: "Mobile Developer",
   },
@@ -58,7 +58,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Investasi terbaik untuk karir saya. Setelah ikut course ini, skill meningkat drastis dan mudah dapat job baru.",
-    userPhoto: "/src/assets/images/photos/anggaphoto.png",
+    userPhoto: "https://randomuser.me/api/portraits/women/12.jpg",
     userName: "Maya Sari",
     userJob: "DevOps Engineer",
   },
@@ -67,7 +67,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     testimonial:
       "Sistem pembelajaran yang terstruktur dan fleksibel. Bisa belajar sesuai pace sendiri tanpa tekanan.",
-    userPhoto: "/src/assets/images/photos/3rdPerson.png",
+    userPhoto: "https://randomuser.me/api/portraits/men/23.jpg",
     userName: "Ahmad Fauzi",
     userJob: "Data Scientist",
   },
