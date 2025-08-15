@@ -158,16 +158,18 @@ export default function NavbarDashboard({
                   className="appearance-none outline-none ring-1 ring-obito-grey rounded-full w-full min-w-0 md:w-[300px] lg:w-[400px] py-2.5 px-3 md:py-[14px] md:px-5 bg-white font-bold placeholder:font-normal placeholder:text-obito-text-secondary group-focus-within:ring-obito-green transition-all duration-300 pr-12 xs:pr-10 md:pr-[50px] text-sm md:text-base"
                   placeholder="Search course by name"
                 />
-                <button
-                  type="submit"
-                  className="absolute h-7 w-7 md:h-[52px] md:w-[52px] top-1/2 -translate-y-1/2 right-2 md:-right-1"
-                >
-                  <img
-                    src="/src/assets/images/icons/search-normal-green-fill.svg"
-                    className="flex shrink-0"
-                    alt=""
-                  />
-                </button>
+                <Link to="/course/search">
+                  <button
+                    type="submit"
+                    className="absolute h-7 w-7 md:h-[52px] md:w-[52px] top-1/2 -translate-y-1/2 right-2 md:-right-1"
+                  >
+                    <img
+                      src="/src/assets/images/icons/search-normal-green-fill.svg"
+                      className="flex shrink-0"
+                      alt=""
+                    />
+                  </button>
+                </Link>
               </label>
             </form>
 

@@ -11,6 +11,7 @@ import SignUp from "./pages/auth/SignUp";
 import SignIn from "./pages/auth/SignIn";
 import Checkout from "./pages/Checkout";
 import SuccessCheckout from "./pages/SuccessCheckout";
+import SearchCourse from "./pages/course/SearchCourse";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="catalog" element={<CourseCatalog />} />
         <Route path="learning" element={<CourseLearning />} />
         <Route path="details" element={<CourseDetails />} />
+        <Route path="search" element={<SearchCourse />} />
       </Route>
       <Route path="/learning-finished" element={<LearningFinished />} />
       <Route path="/signup" element={<SignUp />} />
