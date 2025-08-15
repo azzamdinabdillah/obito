@@ -34,7 +34,7 @@ const dropdownMenuItems: MenuItem[] = [
   {
     id: "subscriptions",
     label: "Subscriptions",
-    href: "my-subscriptions.html",
+    href: "/subscription",
   },
   {
     id: "logout",
@@ -262,9 +262,9 @@ export default function NavbarDashboard({
                         key={item.id}
                         className="hover:text-obito-green transition-all duration-300"
                       >
-                        <a href={item.href} onClick={closeDropdown}>
+                        <Link to={item.href} onClick={closeDropdown}>
                           {item.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

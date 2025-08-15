@@ -12,6 +12,7 @@ import SignIn from "./pages/auth/SignIn";
 import Checkout from "./pages/Checkout";
 import SuccessCheckout from "./pages/SuccessCheckout";
 import SearchCourse from "./pages/course/SearchCourse";
+import Subscription from "./pages/subscription/Subscription";
 
 function App() {
   return (
@@ -35,7 +36,9 @@ function App() {
       <Route path="/learning-finished" element={<LearningFinished />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
-      {/* Add more routes here as needed */}
+      <Route path="/subscription">
+        <Route index element={<Subscription />} />
+      </Route>
     </Routes>
   );
 }
