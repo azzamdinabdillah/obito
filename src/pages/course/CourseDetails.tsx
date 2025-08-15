@@ -80,7 +80,7 @@ function CourseDetails() {
 
   return (
     <div className="bg-[#F8FAF9] pt-[10rem] md:pt-[11rem] lg:pt-[12rem] px-4 md:px-6 lg:px-8 pb-10">
-      <NavbarDashboard />
+      <NavbarDashboard breadcrump />
       <div className="flex flex-col gap-4 md:gap-6 lg:gap-[30px]">
         <header className="flex flex-col md:flex-row text-obito-black items-start md:items-center w-full max-w-[1000px] rounded-[20px] border border-obito-grey p-4 md:p-5 gap-4 md:gap-6 lg:gap-[30px] bg-white mx-auto">
           <div

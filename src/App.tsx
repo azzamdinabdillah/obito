@@ -25,9 +25,11 @@ function App() {
       </Route>
       <Route path="/features" element={<Features />} />
       <Route path="/testimonials" element={<Testimonials />} />
-      <Route path="/course-catalog" element={<CourseCatalog />} />
-      <Route path="/course-learning" element={<CourseLearning />} />
-      <Route path="/course-details" element={<CourseDetails />} />
+      <Route path="/course">
+        <Route path="catalog" element={<CourseCatalog />} />
+        <Route path="learning" element={<CourseLearning />} />
+        <Route path="details" element={<CourseDetails />} />
+      </Route>
       <Route path="/learning-finished" element={<LearningFinished />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />

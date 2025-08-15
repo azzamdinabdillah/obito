@@ -82,7 +82,7 @@ export default function Navbar(): JSX.Element {
                   Sign In
                 </Button>
               </Link>
-              <Link to="/signin">
+              <Link to="/course/catalog">
                 <Button variant="green" className="lg:!py-3">
                   My Account
                 </Button>
@@ -230,7 +230,7 @@ export default function Navbar(): JSX.Element {
               </Button>
             </Link>
 
-            <Link to="/signin">
+            <Link to="/course/catalog">
               <Button
                 variant="green"
                 className="py-3 px-5 !text-base w-full flex-center"

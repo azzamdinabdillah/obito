@@ -32,7 +32,7 @@ export default function index() {
                   </p>
                 </div>
                 <div className="flex items-stretch sm:items-center gap-2 sm:gap-[18px] w-full">
-                  <Link to="/course-catalog" className="">
+                  <Link to="/course/catalog" className="">
                     <Button
                       variant="green"
                       className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"
@@ -40,7 +40,7 @@ export default function index() {
                       Get Started
                     </Button>
                   </Link>
-                  <Link to="/course-catalog" className="">
+                  <Link to="/course/catalog" className="">
                     <Button
                       variant="outline"
                       className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"

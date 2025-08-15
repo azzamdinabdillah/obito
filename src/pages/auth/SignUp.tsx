@@ -60,12 +60,12 @@ export default function SignUp() {
   };
 
   return (
-    <section className="relative lg:flex flex-1 w-full h-full min-h-dvh px-4 overflow-x-hidden pb-20">
+    <section className="relative lg:flex flex-1 w-full h-full min-h-dvh px-4 overflow-x-hidden">
       <Navbar />
-      <div className="flex flex-1 w-full items-center justify-center pt-[7rem] md:pt-[11rem] lg:pt-[12rem]">
+      <div className="flex flex-1 w-full items-center justify-center pt-[7rem] md:pt-[11rem] lg:pt-[8rem]">
         <form
           onSubmit={handleFormSubmit}
-          className="flex flex-col h-fit w-full max-w-[510px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white"
+          className="flex flex-col h-fit w-full max-w-[510px] shrink-0 rounded-[20px] border border-obito-grey p-5 gap-4 bg-white mb-20"
         >
           <h1 className="font-bold text-[22px] leading-[33px]">
             Upgrade Your Skills
