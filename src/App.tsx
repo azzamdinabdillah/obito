@@ -13,6 +13,7 @@ import Checkout from "./pages/Checkout";
 import SuccessCheckout from "./pages/SuccessCheckout";
 import SearchCourse from "./pages/course/SearchCourse";
 import Subscription from "./pages/subscription/Subscription";
+import SubscriptionDetails from "./pages/subscription/SubscriptionDetails";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/subscription">
         <Route index element={<Subscription />} />
+        <Route path="details" element={<SubscriptionDetails />} />
       </Route>
     </Routes>
   );

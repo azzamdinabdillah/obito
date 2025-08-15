@@ -24,7 +24,7 @@ const subscriptionData: SubscriptionData[] = [
     price: "Rp 1.890.000",
     startedAt: "19 December 2024",
     status: "ACTIVE",
-    detailsUrl: "subscription-details.html",
+    detailsUrl: "/subscription/details",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const subscriptionData: SubscriptionData[] = [
     price: "Rp 3.250.000",
     startedAt: "15 November 2024",
     status: "ACTIVE",
-    detailsUrl: "subscription-details.html",
+    detailsUrl: "/subscription/details",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const subscriptionData: SubscriptionData[] = [
     price: "Rp 750.000",
     startedAt: "10 October 2024",
     status: "EXPIRED",
-    detailsUrl: "subscription-details.html",
+    detailsUrl: "/subscription/details",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const subscriptionData: SubscriptionData[] = [
     price: "Rp 5.500.000",
     startedAt: "1 January 2025",
     status: "PENDING",
-    detailsUrl: "subscription-details.html",
+    detailsUrl: "/subscription/details",
   },
 ];
 

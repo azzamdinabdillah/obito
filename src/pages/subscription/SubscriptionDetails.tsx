@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import NavbarDashboard from "../components/NavbarDashboard";
-import Button from "../components/Button";
+import Button from "../../components/Button";
+import NavbarDashboard from "../../components/NavbarDashboard";
 
-export default function Checkout() {
+export default function SubscriptionDetails() {
   return (
     <section className="flex flex-1 justify-center py-3 md:py-4 lg:py-5 items-center !pb-10 md:!pb-20">
       <NavbarDashboard breadcrump />
@@ -12,37 +12,34 @@ export default function Checkout() {
           className="w-full flex flex-col gap-4 md:gap-5"
         >
           <h1 className="font-bold text-[20px] md:text-[22px] leading-[27px] md:leading-[30px] lg:leading-[33px]">
-            Checkout Pro
+            Details Subscription
           </h1>
-          <section id="give-access-to" className="flex flex-col gap-1 md:gap-2">
-            <h2 className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
-              Give Access to
-            </h2>
-            <div className="flex items-center justify-between rounded-[12px] md:rounded-[16px] lg:rounded-[20px] border border-obito-grey p-[10px] md:p-[12px] lg:p-[14px]">
-              <div className="profile flex items-center gap-[10px] md:gap-[12px] lg:gap-[14px]">
-                <div className="flex justify-center items-center overflow-hidden size-[40px] md:size-[45px] lg:size-[50px] rounded-full">
-                  <img
-                    src="/src/assets/images/photos/sami.png"
-                    alt="image"
-                    className="size-full object-cover"
-                  />
-                </div>
-                <div className="desc flex flex-col gap-[2px] md:gap-[3px]">
-                  <h3 className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
-                    Tamara Utami
+          <section id="give-access-to" className="flex flex-col gap-2">
+            <div className="flex flex-wrap gap-3 items-center justify-between rounded-[20px] border border-obito-grey p-[14px]">
+              <div className="profile flex items-center gap-[14px]">
+                <img
+                  src="/src/assets/images/icons/security-user-green-fill.svg"
+                  alt="icon"
+                  className="size-[40px] md:size-[45px] lg:size-[50px]"
+                />
+                <div className="desc flex flex-col gap-[3px]">
+                  <h3 className="text-xs md:text-sm leading-[18px] md:leading-[21px] text-obito-text-secondary">
+                    Booking TRX ID
                   </h3>
-                  <p className="text-xs md:text-sm leading-[18px] md:leading-[21px] text-obito-text-secondary">
-                    Programmer UI
-                  </p>
+                  <p className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">OBITOBWA10930949</p>
                 </div>
               </div>
-              <a href="#">
-                <p className="text-xs md:text-sm leading-[18px] md:leading-[21px] hover:underline text-obito-green">
-                  Change Account
-                </p>
-              </a>
+              <div className="status flex items-center gap-[14px]">
+                <span className="font-bold text-xs text-obito-green badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-green">
+                  ACTIVE
+                </span>
+                <span className="font-bold text-xs text-obito-red badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-red">
+                  EXPIRED
+                </span>
+              </div>
             </div>
           </section>
+
           <section
             id="transaction-details"
             className="flex flex-col gap-[8px] md:gap-[10px] lg:gap-[12px]"
@@ -133,20 +130,35 @@ export default function Checkout() {
               </div>
             </div>
           </section>
-          <div className="grid grid-cols-2 gap-[10px] md:gap-[12px] lg:gap-[14px]">
-            <Link to="/pricing">
-              <Button variant="outline" className="w-full flex-center">
-                Cancel
-              </Button>
-            </Link>
-            <Link to="/pricing/checkout/success">
-              <Button className="w-full flex-center">Pay Now</Button>
-            </Link>
-          </div>
-          <hr className="border-obito-grey" />
-          <p className="text-xs md:text-sm leading-[18px] md:leading-[21px] text-center hover:underline text-obito-text-secondary">
-            Pahami Terms &amp; Conditions Platform Kami
-          </p>
+          <section id="give-access-to" className="flex flex-col gap-1 md:gap-2">
+            <h2 className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
+              Give Access to
+            </h2>
+            <div className="flex items-center justify-between rounded-[12px] md:rounded-[16px] lg:rounded-[20px] border border-obito-grey p-[10px] md:p-[12px] lg:p-[14px]">
+              <div className="profile flex items-center gap-[10px] md:gap-[12px] lg:gap-[14px]">
+                <div className="flex justify-center items-center overflow-hidden size-[40px] md:size-[45px] lg:size-[50px] rounded-full">
+                  <img
+                    src="/src/assets/images/photos/sami.png"
+                    alt="image"
+                    className="size-full object-cover"
+                  />
+                </div>
+                <div className="desc flex flex-col gap-[2px] md:gap-[3px]">
+                  <h3 className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
+                    Tamara Utami
+                  </h3>
+                  <p className="text-xs md:text-sm leading-[18px] md:leading-[21px] text-obito-text-secondary">
+                    Programmer UI
+                  </p>
+                </div>
+              </div>
+              <a href="#">
+                <p className="text-xs md:text-sm leading-[18px] md:leading-[21px] hover:underline text-obito-green">
+                  Change Account
+                </p>
+              </a>
+            </div>
+          </section>
         </form>
         <div
           id="benefits"
