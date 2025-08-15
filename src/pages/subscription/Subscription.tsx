@@ -60,20 +60,6 @@ const subscriptionData: SubscriptionData[] = [
 ];
 
 export default function Subscription() {
-  // Function to get status badge styling
-  const getStatusBadgeStyle = (status: string) => {
-    switch (status) {
-      case "ACTIVE":
-        return "font-bold text-xs text-obito-green badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-green";
-      case "EXPIRED":
-        return "font-bold text-xs text-red-600 badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-red-100";
-      case "PENDING":
-        return "font-bold text-xs text-yellow-600 badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-yellow-100";
-      default:
-        return "font-bold text-xs text-obito-green badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-green";
-    }
-  };
-
   return (
     <div>
       <NavbarDashboard />
