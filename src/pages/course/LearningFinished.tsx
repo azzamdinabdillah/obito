@@ -74,7 +74,7 @@ export default function LearningFinished() {
               Get My Certificate
             </Button>
           </Link>
-          <Link to={"/course-catalog"}>
+          <Link to={"/course/catalog"}>
             <Button
               className="w-full flex-center"
               variant="green"

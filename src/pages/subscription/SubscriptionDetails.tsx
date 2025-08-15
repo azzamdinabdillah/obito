@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import NavbarDashboard from "../../components/NavbarDashboard";
+import BadgeStatus from "../../components/BadgeStatus";
 
 export default function SubscriptionDetails() {
   return (
@@ -30,12 +31,8 @@ export default function SubscriptionDetails() {
                 </div>
               </div>
               <div className="status flex items-center gap-[14px]">
-                <span className="font-bold text-xs text-obito-green badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-green">
-                  ACTIVE
-                </span>
-                <span className="font-bold text-xs text-obito-red badge w-fit rounded-full py-[6px] px-[10px] gap-[6px] bg-obito-light-red">
-                  EXPIRED
-                </span>
+                <BadgeStatus status="ACTIVE" />
+                <BadgeStatus status="EXPIRED" />
               </div>
             </div>
           </section>

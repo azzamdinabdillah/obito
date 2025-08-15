@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import NavbarDashboard from "../../components/NavbarDashboard";
+import BadgeStatus from "../../components/BadgeStatus";
 
 // TypeScript interface for subscription data
 interface SubscriptionData {
@@ -123,9 +124,7 @@ export default function Subscription() {
                   </div>
 
                   <div className="lg:hidden">
-                    <span className={getStatusBadgeStyle(subscription.status)}>
-                      {subscription.status}
-                    </span>
+                    <BadgeStatus status={subscription.status} />
                   </div>
                 </div>
                 <div className="flex flex-row w-full justify-between lg:flex-col lg:w-[100px] shrink-0 gap-1 md:gap-2 lg:gap-1">
@@ -155,9 +154,7 @@ export default function Subscription() {
                   </p>
                 </div>
                 <div className="hidden lg:flex items-center justify-center w-[60px] md:w-[70px] lg:w-[75px] shrink-0">
-                  <span className={getStatusBadgeStyle(subscription.status)}>
-                    {subscription.status}
-                  </span>
+                  <BadgeStatus status={subscription.status} />
                 </div>
                 <Link to={subscription.detailsUrl}>
                   <Button

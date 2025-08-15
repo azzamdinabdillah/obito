@@ -182,12 +182,12 @@ function CourseDetails() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-4">
-              <Link to="/course-learning" className="w-full md:w-auto">
+              <Link to="/course/learning" className="w-full md:w-auto">
                 <Button className="w-full flex-center" variant="green">
                   Start Learning Now
                 </Button>
               </Link>
-              <Link to="/course-learning" className="w-full md:w-auto">
+              <Link to="/course/learning" className="w-full md:w-auto">
                 <Button className="w-full flex-center" variant="outline">
                   Add to Bookmark
                 </Button>

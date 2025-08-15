@@ -28,14 +28,9 @@ export default function Navbar(): JSX.Element {
       isActive: location.pathname === "/pricing",
     },
     {
-      href: "/features",
-      label: "Features",
-      isActive: location.pathname === "/features",
-    },
-    {
-      href: "/testimonials",
-      label: "Testimonials",
-      isActive: location.pathname === "/testimonials",
+      href: "/course/catalog",
+      label: "Courses",
+      isActive: location.pathname === "/course/catalog",
     },
   ];
 

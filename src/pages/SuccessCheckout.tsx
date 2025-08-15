@@ -70,12 +70,12 @@ export default function SuccessCheckout() {
             />
           </section>
           <div className="grid grid-cols-2 justify-center items-center gap-[10px] md:gap-[14px] mx-auto w-full md:max-w-[380px]">
-            <Link to="/my-subscriptions" className="w-full md:w-auto">
+            <Link to="/subscription" className="w-full md:w-auto">
               <Button variant="outline" className="w-full flex-center">
                 My Transactions
               </Button>
             </Link>
-            <Link to="/course-catalog" className="w-full md:w-auto">
+            <Link to="/course/learning" className="w-full md:w-auto">
               <Button className="w-full flex-center">Start Learning</Button>
             </Link>
           </div>

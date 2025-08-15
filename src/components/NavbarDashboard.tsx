@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Breadcrump from "./Breadcrump";
 
 // TypeScript interfaces
@@ -29,7 +29,7 @@ const dropdownMenuItems: MenuItem[] = [
   {
     id: "my-courses",
     label: "My Courses",
-    href: "#",
+    href: "/course/catalog",
   },
   {
     id: "subscriptions",
@@ -39,45 +39,7 @@ const dropdownMenuItems: MenuItem[] = [
   {
     id: "logout",
     label: "Logout",
-    href: "index.html",
-  },
-];
-
-const bottomNavItems: BottomNavItem[] = [
-  {
-    id: "overview",
-    label: "Overview",
-    href: "#",
-    icon: "/src/assets/images/icons/home-trend-up.svg",
-    isActive: false,
-  },
-  {
-    id: "courses",
-    label: "Courses",
-    href: "#",
-    icon: "/src/assets/images/icons/note-favorite.svg",
-    isActive: true,
-  },
-  {
-    id: "quizzes",
-    label: "Quizzess",
-    href: "#",
-    icon: "/src/assets/images/icons/message-programming.svg",
-    isActive: false,
-  },
-  {
-    id: "certificates",
-    label: "Certificates",
-    href: "#",
-    icon: "/src/assets/images/icons/cup.svg",
-    isActive: false,
-  },
-  {
-    id: "portfolios",
-    label: "Portfolios",
-    href: "#",
-    icon: "/src/assets/images/icons/ruler&pen.svg",
-    isActive: false,
+    href: "/signin",
   },
 ];
 
@@ -95,6 +57,25 @@ export default function NavbarDashboard({
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const bottomNavItems: BottomNavItem[] = [
+    {
+      id: "courses",
+      label: "Courses",
+      href: "/course/catalog",
+      icon: "/src/assets/images/icons/note-favorite.svg",
+      isActive: currentPath.startsWith("/course"),
+    },
+    {
+      id: "subscription",
+      label: "Subscription",
+      href: "/subscription",
+      icon: "/src/assets/images/icons/ruler&pen.svg",
+      isActive: currentPath.startsWith("/subscription"),
+    },
+  ];
 
   const toggleDrawer = (): void => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -197,7 +178,7 @@ export default function NavbarDashboard({
                   alt="icon"
                 />
               </a>
-              <a href="catalog-v2.html" className="flex shrink-0">
+              <a href="#" className="flex shrink-0">
                 <img
                   src="/src/assets/images/icons/category.svg"
                   className="flex shrink-0"

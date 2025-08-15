@@ -99,7 +99,7 @@ function CourseLearning() {
       <div className="w-full pb-[20px] h-[280px] px-5 pt-5 flex flex-col gap-5">
         <ul>
           <li>
-            <Link to="/course-catalog">
+            <Link to="/course/catalog">
               <div className="flex items-center gap-2 py-[10px] px-[14px] rounded-full border border-obito-grey bg-white hover:border-obito-green transition-all duration-300">
                 <img
                   src="/src/assets/images/icons/home-trend-up.svg"
@@ -248,9 +248,9 @@ function CourseLearning() {
                 <a href="#" className="">
                   <Button variant="outline">Ask Mentor</Button>
                 </a>
-                <a href="#" className="">
-                  <Button variant="green">Next Lesson</Button>
-                </a>
+                <Link to="/course/learning-finished" className="">
+                  <Button variant="green">Finish Learning</Button>
+                </Link>
               </div>
             </div>
           </div>
