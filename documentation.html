@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obito React - Complete Documentation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #2f6a62 0%, #0a0723 100%);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .nav {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: #2f6a62;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .nav a:hover {
+        background: #2f6a62;
+        color: white;
+      }
+
+      .section {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        color: #2f6a62;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #2f6a62;
+        padding-bottom: 10px;
+      }
+
+      .section h3 {
+        color: #0a0723;
+        font-size: 1.4rem;
+        margin: 25px 0 15px 0;
+      }
+
+      .section h4 {
+        color: #2f6a62;
+        font-size: 1.2rem;
+        margin: 20px 0 10px 0;
+      }
+
+      .code-block {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 15px 0;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+      }
+
+      .file-structure {
+        background: #f1f3f4;
+        border-left: 4px solid #2f6a62;
+        padding: 15px;
+        margin: 15px 0;
+        font-family: "Courier New", monospace;
+      }
+
+      .highlight {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 15px 0;
+      }
+
+      .warning {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 15px 0;
+      }
+
+      .success {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 15px 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .card {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .card h4 {
+        color: #2f6a62;
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+
+      th,
+      td {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background: #2f6a62;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #2f6a62;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .nav ul {
+          flex-direction: column;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>🚀 Obito React Project</h1>
+      <p>Complete Documentation & Setup Guide</p>
+    </div>
+
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#setup">Setup & Installation</a></li>
+          <li><a href="#structure">Project Structure</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#styling">Styling & CSS</a></li>
+          <li><a href="#routing">Routing</a></li>
+          <li><a href="#data">Data Management</a></li>
+          <li><a href="#deployment">Deployment</a></li>
+          <li><a href="#modification">Modification Guide</a></li>
+        </ul>
+      </nav>
+
+      <section id="overview" class="section">
+        <h2>📋 Project Overview</h2>
+        <p>
+          <strong>Obito React</strong> adalah platform pembelajaran online yang
+          dibangun dengan React, TypeScript, dan Vite. Project ini menawarkan
+          berbagai kursus dalam kategori Programming, Networking, Digital
+          Marketing, Product Design, dan Entrepreneurship.
+        </p>
+
+        <div class="highlight">
+          <h4>🎯 Fitur Utama:</h4>
+          <ul>
+            <li>Katalog kursus dengan 50+ kursus</li>
+            <li>Sistem autentikasi (Sign In/Sign Up)</li>
+            <li>Dashboard pembelajaran</li>
+            <li>Sistem subscription</li>
+            <li>Responsive design dengan Tailwind CSS</li>
+            <li>TypeScript untuk type safety</li>
+          </ul>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h4>🛠️ Tech Stack</h4>
+            <ul>
+              <li>React 19.1.0</li>
+              <li>TypeScript 5.8.3</li>
+              <li>Vite 7.0.4</li>
+              <li>Tailwind CSS 4.1.11</li>
+              <li>React Router DOM 7.7.1</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>📦 Dependencies</h4>
+            <ul>
+              <li>@radix-ui/react-accordion</li>
+              <li>react-tabs</li>
+              <li>highlight.js</li>
+              <li>ESLint</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup" class="section">
+        <h2>⚙️ Setup & Installation</h2>
+
+        <h3>Prerequisites</h3>
+        <ul>
+          <li>Node.js (versi 18 atau lebih baru)</li>
+          <li>npm atau yarn</li>
+          <li>Git</li>
+        </ul>
+
+        <h3>Installation Steps</h3>
+        <div class="code-block">
+          # Clone repository git clone [repository-url] cd obito-react # Install
+          dependencies npm install # Start development server npm run dev #
+          Build for production npm run build # Preview production build npm run
+          preview # Run linting npm run lint
+        </div>
+
+        <div class="success">
+          <strong>✅ Success!</strong> Project akan berjalan di
+          <code>http://localhost:5173</code>
+        </div>
+
+        <h3>Environment Setup</h3>
+        <p>
+          Project ini menggunakan Vite sebagai build tool dengan konfigurasi
+          berikut:
+        </p>
+        <div class="code-block">
+          // vite.config.ts import { defineConfig } from 'vite' import react
+          from '@vitejs/plugin-react' import tailwindcss from
+          '@tailwindcss/vite' export default defineConfig({ plugins: [react(),
+          tailwindcss()], })
+        </div>
+      </section>
+
+      <section id="structure" class="section">
+        <h2>📁 Project Structure</h2>
+
+        <div class="file-structure">
+          obito-react/ ├── public/ │ └── vite.svg ├── src/ │ ├── assets/ │ │ ├──
+          css/ │ │ │ ├── course-details.css │ │ │ └── syntax-highlighter.css │ │
+          └── images/ │ │ ├── backgrounds/ │ │ ├── icons/ │ │ ├── logos/ │ │ ├──
+          photos/ │ │ └── thumbnails/ │ ├── components/ │ │ ├── form/ │ │ │ └──
+          InputGroup.tsx │ │ ├── pages/ │ │ │ ├── course-catalog/ │ │ │ └──
+          course-details/ │ │ ├── BadgeStatus.tsx │ │ ├── Breadcrump.tsx │ │ ├──
+          Button.tsx │ │ ├── CardRoadmap.tsx │ │ ├── CourseCard.tsx │ │ ├──
+          InstructorCard.tsx │ │ ├── Navbar.tsx │ │ ├── NavbarDashboard.tsx │ │
+          ├── SyntaxHighlighter.tsx │ │ └── TestimonialCard.tsx │ ├── data/ │ │
+          ├── courseLearning.tsx │ │ ├── courses.ts │ │ ├── roadmap.ts │ │ └──
+          testimonials.ts │ ├── pages/ │ │ ├── auth/ │ │ │ ├── SignIn.tsx │ │ │
+          └── SignUp.tsx │ │ ├── course/ │ │ │ ├── CourseCatalog.tsx │ │ │ ├──
+          CourseDetails.tsx │ │ │ ├── CourseLearning.tsx │ │ │ ├──
+          LearningFinished.tsx │ │ │ └── SearchCourse.tsx │ │ ├── subscription/
+          │ │ │ ├── Subscription.tsx │ │ │ └── SubscriptionDetails.tsx │ │ ├──
+          Checkout.tsx │ │ ├── Features.tsx │ │ ├── Homepage.tsx │ │ ├──
+          Pricing.tsx │ │ ├── SuccessCheckout.tsx │ │ └── Testimonials.tsx │ ├──
+          App.tsx │ ├── index.css │ └── main.tsx ├── package.json ├──
+          tsconfig.json ├── vite.config.ts └── README.md
+        </div>
+
+        <h3>Key Directories Explained</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>📂 src/components/</h4>
+            <p>Reusable UI components yang digunakan di seluruh aplikasi</p>
+          </div>
+          <div class="card">
+            <h4>📂 src/pages/</h4>
+            <p>Halaman-halaman utama aplikasi dengan routing</p>
+          </div>
+          <div class="card">
+            <h4>📂 src/data/</h4>
+            <p>Data statis untuk kursus, testimonials, dan roadmap</p>
+          </div>
+          <div class="card">
+            <h4>📂 src/assets/</h4>
+            <p>Assets seperti gambar, CSS, dan file statis lainnya</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="section">
+        <h2>🧩 Components</h2>
+
+        <h3>Core Components</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>File</th>
+              <th>Description</th>
+              <th>Props</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Button</td>
+              <td>Button.tsx</td>
+              <td>Reusable button component dengan berbagai variant</td>
+              <td>variant, onClick, disabled, type, className</td>
+            </tr>
+            <tr>
+              <td>Navbar</td>
+              <td>Navbar.tsx</td>
+              <td>Navigation bar untuk guest users</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>NavbarDashboard</td>
+              <td>NavbarDashboard.tsx</td>
+              <td>Navigation bar untuk authenticated users</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>CourseCard</td>
+              <td>CourseCard.tsx</td>
+              <td>Card untuk menampilkan informasi kursus</td>
+              <td>course (Course interface)</td>
+            </tr>
+            <tr>
+              <td>InputGroup</td>
+              <td>form/InputGroup.tsx</td>
+              <td>Form input dengan label dan icon</td>
+              <td>label, placeholder, type, icon, name, required</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Component Usage Example</h3>
+        <div class="code-block">
+          import Button from "../components/Button"; // Button dengan variant
+          green &lt;Button variant="green" className="w-full"&gt; Get Started
+          &lt;/Button&gt; // Button dengan variant outline &lt;Button
+          variant="outline" onClick={handleClick}&gt; Sign In &lt;/Button&gt;
+        </div>
+
+        <h3>Creating New Components</h3>
+        <div class="code-block">
+          // Template untuk component baru import React from "react"; interface
+          ComponentNameProps { // Define your props here title: string;
+          onClick?: () => void; } const ComponentName:
+          React.FC&lt;ComponentNameProps&gt; = ({ title, onClick }) => { return
+          ( &lt;div className="component-container"&gt;
+          &lt;h3&gt;{title}&lt;/h3&gt; &lt;button onClick={onClick}&gt;Click
+          me&lt;/button&gt; &lt;/div&gt; ); }; export default ComponentName;
+        </div>
+      </section>
+
+      <section id="pages" class="section">
+        <h2>📄 Pages</h2>
+
+        <h3>Page Structure</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Route</th>
+              <th>Description</th>
+              <th>Components Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Homepage</td>
+              <td>/</td>
+              <td>Landing page utama</td>
+              <td>Navbar, Button</td>
+            </tr>
+            <tr>
+              <td>Course Catalog</td>
+              <td>/course/catalog</td>
+              <td>Katalog semua kursus</td>
+              <td>NavbarDashboard, CourseCard</td>
+            </tr>
+            <tr>
+              <td>Course Details</td>
+              <td>/course/details</td>
+              <td>Detail informasi kursus</td>
+              <td>NavbarDashboard, SyntaxHighlighter</td>
+            </tr>
+            <tr>
+              <td>Sign In</td>
+              <td>/signin</td>
+              <td>Halaman login</td>
+              <td>Navbar, InputGroup, Button</td>
+            </tr>
+            <tr>
+              <td>Sign Up</td>
+              <td>/signup</td>
+              <td>Halaman registrasi</td>
+              <td>Navbar, InputGroup, Button</td>
+            </tr>
+            <tr>
+              <td>Subscription</td>
+              <td>/subscription</td>
+              <td>Manajemen subscription</td>
+              <td>NavbarDashboard, BadgeStatus</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Adding New Pages</h3>
+        <div class="code-block">
+          // 1. Buat file page baru di src/pages/ // src/pages/NewPage.tsx
+          import React from "react"; import Navbar from "../components/Navbar";
+          export default function NewPage() { return ( &lt;div&gt; &lt;Navbar
+          /&gt; &lt;div className="pt-20"&gt; &lt;h1&gt;New Page
+          Content&lt;/h1&gt; &lt;/div&gt; &lt;/div&gt; ); } // 2. Tambahkan
+          route di App.tsx &lt;Route path="/new-page" element={&lt;NewPage
+          /&gt;} /&gt;
+        </div>
+      </section>
+
+      <section id="styling" class="section">
+        <h2>🎨 Styling & CSS</h2>
+
+        <h3>Tailwind CSS Configuration</h3>
+        <p>
+          Project menggunakan Tailwind CSS v4 dengan custom theme variables:
+        </p>
+        <div class="code-block">
+          @theme { --color-obito-black: #0a0723; --color-obito-green: #2f6a62;
+          --color-obito-grey: #eaecee; --color-obito-red: #ef372b;
+          --color-obito-text-grey: #87898c; --color-obito-light-green: #e0eae8;
+          --color-obito-light-red: #ffe3e1; --color-obito-text-secondary:
+          #6a6f7c; }
+        </div>
+
+        <h3>Custom CSS Classes</h3>
+        <div class="code-block">
+          // Utility classes .flex-center { @apply flex justify-center
+          items-center; } .bg-custom-gradient { background:
+          linear-gradient(90deg, #a531ff 0%, #ff1fa5 100%); }
+          .container-max-w-1280 { @apply max-w-[1280px] mx-auto; }
+          .container-padding-x { @apply px-4 md:px-8 lg:px-[75px]; }
+          .container-padding-y { @apply py-4 md:py-8 lg:py-[39px]; }
+        </div>
+
+        <h3>Responsive Design</h3>
+        <p>Project menggunakan Tailwind breakpoints untuk responsive design:</p>
+        <ul>
+          <li><strong>sm:</strong> 640px dan ke atas</li>
+          <li><strong>md:</strong> 768px dan ke atas</li>
+          <li><strong>lg:</strong> 1024px dan ke atas</li>
+          <li><strong>xl:</strong> 1280px dan ke atas</li>
+        </ul>
+
+        <div class="code-block">
+          // Contoh responsive classes &lt;div className="text-sm md:text-base
+          lg:text-lg"&gt; Responsive text &lt;/div&gt; &lt;div className="grid
+          grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt; Responsive grid
+          &lt;/div&gt;
+        </div>
+      </section>
+
+      <section id="routing" class="section">
+        <h2>🛣️ Routing</h2>
+
+        <h3>Route Configuration</h3>
+        <div class="code-block">
+          // src/App.tsx &lt;Routes&gt; &lt;Route path="/" element={&lt;Homepage
+          /&gt;} /&gt; &lt;Route path="/pricing"&gt; &lt;Route index
+          element={&lt;Pricing /&gt;} /&gt; &lt;Route path="checkout"&gt;
+          &lt;Route index element={&lt;Checkout /&gt;} /&gt; &lt;Route
+          path="success" element={&lt;SuccessCheckout /&gt;} /&gt;
+          &lt;/Route&gt; &lt;/Route&gt; &lt;Route path="/course"&gt; &lt;Route
+          path="catalog" element={&lt;CourseCatalog /&gt;} /&gt; &lt;Route
+          path="learning" element={&lt;CourseLearning /&gt;} /&gt; &lt;Route
+          path="details" element={&lt;CourseDetails /&gt;} /&gt; &lt;Route
+          path="search" element={&lt;SearchCourse /&gt;} /&gt; &lt;Route
+          path="learning-finished" element={&lt;LearningFinished /&gt;} /&gt;
+          &lt;/Route&gt; &lt;Route path="/signup" element={&lt;SignUp /&gt;}
+          /&gt; &lt;Route path="/signin" element={&lt;SignIn /&gt;} /&gt;
+          &lt;Route path="/subscription"&gt; &lt;Route index
+          element={&lt;Subscription /&gt;} /&gt; &lt;Route path="details"
+          element={&lt;SubscriptionDetails /&gt;} /&gt; &lt;/Route&gt;
+          &lt;/Routes&gt;
+        </div>
+
+        <h3>Navigation</h3>
+        <div class="code-block">
+          import { Link, useNavigate } from "react-router-dom"; // Programmatic
+          navigation const navigate = useNavigate();
+          navigate("/course/catalog"); // Link navigation &lt;Link
+          to="/course/details"&gt;View Course&lt;/Link&gt;
+        </div>
+      </section>
+
+      <section id="data" class="section">
+        <h2>📊 Data Management</h2>
+
+        <h3>Data Structure</h3>
+        <p>
+          Project menggunakan data statis yang disimpan dalam file TypeScript:
+        </p>
+
+        <h4>Course Interface</h4>
+        <div class="code-block">
+          export interface Course { id: string; title: string; category: string;
+          thumbnail: string; rating: number; lessons: number; status: string;
+          categoryIcon: string; lessonsIcon: string; statusIcon: string;
+          ratingIcon: string; }
+        </div>
+
+        <h4>Subscription Interface</h4>
+        <div class="code-block">
+          interface SubscriptionData { id: number; name: string; duration:
+          string; icon: string; price: string; startedAt: string; status:
+          "ACTIVE" | "EXPIRED" | "PENDING"; detailsUrl: string; }
+        </div>
+
+        <h3>Data Files</h3>
+        <ul>
+          <li><strong>courses.ts:</strong> Data 50+ kursus dalam 5 kategori</li>
+          <li><strong>testimonials.ts:</strong> Data testimonial users</li>
+          <li><strong>roadmap.ts:</strong> Data learning roadmap</li>
+          <li><strong>courseLearning.tsx:</strong> Data pembelajaran kursus</li>
+        </ul>
+
+        <h3>Adding New Data</h3>
+        <div class="code-block">
+          // src/data/newData.ts export interface NewDataType { id: string;
+          name: string; description: string; } export const newData:
+          NewDataType[] = [ { id: "1", name: "Example Item", description: "This
+          is an example" } ]; // Import dan gunakan di component import {
+          newData } from "../data/newData";
+        </div>
+      </section>
+
+      <section id="deployment" class="section">
+        <h2>🚀 Deployment</h2>
+
+        <h3>Build Process</h3>
+        <div class="code-block">
+          # Build untuk production npm run build # Preview build npm run preview
+        </div>
+
+        <h3>Deployment Options</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>🌐 Vercel</h4>
+            <p>Deploy langsung dari GitHub dengan Vercel</p>
+            <div class="code-block">
+              # Install Vercel CLI npm i -g vercel # Deploy vercel
+            </div>
+          </div>
+          <div class="card">
+            <h4>☁️ Netlify</h4>
+            <p>Drag & drop dist folder ke Netlify</p>
+          </div>
+          <div class="card">
+            <h4>🔥 Firebase Hosting</h4>
+            <p>Deploy menggunakan Firebase CLI</p>
+            <div class="code-block">
+              npm install -g firebase-tools firebase login firebase init hosting
+              firebase deploy
+            </div>
+          </div>
+        </div>
+
+        <h3>Environment Variables</h3>
+        <p>Buat file <code>.env</code> untuk environment variables:</p>
+        <div class="code-block">
+          VITE_API_URL=https://api.example.com VITE_APP_NAME=Obito React
+        </div>
+      </section>
+
+      <section id="modification" class="section">
+        <h2>🔧 Modification Guide</h2>
+
+        <h3>Menambah Kursus Baru</h3>
+        <div class="code-block">
+          // src/data/courses.ts export const coursesData: Course[] = [ // ...
+          existing courses { id: "new-course-1", title: "New Course Title",
+          category: "Programming", thumbnail:
+          "/src/assets/images/thumbnails/new-thumbnail.png", rating: 4.8,
+          lessons: 150, status: "Ready to Work", categoryIcon:
+          "/src/assets/images/icons/crown-green.svg", lessonsIcon:
+          "/src/assets/images/icons/menu-board-green.svg", statusIcon:
+          "/src/assets/images/icons/briefcase-green.svg", ratingIcon:
+          "/src/assets/images/icons/like.svg", } ];
+        </div>
+
+        <h3>Mengubah Warna Theme</h3>
+        <div class="code-block">
+          // src/index.css @theme { --color-obito-green: #your-new-color;
+          --color-obito-black: #your-new-color; // ... other colors }
+        </div>
+
+        <h3>Menambah Halaman Baru</h3>
+        <div class="code-block">
+          // 1. Buat component page // src/pages/NewPage.tsx // 2. Import di
+          App.tsx import NewPage from "./pages/NewPage"; // 3. Tambahkan route
+          &lt;Route path="/new-page" element={&lt;NewPage /&gt;} /&gt; // 4.
+          Update navigation jika diperlukan // src/components/Navbar.tsx const
+          menuItems: MenuItem[] = [ // ... existing items { href: "/new-page",
+          label: "New Page", isActive: location.pathname === "/new-page" }, ];
+        </div>
+
+        <h3>Menambah Component Baru</h3>
+        <div class="code-block">
+          // src/components/NewComponent.tsx import React from "react";
+          interface NewComponentProps { title: string; onClick?: () => void; }
+          const NewComponent: React.FC&lt;NewComponentProps&gt; = ({ title,
+          onClick }) => { return ( &lt;div className="new-component"&gt;
+          &lt;h3&gt;{title}&lt;/h3&gt; &lt;button onClick={onClick}&gt;Click
+          me&lt;/button&gt; &lt;/div&gt; ); }; export default NewComponent; //
+          Gunakan di page import NewComponent from "../components/NewComponent";
+          &lt;NewComponent title="Hello World" onClick={() =>
+          console.log("clicked")} /&gt;
+        </div>
+
+        <h3>Best Practices</h3>
+        <div class="warning">
+          <h4>⚠️ Important Notes:</h4>
+          <ul>
+            <li>Selalu gunakan TypeScript interfaces untuk props</li>
+            <li>Gunakan Tailwind CSS classes untuk styling</li>
+            <li>Ikuti naming convention yang konsisten</li>
+            <li>Test perubahan di berbagai ukuran layar</li>
+            <li>Gunakan ESLint untuk code quality</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="section">
+        <h2>📞 Support & Resources</h2>
+        <div class="grid">
+          <div class="card">
+            <h4>🔗 Useful Links</h4>
+            <ul>
+              <li>
+                <a href="https://react.dev" target="_blank"
+                  >React Documentation</a
+                >
+              </li>
+              <li>
+                <a href="https://tailwindcss.com" target="_blank"
+                  >Tailwind CSS</a
+                >
+              </li>
+              <li>
+                <a href="https://vitejs.dev" target="_blank"
+                  >Vite Documentation</a
+                >
+              </li>
+              <li>
+                <a href="https://reactrouter.com" target="_blank"
+                  >React Router</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>📚 Learning Resources</h4>
+            <ul>
+              <li>TypeScript Handbook</li>
+              <li>React Best Practices</li>
+              <li>Modern CSS Techniques</li>
+              <li>Web Development Fundamentals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="back-to-top">↑</a>
+
+    <script>
+      // Smooth scrolling untuk navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back to top functionality
+      document
+        .querySelector(".back-to-top")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+      // Show/hide back to top button
+      window.addEventListener("scroll", function () {
+        const backToTop = document.querySelector(".back-to-top");
+        if (window.scrollY > 300) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
