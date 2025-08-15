@@ -27,9 +27,9 @@
       .header {
         background: linear-gradient(135deg, #2f6a62 0%, #0a0723 100%);
         color: white;
-        padding: 40px 0;
+        padding: 40px 20px;
         text-align: center;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
       }
 
       .header h1 {
@@ -42,34 +42,162 @@
         opacity: 0.9;
       }
 
-      .nav {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
+             .nav {
+         background: white;
+         padding: 20px;
+         border-radius: 10px;
+         /* margin-bottom: 30px; */
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+         position: sticky;
+         top: 0;
+         z-index: 10;
+       }
 
-      .nav ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
+       .nav ul {
+         list-style: none;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+       }
 
-      .nav a {
-        text-decoration: none;
-        color: #2f6a62;
-        font-weight: 600;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
+       .nav a {
+         text-decoration: none;
+         color: #2f6a62;
+         font-weight: 600;
+         padding: 10px 15px;
+         border-radius: 5px;
+         transition: all 0.3s ease;
+       }
 
-      .nav a:hover {
-        background: #2f6a62;
-        color: white;
-      }
+       .nav a:hover {
+         background: #2f6a62;
+         color: white;
+       }
+
+               /* Mobile Menu Button */
+        .mobile-menu-btn {
+          display: none;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #2f6a62;
+          border: none;
+          font-size: 1.8rem;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(47, 106, 98, 0.3);
+          z-index: 1001;
+          transition: all 0.3s ease;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .mobile-menu-btn:hover {
+          background: #1f4f47;
+          transform: scale(1.1);
+          box-shadow: 0 6px 16px rgba(47, 106, 98, 0.4);
+        }
+
+        .mobile-menu-btn:active {
+          transform: scale(0.95);
+        }
+
+        .mobile-menu-btn.hidden {
+          opacity: 0;
+          pointer-events: none;
+          transform: scale(0.8);
+        }
+
+       /* Mobile Drawer */
+       .mobile-drawer {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 280px;
+         height: 100vh;
+         background: white;
+         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+         z-index: 1000;
+         transition: left 0.3s ease;
+         overflow-y: auto;
+       }
+
+       .mobile-drawer.active {
+         left: 0;
+       }
+
+       .drawer-header {
+         padding: 20px;
+         border-bottom: 1px solid #e9ecef;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
+
+       .drawer-header h3 {
+         color: #2f6a62;
+         margin: 0;
+       }
+
+       .close-drawer {
+         background: none;
+         border: none;
+         font-size: 1.5rem;
+         color: #2f6a62;
+         cursor: pointer;
+         padding: 5px;
+       }
+
+       .drawer-nav {
+         padding: 20px;
+       }
+
+       .drawer-nav ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+       }
+
+       .drawer-nav li {
+         margin-bottom: 10px;
+       }
+
+       .drawer-nav a {
+         display: block;
+         padding: 15px;
+         text-decoration: none;
+         color: #2f6a62;
+         font-weight: 600;
+         border-radius: 8px;
+         transition: all 0.3s ease;
+       }
+
+       .drawer-nav a:hover {
+         background: #2f6a62;
+         color: white;
+       }
+
+       /* Overlay */
+       .drawer-overlay {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5);
+         z-index: 999;
+       }
+
+       .drawer-overlay.active {
+         display: block;
+       }
 
       .section {
         background: white;
@@ -144,7 +272,7 @@
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
         margin: 20px 0;
       }
@@ -161,10 +289,17 @@
         margin-bottom: 10px;
       }
 
+      .table-container {
+        overflow-x: auto;
+        margin: 15px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
-        margin: 15px 0;
+        min-width: 600px;
       }
 
       th,
@@ -172,15 +307,32 @@
         border: 1px solid #dee2e6;
         padding: 12px;
         text-align: left;
+        white-space: nowrap;
       }
 
       th {
         background: #2f6a62;
         color: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
       }
 
       tr:nth-child(even) {
         background: #f8f9fa;
+      }
+
+      @media (max-width: 768px) {
+        .table-container {
+          margin: 10px -10px;
+          border-radius: 0;
+        }
+        
+        th,
+        td {
+          padding: 8px 10px;
+          font-size: 0.9rem;
+        }
       }
 
       .back-to-top {
@@ -195,57 +347,116 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
+      li{
+        margin-left: 1.5rem;
+      }
+
       @media (max-width: 768px) {
-        .nav ul {
-          flex-direction: column;
+          .nav {
+            display: none;
+          }
+
+          .mobile-menu-btn {
+            display: flex !important;
+          }
+
+          .mobile-drawer {
+            display: block;
+          }
+
+          .header h1 {
+            font-size: 2rem;
+          }
         }
 
-        .header h1 {
-          font-size: 2rem;
-        }
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none !important;
       }
+    }
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1>🚀 Obito React Project</h1>
-      <p>Complete Documentation & Setup Guide</p>
-    </div>
+         <div class="header">
+       <h1>🚀 Obito React UI Template</h1>
+       <p>Complete Documentation & Setup Guide</p>
+     </div>
+     
+     <!-- Mobile Menu Button -->
+     <button class="mobile-menu-btn" onclick="toggleDrawer()">☰</button>
+     
+     <!-- Desktop Navigation -->
+     <nav class="nav">
+       <ul>
+         <li><a href="#overview">Overview</a></li>
+         <li><a href="#setup">Setup & Installation</a></li>
+         <li><a href="#structure">Template Structure</a></li>
+         <li><a href="#components">Components</a></li>
+         <li><a href="#pages">Pages</a></li>
+         <li><a href="#styling">Styling & CSS</a></li>
+         <li><a href="#routing">Routing</a></li>
+         <li><a href="#data">Mock Data</a></li>
+         <li><a href="#deployment">Deployment</a></li>
+         <li><a href="#modification">Modification Guide</a></li>
+       </ul>
+     </nav>
+
+     <!-- Mobile Drawer -->
+     <div class="drawer-overlay" onclick="closeDrawer()"></div>
+     <div class="mobile-drawer" id="mobileDrawer">
+       <div class="drawer-header">
+         <h3>📚 Navigation</h3>
+         <button class="close-drawer" onclick="closeDrawer()">✕</button>
+       </div>
+       <nav class="drawer-nav">
+         <ul>
+           <li><a href="#overview" onclick="closeDrawer()">Overview</a></li>
+           <li><a href="#setup" onclick="closeDrawer()">Setup & Installation</a></li>
+           <li><a href="#structure" onclick="closeDrawer()">Template Structure</a></li>
+           <li><a href="#components" onclick="closeDrawer()">Components</a></li>
+           <li><a href="#pages" onclick="closeDrawer()">Pages</a></li>
+           <li><a href="#styling" onclick="closeDrawer()">Styling & CSS</a></li>
+           <li><a href="#routing" onclick="closeDrawer()">Routing</a></li>
+           <li><a href="#data" onclick="closeDrawer()">Mock Data</a></li>
+           <li><a href="#deployment" onclick="closeDrawer()">Deployment</a></li>
+           <li><a href="#modification" onclick="closeDrawer()">Modification Guide</a></li>
+         </ul>
+       </nav>
+     </div>
 
     <div class="container">
-      <nav class="nav">
-        <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#setup">Setup & Installation</a></li>
-          <li><a href="#structure">Project Structure</a></li>
-          <li><a href="#components">Components</a></li>
-          <li><a href="#pages">Pages</a></li>
-          <li><a href="#styling">Styling & CSS</a></li>
-          <li><a href="#routing">Routing</a></li>
-          <li><a href="#data">Data Management</a></li>
-          <li><a href="#deployment">Deployment</a></li>
-          <li><a href="#modification">Modification Guide</a></li>
-        </ul>
-      </nav>
 
       <section id="overview" class="section">
         <h2>📋 Project Overview</h2>
         <p>
-          <strong>Obito React</strong> adalah platform pembelajaran online yang
-          dibangun dengan React, TypeScript, dan Vite. Project ini menawarkan
-          berbagai kursus dalam kategori Programming, Networking, Digital
-          Marketing, Product Design, dan Entrepreneurship.
+          <strong>Obito React</strong> is a <strong>UI template only</strong> for an online learning platform built with
+          React, TypeScript, and Vite. This project showcases various UI components and pages for
+          Programming, Networking, Digital Marketing, Product Design, and
+          Entrepreneurship categories.
         </p>
 
-        <div class="highlight">
-          <h4>🎯 Fitur Utama:</h4>
+        <div class="warning">
+          <h4>⚠️ Important Notice:</h4>
+          <p><strong>This is a UI template only - no backend functionality is included.</strong></p>
           <ul>
-            <li>Katalog kursus dengan 50+ kursus</li>
-            <li>Sistem autentikasi (Sign In/Sign Up)</li>
-            <li>Dashboard pembelajaran</li>
-            <li>Sistem subscription</li>
-            <li>Responsive design dengan Tailwind CSS</li>
-            <li>TypeScript untuk type safety</li>
+            <li>All data is static/mock data</li>
+            <li>No real authentication system</li>
+            <li>No actual payment processing</li>
+            <li>No database integration</li>
+            <li>Forms don't actually submit data</li>
+          </ul>
+        </div>
+
+        <div class="highlight">
+          <h4>🎯 UI Template Features:</h4>
+          <ul>
+            <li>Complete UI mockup with 50+ course displays</li>
+            <li>Authentication UI pages (Sign In/Sign Up)</li>
+            <li>Learning dashboard interface</li>
+            <li>Subscription management UI</li>
+            <li>Responsive design with Tailwind CSS</li>
+            <li>TypeScript for type safety</li>
+            <li>Ready-to-use component library</li>
           </ul>
         </div>
 
@@ -284,72 +495,139 @@
 
         <h3>Installation Steps</h3>
         <div class="code-block">
-          # Clone repository git clone [repository-url] cd obito-react # Install
-          dependencies npm install # Start development server npm run dev #
-          Build for production npm run build # Preview production build npm run
-          preview # Run linting npm run lint
+          <pre>
+# Ekstrak file ZIP
+unzip obito.zip
+cd obito
+
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+
+# Build untuk production
+npm run build
+
+# Preview hasil build production
+npm run preview
+
+# Jalankan linting
+npm run lint
+          </pre>
         </div>
 
         <div class="success">
-          <strong>✅ Success!</strong> Project akan berjalan di
+          <strong>✅ Success!</strong> Project will run at
           <code>http://localhost:5173</code>
         </div>
 
         <h3>Environment Setup</h3>
         <p>
-          Project ini menggunakan Vite sebagai build tool dengan konfigurasi
-          berikut:
+          This project uses Vite as a build tool with the following
+          configuration:
         </p>
         <div class="code-block">
-          // vite.config.ts import { defineConfig } from 'vite' import react
-          from '@vitejs/plugin-react' import tailwindcss from
-          '@tailwindcss/vite' export default defineConfig({ plugins: [react(),
-          tailwindcss()], })
+          <pre>
+// vite.config.ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+          </pre>
         </div>
       </section>
 
       <section id="structure" class="section">
-        <h2>📁 Project Structure</h2>
+        <h2>📁 Template Structure</h2>
 
         <div class="file-structure">
-          obito-react/ ├── public/ │ └── vite.svg ├── src/ │ ├── assets/ │ │ ├──
-          css/ │ │ │ ├── course-details.css │ │ │ └── syntax-highlighter.css │ │
-          └── images/ │ │ ├── backgrounds/ │ │ ├── icons/ │ │ ├── logos/ │ │ ├──
-          photos/ │ │ └── thumbnails/ │ ├── components/ │ │ ├── form/ │ │ │ └──
-          InputGroup.tsx │ │ ├── pages/ │ │ │ ├── course-catalog/ │ │ │ └──
-          course-details/ │ │ ├── BadgeStatus.tsx │ │ ├── Breadcrump.tsx │ │ ├──
-          Button.tsx │ │ ├── CardRoadmap.tsx │ │ ├── CourseCard.tsx │ │ ├──
-          InstructorCard.tsx │ │ ├── Navbar.tsx │ │ ├── NavbarDashboard.tsx │ │
-          ├── SyntaxHighlighter.tsx │ │ └── TestimonialCard.tsx │ ├── data/ │ │
-          ├── courseLearning.tsx │ │ ├── courses.ts │ │ ├── roadmap.ts │ │ └──
-          testimonials.ts │ ├── pages/ │ │ ├── auth/ │ │ │ ├── SignIn.tsx │ │ │
-          └── SignUp.tsx │ │ ├── course/ │ │ │ ├── CourseCatalog.tsx │ │ │ ├──
-          CourseDetails.tsx │ │ │ ├── CourseLearning.tsx │ │ │ ├──
-          LearningFinished.tsx │ │ │ └── SearchCourse.tsx │ │ ├── subscription/
-          │ │ │ ├── Subscription.tsx │ │ │ └── SubscriptionDetails.tsx │ │ ├──
-          Checkout.tsx │ │ ├── Features.tsx │ │ ├── Homepage.tsx │ │ ├──
-          Pricing.tsx │ │ ├── SuccessCheckout.tsx │ │ └── Testimonials.tsx │ ├──
-          App.tsx │ ├── index.css │ └── main.tsx ├── package.json ├──
-          tsconfig.json ├── vite.config.ts └── README.md
+          <pre>
+obito/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── course-details.css
+│   │   │   └── syntax-highlighter.css
+│   │   └── images/
+│   │       ├── backgrounds/
+│   │       ├── icons/
+│   │       ├── logos/
+│   │       ├── photos/
+│   │       └── thumbnails/
+│   ├── components/
+│   │   ├── form/
+│   │   │   └── InputGroup.tsx
+│   │   ├── pages/
+│   │   │   ├── course-catalog/
+│   │   │   └── course-details/
+│   │   ├── BadgeStatus.tsx
+│   │   ├── Breadcrump.tsx
+│   │   ├── Button.tsx
+│   │   ├── CardRoadmap.tsx
+│   │   ├── CourseCard.tsx
+│   │   ├── InstructorCard.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NavbarDashboard.tsx
+│   │   ├── SyntaxHighlighter.tsx
+│   │   └── TestimonialCard.tsx
+│   ├── data/
+│   │   ├── courseLearning.tsx
+│   │   ├── courses.ts
+│   │   ├── roadmap.ts
+│   │   └── testimonials.ts
+│   ├── pages/
+│   │   ├── auth/
+│   │   │   ├── SignIn.tsx
+│   │   │   └── SignUp.tsx
+│   │   ├── course/
+│   │   │   ├── CourseCatalog.tsx
+│   │   │   ├── CourseDetails.tsx
+│   │   │   ├── CourseLearning.tsx
+│   │   │   ├── LearningFinished.tsx
+│   │   │   └── SearchCourse.tsx
+│   │   ├── subscription/
+│   │   │   ├── Subscription.tsx
+│   │   │   └── SubscriptionDetails.tsx
+│   │   ├── Checkout.tsx
+│   │   ├── Features.tsx
+│   │   ├── Homepage.tsx
+│   │   ├── Pricing.tsx
+│   │   ├── SuccessCheckout.tsx
+│   │   └── Testimonials.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+</pre
+          >
         </div>
 
         <h3>Key Directories Explained</h3>
         <div class="grid">
           <div class="card">
             <h4>📂 src/components/</h4>
-            <p>Reusable UI components yang digunakan di seluruh aplikasi</p>
+            <p>Reusable UI components used throughout the template</p>
           </div>
           <div class="card">
             <h4>📂 src/pages/</h4>
-            <p>Halaman-halaman utama aplikasi dengan routing</p>
+            <p>UI mockup pages with static routing</p>
           </div>
           <div class="card">
             <h4>📂 src/data/</h4>
-            <p>Data statis untuk kursus, testimonials, dan roadmap</p>
+            <p>Mock/static data for courses, testimonials, and roadmap</p>
           </div>
           <div class="card">
             <h4>📂 src/assets/</h4>
-            <p>Assets seperti gambar, CSS, dan file statis lainnya</p>
+            <p>Assets such as images, CSS, and other static files</p>
           </div>
         </div>
       </section>
@@ -358,248 +636,379 @@
         <h2>🧩 Components</h2>
 
         <h3>Core Components</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>File</th>
-              <th>Description</th>
-              <th>Props</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Button</td>
-              <td>Button.tsx</td>
-              <td>Reusable button component dengan berbagai variant</td>
-              <td>variant, onClick, disabled, type, className</td>
-            </tr>
-            <tr>
-              <td>Navbar</td>
-              <td>Navbar.tsx</td>
-              <td>Navigation bar untuk guest users</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>NavbarDashboard</td>
-              <td>NavbarDashboard.tsx</td>
-              <td>Navigation bar untuk authenticated users</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>CourseCard</td>
-              <td>CourseCard.tsx</td>
-              <td>Card untuk menampilkan informasi kursus</td>
-              <td>course (Course interface)</td>
-            </tr>
-            <tr>
-              <td>InputGroup</td>
-              <td>form/InputGroup.tsx</td>
-              <td>Form input dengan label dan icon</td>
-              <td>label, placeholder, type, icon, name, required</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>File</th>
+                <th>Description</th>
+                <th>Props</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Button</td>
+                <td>Button.tsx</td>
+                <td>Reusable button component with various variants</td>
+                <td>variant, onClick, disabled, type, className</td>
+              </tr>
+              <tr>
+                <td>Navbar</td>
+                <td>Navbar.tsx</td>
+                <td>Navigation bar for guest users</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>NavbarDashboard</td>
+                <td>NavbarDashboard.tsx</td>
+                <td>Navigation bar for authenticated users</td>
+                <td>breadcrumb</td>
+              </tr>
+              <tr>
+                <td>CourseCard</td>
+                <td>CourseCard.tsx</td>
+                <td>Card for displaying course information</td>
+                <td>course (Course interface)</td>
+              </tr>
+              <tr>
+                <td>InputGroup</td>
+                <td>form/InputGroup.tsx</td>
+                <td>Form input with label and icon</td>
+                <td>label, placeholder, type, icon, name, required</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h3>Component Usage Example</h3>
-        <div class="code-block">
-          import Button from "../components/Button"; // Button dengan variant
-          green &lt;Button variant="green" className="w-full"&gt; Get Started
-          &lt;/Button&gt; // Button dengan variant outline &lt;Button
-          variant="outline" onClick={handleClick}&gt; Sign In &lt;/Button&gt;
-        </div>
+        <pre class="code-block">
+import Button from "../components/Button";
+
+// Button with green variant
+&lt;Button variant="green" className="w-full"&gt;
+  Get Started
+&lt;/Button&gt;
+
+// Button with outline variant
+&lt;Button variant="outline" onClick={handleClick}&gt;
+  Sign In
+&lt;/Button&gt;
+        </pre>
 
         <h3>Creating New Components</h3>
-        <div class="code-block">
-          // Template untuk component baru import React from "react"; interface
-          ComponentNameProps { // Define your props here title: string;
-          onClick?: () => void; } const ComponentName:
-          React.FC&lt;ComponentNameProps&gt; = ({ title, onClick }) => { return
-          ( &lt;div className="component-container"&gt;
-          &lt;h3&gt;{title}&lt;/h3&gt; &lt;button onClick={onClick}&gt;Click
-          me&lt;/button&gt; &lt;/div&gt; ); }; export default ComponentName;
-        </div>
+        <pre class="code-block">
+// Template for new component
+import React from "react";
+
+interface ComponentNameProps {
+  // Define your props here
+  title: string;
+  onClick?: () => void;
+}
+
+const ComponentName: React.FC&lt;ComponentNameProps&gt; = ({ title, onClick }) =&gt; {
+  return (
+    &lt;div className="component-container"&gt;
+      &lt;h3&gt;{title}&lt;/h3&gt;
+      &lt;button onClick={onClick}&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ComponentName;
+        </pre>
       </section>
 
       <section id="pages" class="section">
         <h2>📄 Pages</h2>
 
         <h3>Page Structure</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Page</th>
-              <th>Route</th>
-              <th>Description</th>
-              <th>Components Used</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Homepage</td>
-              <td>/</td>
-              <td>Landing page utama</td>
-              <td>Navbar, Button</td>
-            </tr>
-            <tr>
-              <td>Course Catalog</td>
-              <td>/course/catalog</td>
-              <td>Katalog semua kursus</td>
-              <td>NavbarDashboard, CourseCard</td>
-            </tr>
-            <tr>
-              <td>Course Details</td>
-              <td>/course/details</td>
-              <td>Detail informasi kursus</td>
-              <td>NavbarDashboard, SyntaxHighlighter</td>
-            </tr>
-            <tr>
-              <td>Sign In</td>
-              <td>/signin</td>
-              <td>Halaman login</td>
-              <td>Navbar, InputGroup, Button</td>
-            </tr>
-            <tr>
-              <td>Sign Up</td>
-              <td>/signup</td>
-              <td>Halaman registrasi</td>
-              <td>Navbar, InputGroup, Button</td>
-            </tr>
-            <tr>
-              <td>Subscription</td>
-              <td>/subscription</td>
-              <td>Manajemen subscription</td>
-              <td>NavbarDashboard, BadgeStatus</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Adding New Pages</h3>
-        <div class="code-block">
-          // 1. Buat file page baru di src/pages/ // src/pages/NewPage.tsx
-          import React from "react"; import Navbar from "../components/Navbar";
-          export default function NewPage() { return ( &lt;div&gt; &lt;Navbar
-          /&gt; &lt;div className="pt-20"&gt; &lt;h1&gt;New Page
-          Content&lt;/h1&gt; &lt;/div&gt; &lt;/div&gt; ); } // 2. Tambahkan
-          route di App.tsx &lt;Route path="/new-page" element={&lt;NewPage
-          /&gt;} /&gt;
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Route</th>
+                <th>Description</th>
+                <th>Components Used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Homepage</td>
+                <td>/</td>
+                <td>Main landing page UI</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Pricing</td>
+                <td>/pricing</td>
+                <td>Pricing plans and options</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Checkout</td>
+                <td>/pricing/checkout</td>
+                <td>Checkout UI for purchasing a plan</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Checkout Success</td>
+                <td>/pricing/checkout/success</td>
+                <td>Success page after checkout</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Features</td>
+                <td>/features</td>
+                <td>Feature highlights of the platform</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Testimonials</td>
+                <td>/testimonials</td>
+                <td>User testimonials and reviews</td>
+                <td>Navbar, Button</td>
+              </tr>
+              <tr>
+                <td>Course Catalog</td>
+                <td>/course/catalog</td>
+                <td>UI mockup of course catalog</td>
+                <td>NavbarDashboard, CourseCard</td>
+              </tr>
+              <tr>
+                <td>Course Details</td>
+                <td>/course/details</td>
+                <td>UI mockup of course details</td>
+                <td>NavbarDashboard, SyntaxHighlighter</td>
+              </tr>
+              <tr>
+                <td>Course Learning</td>
+                <td>/course/learning</td>
+                <td>Learning interface for a course</td>
+                <td>NavbarDashboard, CourseCard</td>
+              </tr>
+              <tr>
+                <td>Course Search</td>
+                <td>/course/search</td>
+                <td>Search for courses</td>
+                <td>NavbarDashboard, InputGroup, CourseCard</td>
+              </tr>
+              <tr>
+                <td>Learning Finished</td>
+                <td>/course/learning-finished</td>
+                <td>Completion page after finishing a course</td>
+                <td>NavbarDashboard, Button</td>
+              </tr>
+              <tr>
+                <td>Sign In</td>
+                <td>/signin</td>
+                <td>Login page UI (no actual auth)</td>
+                <td>Navbar, InputGroup, Button</td>
+              </tr>
+              <tr>
+                <td>Sign Up</td>
+                <td>/signup</td>
+                <td>Registration page UI (no actual auth)</td>
+                <td>Navbar, InputGroup, Button</td>
+              </tr>
+              <tr>
+                <td>Subscription</td>
+                <td>/subscription</td>
+                <td>Subscription UI mockup</td>
+                <td>NavbarDashboard, BadgeStatus</td>
+              </tr>
+              <tr>
+                <td>Subscription Details</td>
+                <td>/subscription/details</td>
+                <td>Detailed view of a subscription</td>
+                <td>NavbarDashboard, BadgeStatus</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h3>Adding New UI Pages</h3>
+        <pre class="code-block">
+// 1. Create new page file in src/pages/
+// src/pages/NewPage.tsx
+import React from "react";
+import Navbar from "../components/Navbar";
+
+export default function NewPage() {
+  return (
+    &lt;div&gt;
+      &lt;Navbar /&gt;
+      &lt;div className="pt-20"&gt;
+        &lt;h1&gt;New Page Content&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+// 2. Add route in App.tsx
+&lt;Route path="/new-page" element={&lt;NewPage /&gt;} /&gt;
+        </pre>
       </section>
 
       <section id="styling" class="section">
         <h2>🎨 Styling & CSS</h2>
 
         <h3>Tailwind CSS Configuration</h3>
-        <p>
-          Project menggunakan Tailwind CSS v4 dengan custom theme variables:
-        </p>
-        <div class="code-block">
-          @theme { --color-obito-black: #0a0723; --color-obito-green: #2f6a62;
-          --color-obito-grey: #eaecee; --color-obito-red: #ef372b;
-          --color-obito-text-grey: #87898c; --color-obito-light-green: #e0eae8;
-          --color-obito-light-red: #ffe3e1; --color-obito-text-secondary:
-          #6a6f7c; }
-        </div>
+        <p>Project uses Tailwind CSS v4 with custom theme variables:</p>
+        <pre class="code-block">
+@theme {
+  --color-obito-black: #0a0723;
+  --color-obito-green: #2f6a62;
+  --color-obito-grey: #eaecee;
+  --color-obito-red: #ef372b;
+  --color-obito-text-grey: #87898c;
+  --color-obito-light-green: #e0eae8;
+  --color-obito-light-red: #ffe3e1;
+  --color-obito-text-secondary: #6a6f7c;
+}
+        </pre>
 
         <h3>Custom CSS Classes</h3>
-        <div class="code-block">
-          // Utility classes .flex-center { @apply flex justify-center
-          items-center; } .bg-custom-gradient { background:
-          linear-gradient(90deg, #a531ff 0%, #ff1fa5 100%); }
-          .container-max-w-1280 { @apply max-w-[1280px] mx-auto; }
-          .container-padding-x { @apply px-4 md:px-8 lg:px-[75px]; }
-          .container-padding-y { @apply py-4 md:py-8 lg:py-[39px]; }
-        </div>
+        <pre class="code-block">
+/* Utility classes */
+.flex-center { @apply flex justify-center items-center; }
+.bg-custom-gradient { background: linear-gradient(90deg, #a531ff 0%, #ff1fa5 100%); }
+.container-max-w-1280 { @apply max-w-[1280px] mx-auto; }
+.container-padding-x { @apply px-4 md:px-8 lg:px-[75px]; }
+.container-padding-y { @apply py-4 md:py-8 lg:py-[39px]; }
+        </pre>
 
         <h3>Responsive Design</h3>
-        <p>Project menggunakan Tailwind breakpoints untuk responsive design:</p>
+        <p>Project uses Tailwind breakpoints for responsive design:</p>
         <ul>
-          <li><strong>sm:</strong> 640px dan ke atas</li>
-          <li><strong>md:</strong> 768px dan ke atas</li>
-          <li><strong>lg:</strong> 1024px dan ke atas</li>
-          <li><strong>xl:</strong> 1280px dan ke atas</li>
+          <li><strong>sm:</strong> 640px and above</li>
+          <li><strong>md:</strong> 768px and above</li>
+          <li><strong>lg:</strong> 1024px and above</li>
+          <li><strong>xl:</strong> 1280px and above</li>
         </ul>
 
-        <div class="code-block">
-          // Contoh responsive classes &lt;div className="text-sm md:text-base
-          lg:text-lg"&gt; Responsive text &lt;/div&gt; &lt;div className="grid
-          grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt; Responsive grid
-          &lt;/div&gt;
-        </div>
+        <pre class="code-block">
+// Example responsive classes
+&lt;div className="text-sm md:text-base lg:text-lg"&gt;
+  Responsive text
+&lt;/div&gt;
+&lt;div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt;
+  Responsive grid
+&lt;/div&gt;
+        </pre>
       </section>
 
       <section id="routing" class="section">
         <h2>🛣️ Routing</h2>
 
         <h3>Route Configuration</h3>
-        <div class="code-block">
-          // src/App.tsx &lt;Routes&gt; &lt;Route path="/" element={&lt;Homepage
-          /&gt;} /&gt; &lt;Route path="/pricing"&gt; &lt;Route index
-          element={&lt;Pricing /&gt;} /&gt; &lt;Route path="checkout"&gt;
-          &lt;Route index element={&lt;Checkout /&gt;} /&gt; &lt;Route
-          path="success" element={&lt;SuccessCheckout /&gt;} /&gt;
-          &lt;/Route&gt; &lt;/Route&gt; &lt;Route path="/course"&gt; &lt;Route
-          path="catalog" element={&lt;CourseCatalog /&gt;} /&gt; &lt;Route
-          path="learning" element={&lt;CourseLearning /&gt;} /&gt; &lt;Route
-          path="details" element={&lt;CourseDetails /&gt;} /&gt; &lt;Route
-          path="search" element={&lt;SearchCourse /&gt;} /&gt; &lt;Route
-          path="learning-finished" element={&lt;LearningFinished /&gt;} /&gt;
-          &lt;/Route&gt; &lt;Route path="/signup" element={&lt;SignUp /&gt;}
-          /&gt; &lt;Route path="/signin" element={&lt;SignIn /&gt;} /&gt;
-          &lt;Route path="/subscription"&gt; &lt;Route index
-          element={&lt;Subscription /&gt;} /&gt; &lt;Route path="details"
-          element={&lt;SubscriptionDetails /&gt;} /&gt; &lt;/Route&gt;
-          &lt;/Routes&gt;
-        </div>
+        <pre class="code-block">
+// src/App.tsx
+&lt;Routes&gt;
+  &lt;Route path="/" element={&lt;Homepage /&gt;} /&gt;
+  
+  &lt;Route path="/pricing"&gt;
+    &lt;Route index element={&lt;Pricing /&gt;} /&gt;
+    &lt;Route path="checkout"&gt;
+      &lt;Route index element={&lt;Checkout /&gt;} /&gt;
+      &lt;Route path="success" element={&lt;SuccessCheckout /&gt;} /&gt;
+    &lt;/Route&gt;
+  &lt;/Route&gt;
+  
+  &lt;Route path="/course"&gt;
+    &lt;Route path="catalog" element={&lt;CourseCatalog /&gt;} /&gt;
+    &lt;Route path="learning" element={&lt;CourseLearning /&gt;} /&gt;
+    &lt;Route path="details" element={&lt;CourseDetails /&gt;} /&gt;
+    &lt;Route path="search" element={&lt;SearchCourse /&gt;} /&gt;
+    &lt;Route path="learning-finished" element={&lt;LearningFinished /&gt;} /&gt;
+  &lt;/Route&gt;
+  
+  &lt;Route path="/signup" element={&lt;SignUp /&gt;} /&gt;
+  &lt;Route path="/signin" element={&lt;SignIn /&gt;} /&gt;
+  
+  &lt;Route path="/subscription"&gt;
+    &lt;Route index element={&lt;Subscription /&gt;} /&gt;
+    &lt;Route path="details" element={&lt;SubscriptionDetails /&gt;} /&gt;
+  &lt;/Route&gt;
+&lt;/Routes&gt;
+        </pre>
 
         <h3>Navigation</h3>
-        <div class="code-block">
-          import { Link, useNavigate } from "react-router-dom"; // Programmatic
-          navigation const navigate = useNavigate();
-          navigate("/course/catalog"); // Link navigation &lt;Link
-          to="/course/details"&gt;View Course&lt;/Link&gt;
-        </div>
+        <pre class="code-block">
+// Programmatic navigation
+import { Link, useNavigate } from "react-router-dom";
+const navigate = useNavigate();
+navigate("/course/catalog");
+
+// Link navigation
+<Link to="/course/details">View Course</Link>
+        </pre>
       </section>
 
       <section id="data" class="section">
-        <h2>📊 Data Management</h2>
+        <h2>📊 Mock Data Management</h2>
 
         <h3>Data Structure</h3>
-        <p>
-          Project menggunakan data statis yang disimpan dalam file TypeScript:
-        </p>
+        <p>Template uses mock/static data stored in TypeScript files (no real backend integration):</p>
 
         <h4>Course Interface</h4>
-        <div class="code-block">
-          export interface Course { id: string; title: string; category: string;
-          thumbnail: string; rating: number; lessons: number; status: string;
-          categoryIcon: string; lessonsIcon: string; statusIcon: string;
-          ratingIcon: string; }
-        </div>
+        <pre class="code-block">
+export interface Course {
+  id: string;
+  title: string;
+  category: string;
+  thumbnail: string;
+  rating: number;
+  lessons: number;
+  status: string;
+  categoryIcon: string;
+  lessonsIcon: string;
+  statusIcon: string;
+  ratingIcon: string;
+}
+        </pre>
 
         <h4>Subscription Interface</h4>
-        <div class="code-block">
-          interface SubscriptionData { id: number; name: string; duration:
-          string; icon: string; price: string; startedAt: string; status:
-          "ACTIVE" | "EXPIRED" | "PENDING"; detailsUrl: string; }
-        </div>
+        <pre class="code-block">
+interface SubscriptionData {
+  id: number;
+  name: string;
+  duration: string;
+  icon: string;
+  price: string;
+  startedAt: string;
+  status: "ACTIVE" | "EXPIRED" | "PENDING";
+  detailsUrl: string;
+}
+        </pre>
 
         <h3>Data Files</h3>
         <ul>
-          <li><strong>courses.ts:</strong> Data 50+ kursus dalam 5 kategori</li>
-          <li><strong>testimonials.ts:</strong> Data testimonial users</li>
-          <li><strong>roadmap.ts:</strong> Data learning roadmap</li>
-          <li><strong>courseLearning.tsx:</strong> Data pembelajaran kursus</li>
+          <li>
+            <strong>courses.ts:</strong> Mock data for 50+ courses in 5 categories
+          </li>
+          <li><strong>testimonials.ts:</strong> Mock user testimonial data</li>
+          <li><strong>roadmap.ts:</strong> Mock learning roadmap data</li>
+          <li><strong>courseLearning.tsx:</strong> Mock course learning data</li>
         </ul>
 
-        <h3>Adding New Data</h3>
-        <div class="code-block">
-          // src/data/newData.ts export interface NewDataType { id: string;
-          name: string; description: string; } export const newData:
-          NewDataType[] = [ { id: "1", name: "Example Item", description: "This
-          is an example" } ]; // Import dan gunakan di component import {
-          newData } from "../data/newData";
-        </div>
+        <h3>Adding New Mock Data</h3>
+        <pre class="code-block">
+// src/data/newData.ts
+export interface NewDataType {
+  id: string;
+  name: string;
+  description: string;
+}
+export const newData: NewDataType[] = [
+  { id: "1", name: "Example Item", description: "This is an example" }
+];
+
+// Import and use in component
+import { newData } from "../data/newData";
+        </pre>
       </section>
 
       <section id="deployment" class="section">
@@ -607,25 +1016,25 @@
 
         <h3>Build Process</h3>
         <div class="code-block">
-          # Build untuk production npm run build # Preview build npm run preview
+          # Build for production npm run build # Preview build npm run preview
         </div>
 
         <h3>Deployment Options</h3>
         <div class="grid">
           <div class="card">
             <h4>🌐 Vercel</h4>
-            <p>Deploy langsung dari GitHub dengan Vercel</p>
+            <p>Deploy directly from GitHub with Vercel</p>
             <div class="code-block">
               # Install Vercel CLI npm i -g vercel # Deploy vercel
             </div>
           </div>
           <div class="card">
             <h4>☁️ Netlify</h4>
-            <p>Drag & drop dist folder ke Netlify</p>
+            <p>Drag & drop dist folder to Netlify</p>
           </div>
           <div class="card">
             <h4>🔥 Firebase Hosting</h4>
-            <p>Deploy menggunakan Firebase CLI</p>
+            <p>Deploy using Firebase CLI</p>
             <div class="code-block">
               npm install -g firebase-tools firebase login firebase init hosting
               firebase deploy
@@ -634,7 +1043,7 @@
         </div>
 
         <h3>Environment Variables</h3>
-        <p>Buat file <code>.env</code> untuk environment variables:</p>
+        <p>Create <code>.env</code> file for environment variables:</p>
         <div class="code-block">
           VITE_API_URL=https://api.example.com VITE_APP_NAME=Obito React
         </div>
@@ -643,57 +1052,95 @@
       <section id="modification" class="section">
         <h2>🔧 Modification Guide</h2>
 
-        <h3>Menambah Kursus Baru</h3>
-        <div class="code-block">
-          // src/data/courses.ts export const coursesData: Course[] = [ // ...
-          existing courses { id: "new-course-1", title: "New Course Title",
-          category: "Programming", thumbnail:
-          "/src/assets/images/thumbnails/new-thumbnail.png", rating: 4.8,
-          lessons: 150, status: "Ready to Work", categoryIcon:
-          "/src/assets/images/icons/crown-green.svg", lessonsIcon:
-          "/src/assets/images/icons/menu-board-green.svg", statusIcon:
-          "/src/assets/images/icons/briefcase-green.svg", ratingIcon:
-          "/src/assets/images/icons/like.svg", } ];
-        </div>
+        <h3>Adding New Courses</h3>
+        <pre class="code-block">
+// src/data/courses.ts
+export const coursesData: Course[] = [
+  // ...existing courses
+  {
+    id: "new-course-1",
+    title: "New Course Title",
+    category: "Programming",
+    thumbnail: "/src/assets/images/thumbnails/new-thumbnail.png",
+    rating: 4.8,
+    lessons: 150,
+    status: "Ready to Work",
+    categoryIcon: "/src/assets/images/icons/crown-green.svg",
+    lessonsIcon: "/src/assets/images/icons/menu-board-green.svg",
+    statusIcon: "/src/assets/images/icons/briefcase-green.svg",
+    ratingIcon: "/src/assets/images/icons/like.svg",
+  }
+];
+        </pre>
 
-        <h3>Mengubah Warna Theme</h3>
-        <div class="code-block">
-          // src/index.css @theme { --color-obito-green: #your-new-color;
-          --color-obito-black: #your-new-color; // ... other colors }
-        </div>
+        <h3>Changing Theme Colors</h3>
+        <pre class="code-block">
+// src/index.css
+@theme {
+  --color-obito-green: #your-new-color;
+  --color-obito-black: #your-new-color;
+  // ... other colors
+}
+        </pre>
 
-        <h3>Menambah Halaman Baru</h3>
-        <div class="code-block">
-          // 1. Buat component page // src/pages/NewPage.tsx // 2. Import di
-          App.tsx import NewPage from "./pages/NewPage"; // 3. Tambahkan route
-          &lt;Route path="/new-page" element={&lt;NewPage /&gt;} /&gt; // 4.
-          Update navigation jika diperlukan // src/components/Navbar.tsx const
-          menuItems: MenuItem[] = [ // ... existing items { href: "/new-page",
-          label: "New Page", isActive: location.pathname === "/new-page" }, ];
-        </div>
+        <h3>Adding New Pages</h3>
+        <pre class="code-block">
+// 1. Create page component
+// src/pages/NewPage.tsx
 
-        <h3>Menambah Component Baru</h3>
-        <div class="code-block">
-          // src/components/NewComponent.tsx import React from "react";
-          interface NewComponentProps { title: string; onClick?: () => void; }
-          const NewComponent: React.FC&lt;NewComponentProps&gt; = ({ title,
-          onClick }) => { return ( &lt;div className="new-component"&gt;
-          &lt;h3&gt;{title}&lt;/h3&gt; &lt;button onClick={onClick}&gt;Click
-          me&lt;/button&gt; &lt;/div&gt; ); }; export default NewComponent; //
-          Gunakan di page import NewComponent from "../components/NewComponent";
-          &lt;NewComponent title="Hello World" onClick={() =>
-          console.log("clicked")} /&gt;
-        </div>
+// 2. Import in App.tsx
+import NewPage from "./pages/NewPage";
+
+// 3. Add route
+&lt;Route path="/new-page" element={&lt;NewPage /&gt;} /&gt;
+
+// 4. Update navigation if needed
+// src/components/Navbar.tsx
+const menuItems: MenuItem[] = [
+  // ... existing items
+  { href: "/new-page", label: "New Page", isActive: location.pathname === "/new-page" },
+];
+        </pre>
+
+        <h3>Adding New UI Components</h3>
+        <pre class="code-block">
+// src/components/NewComponent.tsx
+import React from "react";
+
+interface NewComponentProps {
+  title: string;
+  onClick?: () => void;
+}
+
+const NewComponent: React.FC&lt;NewComponentProps> = ({ title, onClick }) => {
+  return (
+    &lt;div class="new-component"&gt;
+      &lt;h3&gt;{title}&lt;/h3&gt;
+      &lt;button onClick={onClick}&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default NewComponent;
+
+// Use in page
+import NewComponent from "../components/NewComponent";
+
+&lt;NewComponent title="Hello World" onClick=&#123;() =&gt; console.log("clicked")&#125; /&gt;
+        </pre>
 
         <h3>Best Practices</h3>
         <div class="warning">
           <h4>⚠️ Important Notes:</h4>
           <ul>
-            <li>Selalu gunakan TypeScript interfaces untuk props</li>
-            <li>Gunakan Tailwind CSS classes untuk styling</li>
-            <li>Ikuti naming convention yang konsisten</li>
-            <li>Test perubahan di berbagai ukuran layar</li>
-            <li>Gunakan ESLint untuk code quality</li>
+            <li>This is a UI template only - no backend functionality</li>
+            <li>All data is mock/static data</li>
+            <li>Forms and buttons are for UI demonstration only</li>
+            <li>Always use TypeScript interfaces for props</li>
+            <li>Use Tailwind CSS classes for styling</li>
+            <li>Follow consistent naming conventions</li>
+            <li>Test changes across different screen sizes</li>
+            <li>Use ESLint for code quality</li>
           </ul>
         </div>
       </section>
@@ -741,41 +1188,69 @@
 
     <a href="#" class="back-to-top">↑</a>
 
-    <script>
-      // Smooth scrolling untuk navigation
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-
-      // Back to top functionality
-      document
-        .querySelector(".back-to-top")
-        .addEventListener("click", function (e) {
-          e.preventDefault();
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-
-      // Show/hide back to top button
-      window.addEventListener("scroll", function () {
-        const backToTop = document.querySelector(".back-to-top");
-        if (window.scrollY > 300) {
-          backToTop.style.display = "block";
-        } else {
-          backToTop.style.display = "none";
+         <script>
+               // Mobile drawer functionality
+        function toggleDrawer() {
+          const drawer = document.getElementById('mobileDrawer');
+          const overlay = document.querySelector('.drawer-overlay');
+          const menuBtn = document.querySelector('.mobile-menu-btn');
+          
+          drawer.classList.toggle('active');
+          overlay.classList.toggle('active');
+          menuBtn.classList.toggle('hidden');
         }
-      });
-    </script>
+
+        function closeDrawer() {
+          const drawer = document.getElementById('mobileDrawer');
+          const overlay = document.querySelector('.drawer-overlay');
+          const menuBtn = document.querySelector('.mobile-menu-btn');
+          
+          drawer.classList.remove('active');
+          overlay.classList.remove('active');
+          menuBtn.classList.remove('hidden');
+        }
+
+       // Close drawer on escape key
+       document.addEventListener('keydown', function(e) {
+         if (e.key === 'Escape') {
+           closeDrawer();
+         }
+       });
+
+       // Smooth scrolling for navigation
+       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+         anchor.addEventListener("click", function (e) {
+           e.preventDefault();
+           const target = document.querySelector(this.getAttribute("href"));
+           if (target) {
+             target.scrollIntoView({
+               behavior: "smooth",
+               block: "start",
+             });
+           }
+         });
+       });
+
+       // Back to top functionality
+       document
+         .querySelector(".back-to-top")
+         .addEventListener("click", function (e) {
+           e.preventDefault();
+           window.scrollTo({
+             top: 0,
+             behavior: "smooth",
+           });
+         });
+
+       // Show/hide back to top button
+       window.addEventListener("scroll", function () {
+         const backToTop = document.querySelector(".back-to-top");
+         if (window.scrollY > 300) {
+           backToTop.style.display = "block";
+         } else {
+           backToTop.style.display = "none";
+         }
+       });
+     </script>
   </body>
 </html>
