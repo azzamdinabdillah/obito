@@ -569,18 +569,20 @@ export default defineConfig({
           <pre>
 obito/
 ├── public/
-│   └── vite.svg
+│   ├── assets/
+│   │   ├── images/
+│   │   │   ├── backgrounds/
+│   │   │   ├── icons/
+│   │   │   ├── logos/
+│   │   │   ├── photos/
+│   │   │   └── thumbnails/
+│   │   └── vite.svg
 ├── src/
 │   ├── assets/
-│   │   ├── css/
-│   │   │   ├── course-details.css
-│   │   │   └── syntax-highlighter.css
-│   │   └── images/
-│   │       ├── backgrounds/
-│   │       ├── icons/
-│   │       ├── logos/
-│   │       ├── photos/
-│   │       └── thumbnails/
+│   │   └── css/
+│   │       ├── course-learning.css
+│   │       ├── react-tabs.css
+│   │       └── syntax-highlighter.css
 │   ├── components/
 │   │   ├── form/
 │   │   │   └── InputGroup.tsx
@@ -647,8 +649,14 @@ obito/
             <p>Mock/static data for courses, testimonials, and roadmap</p>
           </div>
           <div class="card">
-            <h4>📂 src/assets/</h4>
-            <p>Assets such as images, CSS, and other static files</p>
+            <h4>📂 public/assets/</h4>
+            <p>
+              Static assets such as images, icons, logos, and other media files
+            </p>
+          </div>
+          <div class="card">
+            <h4>📂 src/assets/css/</h4>
+            <p>External CSS files for component-specific styling</p>
           </div>
         </div>
       </section>
@@ -1110,6 +1118,33 @@ export const coursesData: Course[] = [
 ];
         </pre>
 
+        <div class="highlight">
+          <h4>📁 Asset Path Structure:</h4>
+          <ul>
+            <li>
+              <strong>Images:</strong> <code>/assets/images/</code> (from
+              public/assets/images/)
+            </li>
+            <li>
+              <strong>Icons:</strong> <code>/assets/images/icons/</code> (from
+              public/assets/images/icons/)
+            </li>
+            <li>
+              <strong>Logos:</strong> <code>/assets/images/logos/</code> (from
+              public/assets/images/logos/)
+            </li>
+            <li>
+              <strong>Thumbnails:</strong>
+              <code>/assets/images/thumbnails/</code> (from
+              public/assets/images/thumbnails/)
+            </li>
+            <li>
+              <strong>CSS:</strong> Import from <code>src/assets/css/</code> in
+              components
+            </li>
+          </ul>
+        </div>
+
         <h3>Changing Theme Colors</h3>
         <pre class="code-block">
 // src/index.css
@@ -1143,6 +1178,7 @@ const menuItems: MenuItem[] = [
         <pre class="code-block">
 // src/components/NewComponent.tsx
 import React from "react";
+import "../assets/css/new-component.css"; // Import CSS if needed
 
 interface NewComponentProps {
   title: string;
@@ -1166,6 +1202,22 @@ import NewComponent from "../components/NewComponent";
 &lt;NewComponent title="Hello World" onClick=&#123;() =&gt; console.log("clicked")&#125; /&gt;
         </pre>
 
+        <h3>Adding New Assets</h3>
+        <pre class="code-block">
+// For images/icons (place in public/assets/images/)
+public/assets/images/icons/new-icon.svg
+public/assets/images/thumbnails/new-thumbnail.png
+
+// Reference in components
+&lt;img src="/assets/images/icons/new-icon.svg" alt="New Icon" /&gt;
+
+// For CSS files (place in src/assets/css/)
+src/assets/css/new-component.css
+
+// Import in components
+import "../assets/css/new-component.css";
+        </pre>
+
         <h3>Best Practices</h3>
         <div class="warning">
           <h4>⚠️ Important Notes:</h4>
@@ -1178,6 +1230,14 @@ import NewComponent from "../components/NewComponent";
             <li>Follow consistent naming conventions</li>
             <li>Test changes across different screen sizes</li>
             <li>Use ESLint for code quality</li>
+            <li>
+              Place images/icons in <code>public/assets/images/</code> and
+              reference with <code>/assets/images/</code>
+            </li>
+            <li>
+              Place CSS files in <code>src/assets/css/</code> and import in
+              components
+            </li>
           </ul>
         </div>
       </section>
