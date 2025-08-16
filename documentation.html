@@ -550,14 +550,27 @@ npm run lint
         </p>
         <div class="code-block">
           <pre>
-// vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+{/*
+  Penjelasan:
+  File <b>vite.config.ts</b> adalah file konfigurasi utama untuk Vite.
+  Pada konfigurasi ini:
+  - <b>react()</b> digunakan agar Vite dapat menjalankan dan mengoptimasi project React.
+  - <b>tailwindcss()</b> digunakan untuk mengintegrasikan Tailwind CSS ke dalam proses build Vite.
+  - <b>base</b> di-set ke "/obito/" agar semua asset dan routing berjalan dengan benar saat di-deploy ke subfolder.
+  - <b>publicDir</b> menentukan folder public statis.
+*/}
 
+// vite.config.ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-})
+  base: "/obito/",
+  publicDir: "public",
+});
           </pre>
         </div>
       </section>
