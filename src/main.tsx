@@ -6,9 +6,8 @@ import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/obito">
       <App />
-      {/* <div className="h-[100vh]"></div> */}
     </BrowserRouter>
   </StrictMode>
 );
