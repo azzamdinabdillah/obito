@@ -153,7 +153,7 @@ function CourseLearning() {
               <div key={section.id}>
                 <Accordion.Item
                   value={section.id}
-                  className="lesson accordion flex flex-col gap-4"
+                  className="lesson accordion flex flex-col"
                 >
                   <Accordion.Header>
                     <Accordion.Trigger className="flex w-full items-center justify-between hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
@@ -166,7 +166,7 @@ function CourseLearning() {
                     </Accordion.Trigger>
                   </Accordion.Header>
                   <Accordion.Content className="overflow-hidden">
-                    <div className="pt-2">
+                    <div className="pt-2 pb-4">
                       <ul className="flex flex-col gap-4">
                         {section.lessons.map((lesson) => (
                           <li key={lesson.id} className="group">
