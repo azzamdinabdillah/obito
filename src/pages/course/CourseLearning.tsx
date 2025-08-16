@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Tabs, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -17,7 +17,8 @@ type FlattenedLesson = {
 function CourseLearning() {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-  const [openAccordions, setOpenAccordions] = useState<string[]>([]);
+  const [openAccordion, setOpenAccordion] = useState<string>("");
+  const lessonsContainerRef = useRef<HTMLDivElement>(null);
 
   // Create a flat array (lessonsFlat) containing all lessons from all sections,
   // where each lesson object also includes its parent section's id and title.
@@ -46,27 +47,27 @@ function CourseLearning() {
   // Get current active lesson ID
   const currentLessonId = lessonsFlat[selectedIndex]?.id;
 
-  // Initialize open accordions based on current lesson
+  // Initialize open accordion based on current lesson
   useEffect(() => {
     if (currentLessonId) {
       const currentLesson = lessonsFlat.find(
         (lesson) => lesson.id === currentLessonId
       );
-      if (currentLesson && !openAccordions.includes(currentLesson.sectionId)) {
-        setOpenAccordions((prev) => [...prev, currentLesson.sectionId]);
+      if (currentLesson && openAccordion !== currentLesson.sectionId) {
+        setOpenAccordion(currentLesson.sectionId);
       }
     }
   }, [currentLessonId, lessonsFlat]);
 
   // Initialize accordion on component mount
   useEffect(() => {
-    if (lessonsFlat.length > 0 && openAccordions.length === 0) {
+    if (lessonsFlat.length > 0 && !openAccordion) {
       const currentLesson = lessonsFlat[selectedIndex];
       if (currentLesson) {
-        setOpenAccordions([currentLesson.sectionId]);
+        setOpenAccordion(currentLesson.sectionId);
       }
     }
-  }, [lessonsFlat, selectedIndex, openAccordions.length]);
+  }, [lessonsFlat, selectedIndex]);
 
   // Handle submenu click
   const handleSubmenuClick = (lessonId: string, sectionId: string) => {
@@ -74,28 +75,32 @@ function CourseLearning() {
     setSelectedIndex(idx);
     setIsDrawerOpen(false);
 
-    // Ensure the accordion stays open by adding it to openAccordions if not already there
-    if (!openAccordions.includes(sectionId)) {
-      setOpenAccordions((prev) => [...prev, sectionId]);
+    // Ensure the accordion stays open by setting it as the open accordion
+    if (openAccordion !== sectionId) {
+      setOpenAccordion(sectionId);
     }
+
+    // Scroll to the active lesson button after a short delay to ensure DOM is updated
+    setTimeout(() => {
+      const activeButton = lessonsContainerRef.current?.querySelector(
+        `[data-lesson-id="${lessonId}"]`
+      ) as HTMLElement;
+      if (activeButton && lessonsContainerRef.current) {
+        // Use requestAnimationFrame for smoother scrolling
+        requestAnimationFrame(() => {
+          activeButton.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
+        });
+      }
+    }, 150);
   };
 
-  // Prevent accordion from closing when clicking on submenu items
-  const handleAccordionValueChange = (value: string[]) => {
-    // Only allow closing accordions that don't contain the current active lesson
-    const currentLesson = lessonsFlat[selectedIndex];
-    if (currentLesson) {
-      const filteredValue = value.filter((sectionId) => {
-        // Keep the section open if it contains the current lesson
-        if (sectionId === currentLesson.sectionId) {
-          return true;
-        }
-        return value.includes(sectionId);
-      });
-      setOpenAccordions(filteredValue);
-    } else {
-      setOpenAccordions(value);
-    }
+  // Handle accordion value change (single accordion mode)
+  const handleAccordionValueChange = (value: string) => {
+    setOpenAccordion(value);
   };
 
   const Sidebar = () => (
@@ -128,22 +133,27 @@ function CourseLearning() {
         <hr className="border-obito-grey" />
       </div>
       <div
+        ref={lessonsContainerRef}
         id="lessons-container"
-        className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden w-full mt-2"
+        className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden w-full mt-2 scroll-smooth"
+        style={{
+          scrollBehavior: "smooth",
+          WebkitOverflowScrolling: "touch",
+        }}
       >
         <nav className="px-5 pb-[33px] flex flex-col gap-5">
           <Accordion.Root
-            type="multiple"
+            type="single"
             className="flex flex-col gap-5"
-            value={openAccordions}
+            value={openAccordion}
             onValueChange={handleAccordionValueChange}
+            collapsible
           >
             {courseDetailsData.sections.map((section) => (
-              <>
+              <div key={section.id}>
                 <Accordion.Item
-                  key={section.id}
                   value={section.id}
-                  className={`lesson accordion flex flex-col gap-4`}
+                  className="lesson accordion flex flex-col gap-4"
                 >
                   <Accordion.Header>
                     <Accordion.Trigger className="flex w-full items-center justify-between hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
@@ -151,34 +161,37 @@ function CourseLearning() {
                       <img
                         src="/obito/assets/images/icons/arrow-circle-down.svg"
                         alt="icon"
-                        className="size-6 shrink-0 transition-all duration-300"
+                        className="size-6 shrink-0 transition-all duration-300 [&[data-state=open]]:rotate-180"
                       />
                     </Accordion.Trigger>
                   </Accordion.Header>
-                  <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
-                    <ul className="flex flex-col gap-4">
-                      {section.lessons.map((lesson) => (
-                        <li key={lesson.id} className="group">
-                          <button
-                            type="button"
-                            onClick={() =>
-                              handleSubmenuClick(lesson.id, section.id)
-                            }
-                            className={`w-full text-left px-4 py-[10px] rounded-full border transition-all duration-300 relative ${
-                              currentLessonId === lesson.id
-                                ? "bg-obito-black text-white border-obito-green shadow-sm"
-                                : "border-obito-grey hover:bg-obito-black hover:text-white hover:border-obito-black"
-                            }`}
-                          >
-                            <h3
-                              className={`font-semibold text-sm leading-[21px]`}
+                  <Accordion.Content className="overflow-hidden">
+                    <div className="pt-2">
+                      <ul className="flex flex-col gap-4">
+                        {section.lessons.map((lesson) => (
+                          <li key={lesson.id} className="group">
+                            <button
+                              type="button"
+                              data-lesson-id={lesson.id}
+                              onClick={() =>
+                                handleSubmenuClick(lesson.id, section.id)
+                              }
+                              className={`w-full text-left px-4 py-[10px] rounded-full border transition-all duration-300 relative ${
+                                currentLessonId === lesson.id
+                                  ? "bg-obito-black text-white border-obito-green shadow-sm"
+                                  : "border-obito-grey hover:bg-obito-black hover:text-white hover:border-obito-black"
+                              }`}
                             >
-                              {lesson.title}
-                            </h3>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                              <h3
+                                className={`font-semibold text-sm leading-[21px]`}
+                              >
+                                {lesson.title}
+                              </h3>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </Accordion.Content>
                 </Accordion.Item>
 
@@ -186,7 +199,7 @@ function CourseLearning() {
                   courseDetailsData.sections[
                     courseDetailsData.sections.length - 1
                   ].id && <hr className="border-[#EAECEE]" />}
-              </>
+              </div>
             ))}
           </Accordion.Root>
         </nav>

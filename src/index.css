@@ -62,6 +62,23 @@
   }
 }
 
+/* Scroll optimizations */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent layout thrashing during animations */
+.lesson {
+  contain: layout style;
+}
+
+/* Optimize accordion container */
+#lessons-container {
+  will-change: scroll-position;
+  transform: translateZ(0);
+}
+
 /* Accordion animations */
 @keyframes accordion-down {
   from {
