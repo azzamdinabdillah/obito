@@ -4,24 +4,29 @@ export default function Breadcrump() {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
-  // Function to format route name
+  // Function to format the route segment into a more readable breadcrumb label.
+  // Example: "course-details" becomes "Course Details"
   const formatRouteName = (name: string) => {
     return name
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
+      .split("-") // Split the segment by hyphens to separate words
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+      .join(" "); // Join the words back together with spaces
   };
 
-  // Generate breadcrumb items
+  // Generate an array of breadcrumb items from the current URL path segments.
+  // Each item contains:
+  // - label: the formatted name to display
+  // - routeTo: the cumulative path up to this segment for navigation
+  // - isLast: boolean indicating if this is the last segment (current page)
   const breadcrumbItems = pathnames.map((name, index) => {
-    const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-    const isLast = index === pathnames.length - 1;
-    const label = formatRouteName(name);
+    const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`; // Build the path up to the current segment
+    const isLast = index === pathnames.length - 1; // Check if this is the last segment
+    const label = formatRouteName(name); // Format the segment for display
 
     return {
-      label,
-      routeTo,
-      isLast,
+      label,    // The display label for the breadcrumb
+      routeTo,  // The navigation path for this breadcrumb
+      isLast,   // Whether this is the last breadcrumb (current page)
     };
   });
 

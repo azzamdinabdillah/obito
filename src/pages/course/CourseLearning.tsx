@@ -9,7 +9,7 @@ import Button from "../../components/Button";
 type FlattenedLesson = {
   id: string;
   title: string;
-  content: string;
+  content: React.ReactNode;
   sectionId: string;
   sectionTitle: string;
 };
@@ -19,6 +19,8 @@ function CourseLearning() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [openAccordions, setOpenAccordions] = useState<string[]>([]);
 
+  // Create a flat array (lessonsFlat) containing all lessons from all sections,
+  // where each lesson object also includes its parent section's id and title.
   const lessonsFlat: FlattenedLesson[] = useMemo(() => {
     return courseDetailsData.sections.flatMap((section) =>
       section.lessons.map((lesson) => ({
@@ -31,6 +33,8 @@ function CourseLearning() {
     );
   }, []);
 
+  // Create a mapping (lessonIndexById) from lesson id to its index in lessonsFlat,
+  // to allow quick lookup of a lesson's index by its id.
   const lessonIndexById: Record<string, number> = useMemo(() => {
     const indexMap: Record<string, number> = {};
     lessonsFlat.forEach((l, idx) => {

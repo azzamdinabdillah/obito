@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "./assets/css/course-learning.css";
 @import "./assets/css/syntax-highlighter.css";
+@import "./assets/css/react-tabs.css";
 
 @theme {
   --color-obito-black: #0a0723;
@@ -59,75 +60,6 @@
   100% {
     transform: translateX(-50%);
   }
-}
-
-/* React Tabs Custom Styles */
-.react-tabs {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* .react-tabs__tab-list {
-  border-bottom: none;
-  margin: 0 0 0;
-  padding: 0;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-} */
-
-.react-tabs__tab {
-  display: inline-block;
-  border: none;
-  border-bottom: none;
-  bottom: -1px;
-  position: relative;
-  list-style: none;
-  padding: 0 !important;
-  cursor: pointer;
-  background: transparent;
-}
-
-.react-tabs__tab--selected {
-  background: transparent !important;
-  border-color: transparent !important;
-  color: inherit !important;
-}
-
-.react-tabs__tab--selected .rounded-full {
-  background-color: #0a0723 !important;
-}
-
-.react-tabs__tab--selected .rounded-full span {
-  font-weight: 600 !important;
-  color: white !important;
-}
-
-/* .react-tabs__tab--disabled {
-  color: Graytext;
-  cursor: default;
-} */
-
-.react-tabs__tab:focus {
-  outline: none;
-}
-
-/* .react-tabs__tab:focus:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
-  background: transparent;
-} */
-
-.react-tabs__tab-panel {
-  display: none;
-  margin-top: 24px;
-}
-
-.react-tabs__tab-panel--selected {
-  display: block;
 }
 
 /* Accordion animations */

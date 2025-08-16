@@ -1,0 +1,44 @@
+/* React Tabs Custom Styles */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: none;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 0 !important;
+  cursor: pointer;
+  background: transparent;
+}
+
+.react-tabs__tab--selected {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: inherit !important;
+}
+
+.react-tabs__tab--selected .rounded-full {
+  background-color: #0a0723 !important;
+}
+
+.react-tabs__tab--selected .rounded-full span {
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  margin-top: 24px;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}

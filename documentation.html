@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obito React - Complete Documentation</title>
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/logos/logo-64.png" />
     <style>
       * {
         margin: 0;
@@ -58,6 +59,9 @@
          display: flex;
          flex-wrap: wrap;
          gap: 20px;
+         max-width: 1160px;
+         margin-inline: auto;
+         justify-content: center;
        }
 
        .nav a {
@@ -943,7 +947,7 @@ const navigate = useNavigate();
 navigate("/course/catalog");
 
 // Link navigation
-<Link to="/course/details">View Course</Link>
+&lt;Link to="/course/details"&gt;View Course&lt;/Link&gt;
         </pre>
       </section>
 
@@ -1015,18 +1019,26 @@ import { newData } from "../data/newData";
         <h2>🚀 Deployment</h2>
 
         <h3>Build Process</h3>
-        <div class="code-block">
-          # Build for production npm run build # Preview build npm run preview
-        </div>
+        <pre class="code-block">
+# Build for production
+npm run build
+
+# Preview build
+npm run preview
+        </pre>
 
         <h3>Deployment Options</h3>
         <div class="grid">
           <div class="card">
             <h4>🌐 Vercel</h4>
             <p>Deploy directly from GitHub with Vercel</p>
-            <div class="code-block">
-              # Install Vercel CLI npm i -g vercel # Deploy vercel
-            </div>
+            <pre class="code-block">
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+            </pre>
           </div>
           <div class="card">
             <h4>☁️ Netlify</h4>
@@ -1035,10 +1047,12 @@ import { newData } from "../data/newData";
           <div class="card">
             <h4>🔥 Firebase Hosting</h4>
             <p>Deploy using Firebase CLI</p>
-            <div class="code-block">
-              npm install -g firebase-tools firebase login firebase init hosting
-              firebase deploy
-            </div>
+            <pre class="code-block">
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+firebase deploy
+            </pre>
           </div>
         </div>
 
