@@ -17,7 +17,7 @@ function CardRoadmap({
   href = "#",
   thumbnailSrc,
   thumbnailAlt = "thumbnail",
-  badgeIconSrc = "/src/assets/images/icons/cup.svg",
+  badgeIconSrc = "/assets/images/icons/cup.svg",
   badgeText,
   title,
   salaryText,
@@ -53,7 +53,7 @@ function CardRoadmap({
           {salaryText ? (
             <p className="flex items-center gap-1.5 md:gap-[6px]">
               <img
-                src="/src/assets/images/icons/briefcase-green.svg"
+                src="/assets/images/icons/briefcase-green.svg"
                 className="flex shrink-0 w-4 md:w-5"
                 alt="icon"
               />
@@ -65,7 +65,7 @@ function CardRoadmap({
           {typeof coursesCount === "number" ? (
             <p className="flex items-center gap-1.5 md:gap-[6px]">
               <img
-                src="/src/assets/images/icons/menu-board-green.svg"
+                src="/assets/images/icons/menu-board-green.svg"
                 className="flex shrink-0 w-4 md:w-5"
                 alt="icon"
               />

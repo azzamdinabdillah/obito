@@ -19,7 +19,7 @@ export default function SignIn() {
             label="Email Address"
             placeholder="Type your valid email address"
             type="email"
-            icon="/src/assets/images/icons/sms.svg"
+            icon="/assets/images/icons/sms.svg"
             iconAlt="email icon"
             name="email"
             required
@@ -29,7 +29,7 @@ export default function SignIn() {
             label="Password"
             placeholder="Type your password"
             type="password"
-            icon="/src/assets/images/icons/shield-security.svg"
+            icon="/assets/images/icons/shield-security.svg"
             iconAlt="security icon"
             name="password"
             required
@@ -42,7 +42,11 @@ export default function SignIn() {
           </Link>
 
           <Link to="/" className="w-full">
-            <Button type="submit" variant="green" className="flex-center w-full">
+            <Button
+              type="submit"
+              variant="green"
+              className="flex-center w-full"
+            >
               Sign In to My Account
             </Button>
           </Link>
@@ -54,7 +58,7 @@ export default function SignIn() {
           className="absolute flex w-full h-full overflow-hidden"
         >
           <img
-            src="/src/assets/images/backgrounds/banner-subscription.png"
+            src="/assets/images/backgrounds/banner-subscription.png"
             className="w-full h-full object-cover"
             alt="banner"
           />

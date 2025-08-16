@@ -21,7 +21,7 @@ export type CourseDetailsData = {
 
 export const courseDetailsData: CourseDetailsData = {
   title: "Data Science Pipelines Marketing Decisions",
-  thumbnailSrc: "/src/assets/images/thumbnails/thumbnail-5.png",
+  thumbnailSrc: "/assets/images/thumbnails/thumbnail-5.png",
   sections: [
     {
       id: "warming-up",
@@ -94,7 +94,7 @@ export const courseDetailsData: CourseDetailsData = {
                   positif.
                 </p>
                 <img
-                  src="/src/assets/images/thumbnails/course-learning-2.png"
+                  src="/assets/images/thumbnails/course-learning-2.png"
                   alt="image"
                 />
                 <p>

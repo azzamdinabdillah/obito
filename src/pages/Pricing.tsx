@@ -15,7 +15,7 @@ export default function Pricing() {
         <div className="flex flex-col items-center gap-2 md:gap-3 max-w-[500px] w-full">
           <p className="flex items-center gap-1 md:gap-2 w-fit rounded-full py-2 px-[14px] bg-obito-light-green">
             <img
-              src="/src/assets/images/icons/crown-green.svg"
+              src="/assets/images/icons/crown-green.svg"
               className="flex shrink-0 w-4 md:w-5"
               alt="icon"
             />
@@ -35,7 +35,7 @@ export default function Pricing() {
           <div className="price-card-reguler flex flex-col h-fit w-full rounded-[20px] p-4 md:p-5 border border-obito-grey gap-4 md:gap-5 bg-white">
             <div className="flex items-center gap-3 md:gap-4">
               <img
-                src="/src/assets/images/icons/award-black-fill.svg"
+                src="/assets/images/icons/award-black-fill.svg"
                 className="flex w-10 md:w-[60px] shrink-0"
                 alt="icon"
               />
@@ -55,7 +55,7 @@ export default function Pricing() {
             <div className="flex flex-col gap-3 md:gap-4">
               <p className="flex items-center gap-2 md:gap-3">
                 <img
-                  src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                  src="/assets/images/icons/tick-circle-green-fill.svg"
                   className="flex shrink-0 w-4 md:w-5"
                   alt="icon"
                 />
@@ -65,7 +65,7 @@ export default function Pricing() {
               </p>
               <p className="flex items-center gap-2 md:gap-3">
                 <img
-                  src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                  src="/assets/images/icons/tick-circle-green-fill.svg"
                   className="flex shrink-0 w-4 md:w-5"
                   alt="icon"
                 />
@@ -88,7 +88,7 @@ export default function Pricing() {
             <div className="flex flex-col gap-4 md:gap-5 p-4 md:p-5 pt-0">
               <div className="flex items-center gap-3 md:gap-4">
                 <img
-                  src="/src/assets/images/icons/cup-green-fill.svg"
+                  src="/assets/images/icons/cup-green-fill.svg"
                   className="flex w-10 md:w-[60px] shrink-0"
                   alt="icon"
                 />
@@ -108,7 +108,7 @@ export default function Pricing() {
               <div className="flex flex-col gap-3 md:gap-4">
                 <p className="flex items-center gap-2 md:gap-3">
                   <img
-                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    src="/assets/images/icons/tick-circle-green-fill.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -118,7 +118,7 @@ export default function Pricing() {
                 </p>
                 <p className="flex items-center gap-2 md:gap-3">
                   <img
-                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    src="/assets/images/icons/tick-circle-green-fill.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -128,7 +128,7 @@ export default function Pricing() {
                 </p>
                 <p className="flex items-center gap-2 md:gap-3">
                   <img
-                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    src="/assets/images/icons/tick-circle-green-fill.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -138,7 +138,7 @@ export default function Pricing() {
                 </p>
                 <p className="flex items-center gap-2 md:gap-3">
                   <img
-                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    src="/assets/images/icons/tick-circle-green-fill.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -148,7 +148,7 @@ export default function Pricing() {
                 </p>
                 <p className="flex items-center gap-2 md:gap-3">
                   <img
-                    src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                    src="/assets/images/icons/tick-circle-green-fill.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -168,7 +168,7 @@ export default function Pricing() {
           <div className="price-card-reguler flex flex-col h-fit w-full rounded-[20px] p-4 md:p-5 border border-obito-grey gap-4 md:gap-5 bg-white">
             <div className="flex items-center gap-3 md:gap-4">
               <img
-                src="/src/assets/images/icons/buildings-green-fill.svg"
+                src="/assets/images/icons/buildings-green-fill.svg"
                 className="flex w-10 md:w-[60px] shrink-0"
                 alt="icon"
               />

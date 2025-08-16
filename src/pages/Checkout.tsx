@@ -22,7 +22,7 @@ export default function Checkout() {
               <div className="profile flex items-center gap-[10px] md:gap-[12px] lg:gap-[14px]">
                 <div className="flex justify-center items-center overflow-hidden size-[40px] md:size-[45px] lg:size-[50px] rounded-full">
                   <img
-                    src="/src/assets/images/photos/sami.png"
+                    src="/assets/images/photos/sami.png"
                     alt="image"
                     className="size-full object-cover"
                   />
@@ -54,7 +54,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -67,7 +67,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -80,7 +80,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -93,7 +93,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -106,7 +106,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -119,7 +119,7 @@ export default function Checkout() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2">
                   <img
-                    src="/src/assets/images/icons/note.svg"
+                    src="/assets/images/icons/note.svg"
                     alt="icon"
                     className="size-4.5 md:size-5 shrink-0"
                   />
@@ -157,7 +157,7 @@ export default function Checkout() {
             className="relative flex justify-center h-[180px] md:h-[220px] lg:h-[250px] items-center overflow-hidden rounded-t-[10px] md:rounded-t-[12px] lg:rounded-t-[14px] w-full"
           >
             <img
-              src="/src/assets/images/thumbnails/checkout.png"
+              src="/assets/images/thumbnails/checkout.png"
               alt="image"
               className="size-full object-cover"
             />
@@ -168,7 +168,7 @@ export default function Checkout() {
           >
             <div className="card absolute -top-[30px] md:-top-[40px] lg:-top-[47px] left-[15px] md:left-[20px] lg:left-[30px] right-[15px] md:right-[20px] lg:right-[30px] flex items-center p-3 md:p-4 gap-[10px] md:gap-[12px] lg:gap-[14px] border border-obito-grey rounded-[12px] md:rounded-[16px] lg:rounded-[20px] bg-white shadow-[0px_10px_30px_0px_#B8B8B840]">
               <img
-                src="/src/assets/images/icons/cup-green-fill.svg"
+                src="/assets/images/icons/cup-green-fill.svg"
                 alt="icon"
                 className="size-[40px] md:size-[45px] lg:size-[50px] shrink-0"
               />
@@ -183,7 +183,7 @@ export default function Checkout() {
             </div>
             <div className="flex items-center gap-1 md:gap-2">
               <img
-                src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                src="/assets/images/icons/tick-circle-green-fill.svg"
                 alt="icon"
                 className="size-5 md:size-6 shrink-0"
               />
@@ -193,7 +193,7 @@ export default function Checkout() {
             </div>
             <div className="flex items-center gap-1 md:gap-2">
               <img
-                src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                src="/assets/images/icons/tick-circle-green-fill.svg"
                 alt="icon"
                 className="size-5 md:size-6 shrink-0"
               />
@@ -203,7 +203,7 @@ export default function Checkout() {
             </div>
             <div className="flex items-center gap-1 md:gap-2">
               <img
-                src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                src="/assets/images/icons/tick-circle-green-fill.svg"
                 alt="icon"
                 className="size-5 md:size-6 shrink-0"
               />
@@ -213,7 +213,7 @@ export default function Checkout() {
             </div>
             <div className="flex items-center gap-1 md:gap-2">
               <img
-                src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                src="/assets/images/icons/tick-circle-green-fill.svg"
                 alt="icon"
                 className="size-5 md:size-6 shrink-0"
               />
@@ -223,7 +223,7 @@ export default function Checkout() {
             </div>
             <div className="flex items-center gap-1 md:gap-2">
               <img
-                src="/src/assets/images/icons/tick-circle-green-fill.svg"
+                src="/assets/images/icons/tick-circle-green-fill.svg"
                 alt="icon"
                 className="size-5 md:size-6 shrink-0"
               />

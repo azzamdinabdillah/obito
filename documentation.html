@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obito - Complete Documentation</title>
-    <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4d6.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4d6.svg"
+    />
     <style>
       * {
         margin: 0;
@@ -43,165 +47,165 @@
         opacity: 0.9;
       }
 
-             .nav {
-         background: white;
-         padding: 20px;
-         border-radius: 10px;
-         /* margin-bottom: 30px; */
-         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-         position: sticky;
-         top: 0;
-         z-index: 20;
-       }
+      .nav {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        /* margin-bottom: 30px; */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
 
-       .nav ul {
-         list-style: none;
-         display: flex;
-         flex-wrap: wrap;
-         gap: 20px;
-         max-width: 1160px;
-         margin-inline: auto;
-         justify-content: center;
-       }
+      .nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1160px;
+        margin-inline: auto;
+        justify-content: center;
+      }
 
-       .nav a {
-         text-decoration: none;
-         color: #2f6a62;
-         font-weight: 600;
-         padding: 10px 15px;
-         border-radius: 5px;
-         transition: all 0.3s ease;
-       }
+      .nav a {
+        text-decoration: none;
+        color: #2f6a62;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
 
-       .nav a:hover {
-         background: #2f6a62;
-         color: white;
-       }
+      .nav a:hover {
+        background: #2f6a62;
+        color: white;
+      }
 
-               /* Mobile Menu Button */
-        .mobile-menu-btn {
-          display: none;
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          background: #2f6a62;
-          border: none;
-          font-size: 1.8rem;
-          color: white;
-          cursor: pointer;
-          padding: 15px;
-          border-radius: 50%;
-          box-shadow: 0 4px 12px rgba(47, 106, 98, 0.3);
-          z-index: 1001;
-          transition: all 0.3s ease;
-          width: 60px;
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+      /* Mobile Menu Button */
+      .mobile-menu-btn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #2f6a62;
+        border: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(47, 106, 98, 0.3);
+        z-index: 1001;
+        transition: all 0.3s ease;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .mobile-menu-btn:hover {
-          background: #1f4f47;
-          transform: scale(1.1);
-          box-shadow: 0 6px 16px rgba(47, 106, 98, 0.4);
-        }
+      .mobile-menu-btn:hover {
+        background: #1f4f47;
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(47, 106, 98, 0.4);
+      }
 
-        .mobile-menu-btn:active {
-          transform: scale(0.95);
-        }
+      .mobile-menu-btn:active {
+        transform: scale(0.95);
+      }
 
-        .mobile-menu-btn.hidden {
-          opacity: 0;
-          pointer-events: none;
-          transform: scale(0.8);
-        }
+      .mobile-menu-btn.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.8);
+      }
 
-       /* Mobile Drawer */
-       .mobile-drawer {
-         display: none;
-         position: fixed;
-         top: 0;
-         left: -100%;
-         width: 280px;
-         height: 100vh;
-         background: white;
-         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-         z-index: 1000;
-         transition: left 0.3s ease;
-         overflow-y: auto;
-       }
+      /* Mobile Drawer */
+      .mobile-drawer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+      }
 
-       .mobile-drawer.active {
-         left: 0;
-       }
+      .mobile-drawer.active {
+        left: 0;
+      }
 
-       .drawer-header {
-         padding: 20px;
-         border-bottom: 1px solid #e9ecef;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-       }
+      .drawer-header {
+        padding: 20px;
+        border-bottom: 1px solid #e9ecef;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-       .drawer-header h3 {
-         color: #2f6a62;
-         margin: 0;
-       }
+      .drawer-header h3 {
+        color: #2f6a62;
+        margin: 0;
+      }
 
-       .close-drawer {
-         background: none;
-         border: none;
-         font-size: 1.5rem;
-         color: #2f6a62;
-         cursor: pointer;
-         padding: 5px;
-       }
+      .close-drawer {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #2f6a62;
+        cursor: pointer;
+        padding: 5px;
+      }
 
-       .drawer-nav {
-         padding: 20px;
-       }
+      .drawer-nav {
+        padding: 20px;
+      }
 
-       .drawer-nav ul {
-         list-style: none;
-         margin: 0;
-         padding: 0;
-       }
+      .drawer-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-       .drawer-nav li {
-         margin-bottom: 10px;
-       }
+      .drawer-nav li {
+        margin-bottom: 10px;
+      }
 
-       .drawer-nav a {
-         display: block;
-         padding: 15px;
-         text-decoration: none;
-         color: #2f6a62;
-         font-weight: 600;
-         border-radius: 8px;
-         transition: all 0.3s ease;
-       }
+      .drawer-nav a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #2f6a62;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
 
-       .drawer-nav a:hover {
-         background: #2f6a62;
-         color: white;
-       }
+      .drawer-nav a:hover {
+        background: #2f6a62;
+        color: white;
+      }
 
-       /* Overlay */
-       .drawer-overlay {
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background: rgba(0, 0, 0, 0.5);
-         z-index: 999;
-       }
+      /* Overlay */
+      .drawer-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
 
-       .drawer-overlay.active {
-         display: block;
-       }
+      .drawer-overlay.active {
+        display: block;
+      }
 
       .section {
         background: white;
@@ -331,7 +335,7 @@
           margin: 10px -10px;
           border-radius: 0;
         }
-        
+
         th,
         td {
           padding: 8px 10px;
@@ -351,97 +355,110 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
-      li{
+      li {
         margin-left: 1.5rem;
       }
 
       @media (max-width: 768px) {
-          .nav {
-            display: none;
-          }
-
-          .mobile-menu-btn {
-            display: flex !important;
-          }
-
-          .mobile-drawer {
-            display: block;
-          }
-
-          .header h1 {
-            font-size: 2rem;
-          }
+        .nav {
+          display: none;
         }
 
-    @media (min-width: 768px) {
-      .mobile-menu-btn {
-        display: none !important;
+        .mobile-menu-btn {
+          display: flex !important;
+        }
+
+        .mobile-drawer {
+          display: block;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
       }
-    }
+
+      @media (min-width: 768px) {
+        .mobile-menu-btn {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body>
-         <div class="header">
-       <h1>🚀 Obito React UI Template</h1>
-       <p>Complete Documentation & Setup Guide</p>
-     </div>
-     
-     <!-- Mobile Menu Button -->
-     <button class="mobile-menu-btn" onclick="toggleDrawer()">☰</button>
-     
-     <!-- Desktop Navigation -->
-     <nav class="nav">
-       <ul>
-         <li><a href="#overview">Overview</a></li>
-         <li><a href="#setup">Setup & Installation</a></li>
-         <li><a href="#structure">Template Structure</a></li>
-         <li><a href="#components">Components</a></li>
-         <li><a href="#pages">Pages</a></li>
-         <li><a href="#styling">Styling & CSS</a></li>
-         <li><a href="#routing">Routing</a></li>
-         <li><a href="#data">Mock Data</a></li>
-         <li><a href="#deployment">Deployment</a></li>
-         <li><a href="#modification">Modification Guide</a></li>
-       </ul>
-     </nav>
+    <div class="header">
+      <h1>🚀 Obito React UI Template</h1>
+      <p>Complete Documentation & Setup Guide</p>
+    </div>
 
-     <!-- Mobile Drawer -->
-     <div class="drawer-overlay" onclick="closeDrawer()"></div>
-     <div class="mobile-drawer" id="mobileDrawer">
-       <div class="drawer-header">
-         <h3>📚 Navigation</h3>
-         <button class="close-drawer" onclick="closeDrawer()">✕</button>
-       </div>
-       <nav class="drawer-nav">
-         <ul>
-           <li><a href="#overview" onclick="closeDrawer()">Overview</a></li>
-           <li><a href="#setup" onclick="closeDrawer()">Setup & Installation</a></li>
-           <li><a href="#structure" onclick="closeDrawer()">Template Structure</a></li>
-           <li><a href="#components" onclick="closeDrawer()">Components</a></li>
-           <li><a href="#pages" onclick="closeDrawer()">Pages</a></li>
-           <li><a href="#styling" onclick="closeDrawer()">Styling & CSS</a></li>
-           <li><a href="#routing" onclick="closeDrawer()">Routing</a></li>
-           <li><a href="#data" onclick="closeDrawer()">Mock Data</a></li>
-           <li><a href="#deployment" onclick="closeDrawer()">Deployment</a></li>
-           <li><a href="#modification" onclick="closeDrawer()">Modification Guide</a></li>
-         </ul>
-       </nav>
-     </div>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" onclick="toggleDrawer()">☰</button>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#setup">Setup & Installation</a></li>
+        <li><a href="#structure">Template Structure</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#styling">Styling & CSS</a></li>
+        <li><a href="#routing">Routing</a></li>
+        <li><a href="#data">Mock Data</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#modification">Modification Guide</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" onclick="closeDrawer()"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <h3>📚 Navigation</h3>
+        <button class="close-drawer" onclick="closeDrawer()">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <ul>
+          <li><a href="#overview" onclick="closeDrawer()">Overview</a></li>
+          <li>
+            <a href="#setup" onclick="closeDrawer()">Setup & Installation</a>
+          </li>
+          <li>
+            <a href="#structure" onclick="closeDrawer()">Template Structure</a>
+          </li>
+          <li><a href="#components" onclick="closeDrawer()">Components</a></li>
+          <li><a href="#pages" onclick="closeDrawer()">Pages</a></li>
+          <li><a href="#styling" onclick="closeDrawer()">Styling & CSS</a></li>
+          <li><a href="#routing" onclick="closeDrawer()">Routing</a></li>
+          <li><a href="#data" onclick="closeDrawer()">Mock Data</a></li>
+          <li><a href="#deployment" onclick="closeDrawer()">Deployment</a></li>
+          <li>
+            <a href="#modification" onclick="closeDrawer()"
+              >Modification Guide</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <div class="container">
-
       <section id="overview" class="section">
         <h2>📋 Project Overview</h2>
         <p>
-          <strong>Obito React</strong> is a <strong>UI template only</strong> for an online learning platform built with
-          React, TypeScript, and Vite. This project showcases various UI components and pages for
-          Programming, Networking, Digital Marketing, Product Design, and
-          Entrepreneurship categories.
+          <strong>Obito React</strong> is a
+          <strong>UI template only</strong> for an online learning platform
+          built with React, TypeScript, and Vite. This project showcases various
+          UI components and pages for Programming, Networking, Digital
+          Marketing, Product Design, and Entrepreneurship categories.
         </p>
 
         <div class="warning">
           <h4>⚠️ Important Notice:</h4>
-          <p><strong>This is a UI template only - no backend functionality is included.</strong></p>
+          <p>
+            <strong
+              >This is a UI template only - no backend functionality is
+              included.</strong
+            >
+          </p>
           <ul>
             <li>All data is static/mock data</li>
             <li>No real authentication system</li>
@@ -955,7 +972,10 @@ navigate("/course/catalog");
         <h2>📊 Mock Data Management</h2>
 
         <h3>Data Structure</h3>
-        <p>Template uses mock/static data stored in TypeScript files (no real backend integration):</p>
+        <p>
+          Template uses mock/static data stored in TypeScript files (no real
+          backend integration):
+        </p>
 
         <h4>Course Interface</h4>
         <pre class="code-block">
@@ -991,11 +1011,14 @@ interface SubscriptionData {
         <h3>Data Files</h3>
         <ul>
           <li>
-            <strong>courses.ts:</strong> Mock data for 50+ courses in 5 categories
+            <strong>courses.ts:</strong> Mock data for 50+ courses in 5
+            categories
           </li>
           <li><strong>testimonials.ts:</strong> Mock user testimonial data</li>
           <li><strong>roadmap.ts:</strong> Mock learning roadmap data</li>
-          <li><strong>courseLearning.tsx:</strong> Mock course learning data</li>
+          <li>
+            <strong>courseLearning.tsx:</strong> Mock course learning data
+          </li>
         </ul>
 
         <h3>Adding New Mock Data</h3>
@@ -1075,14 +1098,14 @@ export const coursesData: Course[] = [
     id: "new-course-1",
     title: "New Course Title",
     category: "Programming",
-    thumbnail: "/src/assets/images/thumbnails/new-thumbnail.png",
+    thumbnail: "/assets/images/thumbnails/new-thumbnail.png",
     rating: 4.8,
     lessons: 150,
     status: "Ready to Work",
-    categoryIcon: "/src/assets/images/icons/crown-green.svg",
-    lessonsIcon: "/src/assets/images/icons/menu-board-green.svg",
-    statusIcon: "/src/assets/images/icons/briefcase-green.svg",
-    ratingIcon: "/src/assets/images/icons/like.svg",
+    categoryIcon: "/assets/images/icons/crown-green.svg",
+    lessonsIcon: "/assets/images/icons/menu-board-green.svg",
+    statusIcon: "/assets/images/icons/briefcase-green.svg",
+    ratingIcon: "/assets/images/icons/like.svg",
   }
 ];
         </pre>
@@ -1202,69 +1225,69 @@ import NewComponent from "../components/NewComponent";
 
     <a href="#" class="back-to-top">↑</a>
 
-         <script>
-               // Mobile drawer functionality
-        function toggleDrawer() {
-          const drawer = document.getElementById('mobileDrawer');
-          const overlay = document.querySelector('.drawer-overlay');
-          const menuBtn = document.querySelector('.mobile-menu-btn');
-          
-          drawer.classList.toggle('active');
-          overlay.classList.toggle('active');
-          menuBtn.classList.toggle('hidden');
+    <script>
+      // Mobile drawer functionality
+      function toggleDrawer() {
+        const drawer = document.getElementById("mobileDrawer");
+        const overlay = document.querySelector(".drawer-overlay");
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+
+        drawer.classList.toggle("active");
+        overlay.classList.toggle("active");
+        menuBtn.classList.toggle("hidden");
+      }
+
+      function closeDrawer() {
+        const drawer = document.getElementById("mobileDrawer");
+        const overlay = document.querySelector(".drawer-overlay");
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+
+        drawer.classList.remove("active");
+        overlay.classList.remove("active");
+        menuBtn.classList.remove("hidden");
+      }
+
+      // Close drawer on escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeDrawer();
         }
+      });
 
-        function closeDrawer() {
-          const drawer = document.getElementById('mobileDrawer');
-          const overlay = document.querySelector('.drawer-overlay');
-          const menuBtn = document.querySelector('.mobile-menu-btn');
-          
-          drawer.classList.remove('active');
-          overlay.classList.remove('active');
-          menuBtn.classList.remove('hidden');
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back to top functionality
+      document
+        .querySelector(".back-to-top")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+      // Show/hide back to top button
+      window.addEventListener("scroll", function () {
+        const backToTop = document.querySelector(".back-to-top");
+        if (window.scrollY > 300) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
         }
-
-       // Close drawer on escape key
-       document.addEventListener('keydown', function(e) {
-         if (e.key === 'Escape') {
-           closeDrawer();
-         }
-       });
-
-       // Smooth scrolling for navigation
-       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-         anchor.addEventListener("click", function (e) {
-           e.preventDefault();
-           const target = document.querySelector(this.getAttribute("href"));
-           if (target) {
-             target.scrollIntoView({
-               behavior: "smooth",
-               block: "start",
-             });
-           }
-         });
-       });
-
-       // Back to top functionality
-       document
-         .querySelector(".back-to-top")
-         .addEventListener("click", function (e) {
-           e.preventDefault();
-           window.scrollTo({
-             top: 0,
-             behavior: "smooth",
-           });
-         });
-
-       // Show/hide back to top button
-       window.addEventListener("scroll", function () {
-         const backToTop = document.querySelector(".back-to-top");
-         if (window.scrollY > 300) {
-           backToTop.style.display = "block";
-         } else {
-           backToTop.style.display = "none";
-         }
-       });
-     </script>
+      });
+    </script>
   </body>
 </html>

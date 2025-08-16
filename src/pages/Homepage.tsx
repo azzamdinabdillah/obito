@@ -46,7 +46,7 @@ export default function index() {
                       className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"
                     >
                       <img
-                        src="/src/assets/images/icons/play-circle-fill.svg"
+                        src="/assets/images/icons/play-circle-fill.svg"
                         className="w-7 h-7 md:w-8 md:h-8 flex shrink-0"
                         alt="icon"
                       />
@@ -57,7 +57,7 @@ export default function index() {
               </div>
               <div className="flex items-center gap-2 sm:gap-[14px]">
                 <img
-                  src="/src/assets/images/photos/group.png"
+                  src="/assets/images/photos/group.png"
                   className="flex shrink-0 h-[40px] md:h-[50px] lg:h-[60px]"
                   alt="group photo"
                 />
@@ -67,7 +67,7 @@ export default function index() {
                       {Array.from({ length: 5 }).map((_, idx) => (
                         <img
                           key={idx}
-                          src="/src/assets/images/icons/Star 1.svg"
+                          src="/assets/images/icons/Star 1.svg"
                           className="flex shrink-0 w-4 md:w-5 lg:w-6"
                           alt="star"
                         />

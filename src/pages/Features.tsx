@@ -21,7 +21,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/video-circle-green-fill.svg"
+                  src="/assets/images/icons/video-circle-green-fill.svg"
                   alt="Video Learning"
                   className="w-8 h-8"
                 />
@@ -39,7 +39,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/note-favorite-green.svg"
+                  src="/assets/images/icons/note-favorite-green.svg"
                   alt="Progress Tracking"
                   className="w-8 h-8"
                 />
@@ -57,7 +57,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/message-programming.svg"
+                  src="/assets/images/icons/message-programming.svg"
                   alt="Community Support"
                   className="w-8 h-8"
                 />
@@ -75,7 +75,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/crown-green.svg"
+                  src="/assets/images/icons/crown-green.svg"
                   alt="Certificates"
                   className="w-8 h-8"
                 />
@@ -93,7 +93,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/device-message.svg"
+                  src="/assets/images/icons/device-message.svg"
                   alt="Mobile Learning"
                   className="w-8 h-8"
                 />
@@ -111,7 +111,7 @@ export default function Features() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-obito-green rounded-2xl flex items-center justify-center mb-6">
                 <img
-                  src="/src/assets/images/icons/security-user-green-fill.svg"
+                  src="/assets/images/icons/security-user-green-fill.svg"
                   alt="Secure Platform"
                   className="w-8 h-8"
                 />

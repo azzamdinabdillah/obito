@@ -46,7 +46,7 @@ const dropdownMenuItems: MenuItem[] = [
 const userProfile: UserProfile = {
   name: "Tamara Utami",
   role: "Programmer UI",
-  avatar: "/src/assets/images/photos/sami.png",
+  avatar: "/assets/images/photos/sami.png",
 };
 
 export default function NavbarDashboard({
@@ -65,14 +65,14 @@ export default function NavbarDashboard({
       id: "courses",
       label: "Courses",
       href: "/course/catalog",
-      icon: "/src/assets/images/icons/note-favorite.svg",
+      icon: "/assets/images/icons/note-favorite.svg",
       isActive: currentPath.startsWith("/course"),
     },
     {
       id: "subscription",
       label: "Subscription",
       href: "/subscription",
-      icon: "/src/assets/images/icons/ruler&pen.svg",
+      icon: "/assets/images/icons/ruler&pen.svg",
       isActive: currentPath.startsWith("/subscription"),
     },
   ];
@@ -120,12 +120,12 @@ export default function NavbarDashboard({
           <div className="flex items-center gap-4 lg:gap-[50px] w-full md:w-auto justify-between md:justify-start">
             <Link to="/" className="flex shrink-0">
               <img
-                src="/src/assets/images/logos/logo-64.png"
+                src="/assets/images/logos/logo-64.png"
                 className="flex shrink-0 w-10 h-10 lg:hidden"
                 alt="logo"
               />
               <img
-                src="/src/assets/images/logos/logo.svg"
+                src="/assets/images/logos/logo.svg"
                 className="shrink-0 hidden lg:block"
                 alt="logo"
               />
@@ -145,7 +145,7 @@ export default function NavbarDashboard({
                     className="absolute h-7 w-7 md:h-[52px] md:w-[52px] top-1/2 -translate-y-1/2 right-2 md:-right-1"
                   >
                     <img
-                      src="/src/assets/images/icons/search-normal-green-fill.svg"
+                      src="/assets/images/icons/search-normal-green-fill.svg"
                       className="flex shrink-0"
                       alt=""
                     />
@@ -162,7 +162,7 @@ export default function NavbarDashboard({
             >
               <span className="block w-10 h-10 rounded-full overflow-hidden">
                 <img
-                  src="/src/assets/images/photos/sami.png"
+                  src="/assets/images/photos/sami.png"
                   className="w-full h-full object-cover"
                   alt="photo"
                 />
@@ -173,21 +173,21 @@ export default function NavbarDashboard({
             <div className="items-center gap-5 hidden md:flex">
               <a href="#" className="flex shrink-0">
                 <img
-                  src="/src/assets/images/icons/device-message.svg"
+                  src="/assets/images/icons/device-message.svg"
                   className="flex shrink-0"
                   alt="icon"
                 />
               </a>
               <a href="#" className="flex shrink-0">
                 <img
-                  src="/src/assets/images/icons/category.svg"
+                  src="/assets/images/icons/category.svg"
                   className="flex shrink-0"
                   alt="icon"
                 />
               </a>
               <a href="#" className="flex shrink-0">
                 <img
-                  src="/src/assets/images/icons/notification.svg"
+                  src="/assets/images/icons/notification.svg"
                   className="flex shrink-0"
                   alt="icon"
                 />
@@ -222,7 +222,7 @@ export default function NavbarDashboard({
                   aria-label="Toggle profile dropdown"
                 >
                   <img
-                    src="/src/assets/images/icons/arrow-circle-down.svg"
+                    src="/assets/images/icons/arrow-circle-down.svg"
                     className={`w-6 h-6 transition-transform duration-300 ${
                       isDropdownOpen ? "rotate-180" : ""
                     }`}
@@ -276,7 +276,7 @@ export default function NavbarDashboard({
           <div className="flex items-center justify-between p-6 border-b border-obito-grey">
             <Link to="/" onClick={closeDrawer}>
               <img
-                src="/src/assets/images/logos/logo.svg"
+                src="/assets/images/logos/logo.svg"
                 className="h-8"
                 alt="logo"
               />

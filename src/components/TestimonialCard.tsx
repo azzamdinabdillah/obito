@@ -19,7 +19,7 @@ export default function TestimonialCard({
         {Array.from({ length: rating }, (_, index) => (
           <img
             key={index}
-            src="/src/assets/images/icons/Star 1.svg"
+            src="/assets/images/icons/Star 1.svg"
             className="w-5 flex shrink-0"
             alt="star icon"
           />

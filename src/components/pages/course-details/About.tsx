@@ -28,7 +28,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-[30px] w-full max-w-[700px]">
           <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
             <img
-              src="/src/assets/images/icons/tick-circle-green-fill.svg"
+              src="/assets/images/icons/tick-circle-green-fill.svg"
               className="w-6 flex shrink-0"
               alt="icon"
             />
@@ -39,7 +39,7 @@ export default function About() {
           </div>
           <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
             <img
-              src="/src/assets/images/icons/tick-circle-green-fill.svg"
+              src="/assets/images/icons/tick-circle-green-fill.svg"
               className="w-6 flex shrink-0"
               alt="icon"
             />
@@ -50,7 +50,7 @@ export default function About() {
           </div>
           <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
             <img
-              src="/src/assets/images/icons/tick-circle-green-fill.svg"
+              src="/assets/images/icons/tick-circle-green-fill.svg"
               className="w-6 flex shrink-0"
               alt="icon"
             />
@@ -61,7 +61,7 @@ export default function About() {
           </div>
           <div className="flex items-center gap-3 md:gap-4 text-sm md:text-base">
             <img
-              src="/src/assets/images/icons/tick-circle-green-fill.svg"
+              src="/assets/images/icons/tick-circle-green-fill.svg"
               className="w-6 flex shrink-0"
               alt="icon"
             />

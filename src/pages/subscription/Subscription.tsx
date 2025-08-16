@@ -21,7 +21,7 @@ const subscriptionData: SubscriptionData[] = [
     id: 1,
     name: "Pro Talent",
     duration: "3 months duration",
-    icon: "/src/assets/images/icons/cup-green-fill.svg",
+    icon: "/assets/images/icons/cup-green-fill.svg",
     price: "Rp 1.890.000",
     startedAt: "19 December 2024",
     status: "ACTIVE",
@@ -31,7 +31,7 @@ const subscriptionData: SubscriptionData[] = [
     id: 2,
     name: "Premium Learning",
     duration: "6 months duration",
-    icon: "/src/assets/images/icons/cup-green-fill.svg",
+    icon: "/assets/images/icons/cup-green-fill.svg",
     price: "Rp 3.250.000",
     startedAt: "15 November 2024",
     status: "ACTIVE",
@@ -41,7 +41,7 @@ const subscriptionData: SubscriptionData[] = [
     id: 3,
     name: "Basic Starter",
     duration: "1 month duration",
-    icon: "/src/assets/images/icons/cup-green-fill.svg",
+    icon: "/assets/images/icons/cup-green-fill.svg",
     price: "Rp 750.000",
     startedAt: "10 October 2024",
     status: "EXPIRED",
@@ -51,7 +51,7 @@ const subscriptionData: SubscriptionData[] = [
     id: 4,
     name: "Enterprise Pro",
     duration: "12 months duration",
-    icon: "/src/assets/images/icons/cup-green-fill.svg",
+    icon: "/assets/images/icons/cup-green-fill.svg",
     price: "Rp 5.500.000",
     startedAt: "1 January 2025",
     status: "PENDING",
@@ -69,7 +69,7 @@ export default function Subscription() {
           className="hidden lg:flex absolute w-1/2 shrink-0 h-full overflow-hidden right-0"
         >
           <img
-            src="/src/assets/images/backgrounds/banner-subscription.png"
+            src="/assets/images/backgrounds/banner-subscription.png"
             className="w-full h-full object-cover"
             alt="banner"
           />
@@ -116,7 +116,7 @@ export default function Subscription() {
                 <div className="flex flex-row w-full justify-between lg:flex-col lg:w-[100px] shrink-0 gap-1 md:gap-2 lg:gap-1">
                   <div className="flex items-center gap-1 md:gap-2">
                     <img
-                      src="/src/assets/images/icons/note.svg"
+                      src="/assets/images/icons/note.svg"
                       className="flex w-4 md:w-5 lg:w-5 shrink-0"
                       alt="icon"
                     />
@@ -129,7 +129,7 @@ export default function Subscription() {
                 <div className="flex flex-row w-full justify-between lg:flex-col lg:w-[150px] shrink-0 gap-1 md:gap-2 lg:gap-1">
                   <div className="flex items-center gap-1 md:gap-2">
                     <img
-                      src="/src/assets/images/icons/note.svg"
+                      src="/assets/images/icons/note.svg"
                       className="flex w-4 md:w-5 lg:w-5 shrink-0"
                       alt="icon"
                     />

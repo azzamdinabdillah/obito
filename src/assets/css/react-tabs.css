@@ -42,3 +42,7 @@
 .react-tabs__tab-panel--selected {
   display: block;
 }
+
+.react-tabs ul {
+  overflow-y: hidden;
+}
