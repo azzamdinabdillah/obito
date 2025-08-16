@@ -13,7 +13,7 @@ export default function index() {
               <div className="flex flex-col gap-[10px] md:gap-[30px]">
                 <p className="flex items-center gap-2 md:gap-[6px] w-fit rounded-full py-2 px-[14px] bg-obito-light-green">
                   <img
-                    src="/assets/images/icons/crown-green.svg"
+                    src="/obito/assets/images/icons/crown-green.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -46,7 +46,7 @@ export default function index() {
                       className="text-base md:text-lg lg:px-[30px] md:h-[60px] lg:h-[67px] px-5 md:px-8 h-12"
                     >
                       <img
-                        src="/assets/images/icons/play-circle-fill.svg"
+                        src="/obito/assets/images/icons/play-circle-fill.svg"
                         className="w-7 h-7 md:w-8 md:h-8 flex shrink-0"
                         alt="icon"
                       />
@@ -57,7 +57,7 @@ export default function index() {
               </div>
               <div className="flex items-center gap-2 sm:gap-[14px]">
                 <img
-                  src="/assets/images/photos/group.png"
+                  src="/obito/assets/images/photos/group.png"
                   className="flex shrink-0 h-[40px] md:h-[50px] lg:h-[60px]"
                   alt="group photo"
                 />
@@ -67,7 +67,7 @@ export default function index() {
                       {Array.from({ length: 5 }).map((_, idx) => (
                         <img
                           key={idx}
-                          src="/assets/images/icons/Star 1.svg"
+                          src="/obito/assets/images/icons/Star 1.svg"
                           className="flex shrink-0 w-4 md:w-5 lg:w-6"
                           alt="star"
                         />
@@ -84,7 +84,7 @@ export default function index() {
           </div>
           <div className="flex pl-4 lg:pl-0 overflow-visible shrink-0 w-full h-full md:max-h-[590px] md:max-w-[666px] justify-end">
             <img
-              src="/assets/images/backgrounds/hero-image.png"
+              src="/obito/assets/images/backgrounds/hero-image.png"
               alt="hero-image"
               className="w-full h-full object-cover overflow-visible md:translate-x-[20%] lg:translate-x-[0%] lg:object-contain"
             />

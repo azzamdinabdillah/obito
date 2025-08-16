@@ -44,7 +44,7 @@ export default function Navbar(): JSX.Element {
           <div className="flex items-center gap-[50px]">
             <Link to="/" className="flex shrink-0">
               <img
-                src="/assets/images/logos/logo.svg"
+                src="/obito/assets/images/logos/logo.svg"
                 className="flex shrink-0"
                 alt="logo"
               />
@@ -65,7 +65,7 @@ export default function Navbar(): JSX.Element {
           <div className="flex items-center gap-5 justify-end">
             <a href="#" className="flex shrink-0">
               <img
-                src="/assets/images/icons/device-message.svg"
+                src="/obito/assets/images/icons/device-message.svg"
                 className="flex shrink-0"
                 alt="icon"
               />
@@ -153,7 +153,7 @@ export default function Navbar(): JSX.Element {
           <div className="flex items-center justify-between p-6 border-b border-obito-grey">
             <Link to="/" onClick={closeDrawer}>
               <img
-                src="/assets/images/logos/logo.svg"
+                src="/obito/assets/images/logos/logo.svg"
                 className="h-8"
                 alt="logo"
               />

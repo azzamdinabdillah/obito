@@ -20,7 +20,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/3rdPerson.png"
+                  src="/obito/assets/images/photos/3rdPerson.png"
                   alt="Sarah Johnson"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -51,7 +51,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/4thPerson.png"
+                  src="/obito/assets/images/photos/4thPerson.png"
                   alt="Michael Chen"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -82,7 +82,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/5thPerson.png"
+                  src="/obito/assets/images/photos/5thPerson.png"
                   alt="Emily Rodriguez"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -114,7 +114,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/angga.png"
+                  src="/obito/assets/images/photos/angga.png"
                   alt="David Kim"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -144,7 +144,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/sami.png"
+                  src="/obito/assets/images/photos/sami.png"
                   alt="Lisa Thompson"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -175,7 +175,7 @@ export default function Testimonials() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <img
-                  src="/assets/images/photos/group.png"
+                  src="/obito/assets/images/photos/group.png"
                   alt="Alex Martinez"
                   className="w-16 h-16 rounded-full mr-4"
                 />

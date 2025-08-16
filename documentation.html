@@ -1106,14 +1106,14 @@ export const coursesData: Course[] = [
     id: "new-course-1",
     title: "New Course Title",
     category: "Programming",
-    thumbnail: "/assets/images/thumbnails/new-thumbnail.png",
+    thumbnail: "/obito/assets/images/thumbnails/new-thumbnail.png",
     rating: 4.8,
     lessons: 150,
     status: "Ready to Work",
-    categoryIcon: "/assets/images/icons/crown-green.svg",
-    lessonsIcon: "/assets/images/icons/menu-board-green.svg",
-    statusIcon: "/assets/images/icons/briefcase-green.svg",
-    ratingIcon: "/assets/images/icons/like.svg",
+    categoryIcon: "/obito/assets/images/icons/crown-green.svg",
+    lessonsIcon: "/obito/assets/images/icons/menu-board-green.svg",
+    statusIcon: "/obito/assets/images/icons/briefcase-green.svg",
+    ratingIcon: "/obito/assets/images/icons/like.svg",
   }
 ];
         </pre>
@@ -1122,20 +1122,22 @@ export const coursesData: Course[] = [
           <h4>📁 Asset Path Structure:</h4>
           <ul>
             <li>
-              <strong>Images:</strong> <code>/assets/images/</code> (from
+              <strong>Images:</strong> <code>/obito/assets/images/</code> (from
               public/assets/images/)
             </li>
             <li>
-              <strong>Icons:</strong> <code>/assets/images/icons/</code> (from
+              <strong>Icons:</strong>
+              <code>/obito/assets/images/icons/</code> (from
               public/assets/images/icons/)
             </li>
             <li>
-              <strong>Logos:</strong> <code>/assets/images/logos/</code> (from
+              <strong>Logos:</strong>
+              <code>/obito/assets/images/logos/</code> (from
               public/assets/images/logos/)
             </li>
             <li>
               <strong>Thumbnails:</strong>
-              <code>/assets/images/thumbnails/</code> (from
+              <code>/obito/assets/images/thumbnails/</code> (from
               public/assets/images/thumbnails/)
             </li>
             <li>
@@ -1209,7 +1211,7 @@ public/assets/images/icons/new-icon.svg
 public/assets/images/thumbnails/new-thumbnail.png
 
 // Reference in components
-&lt;img src="/assets/images/icons/new-icon.svg" alt="New Icon" /&gt;
+&lt;img src="/obito/assets/images/icons/new-icon.svg" alt="New Icon" /&gt;
 
 // For CSS files (place in src/assets/css/)
 src/assets/css/new-component.css
@@ -1232,7 +1234,7 @@ import "../assets/css/new-component.css";
             <li>Use ESLint for code quality</li>
             <li>
               Place images/icons in <code>public/assets/images/</code> and
-              reference with <code>/assets/images/</code>
+              reference with <code>/obito/assets/images/</code>
             </li>
             <li>
               Place CSS files in <code>src/assets/css/</code> and import in

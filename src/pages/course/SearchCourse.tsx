@@ -33,7 +33,7 @@ export default function SearchCourse() {
         <div className="flex flex-col items-center gap-2 md:gap-[10px] max-w-[350px] md:max-w-[500px] w-full mx-auto px-4 md:px-6 lg:px-0">
           <p className="flex items-center gap-1 md:gap-[4px] lg:gap-[6px] w-fit rounded-full py-1.5 md:py-1.5 lg:py-2 px-3 md:px-[12px] lg:px-[14px] bg-obito-light-green">
             <img
-              src="/assets/images/icons/crown-green.svg"
+              src="/obito/assets/images/icons/crown-green.svg"
               className="flex shrink-0 w-4 md:w-4.5 lg:w-5"
               alt="icon"
             />
@@ -56,7 +56,7 @@ export default function SearchCourse() {
                 className="absolute right-0 top-1/2 h-[44px] -translate-y-1/2 md:h-[48px] lg:h-[52px] w-[44px] md:w-[48px] lg:w-[52px] flex shrink-0 items-center justify-center"
               >
                 <img
-                  src="/assets/images/icons/search-normal-green-fill.svg"
+                  src="/obito/assets/images/icons/search-normal-green-fill.svg"
                   className="flex shrink-0 w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10"
                   alt=""
                 />

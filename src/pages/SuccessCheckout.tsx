@@ -11,7 +11,7 @@ export default function SuccessCheckout() {
           <div className="flex flex-col gap-[8px] md:gap-[10px]">
             <div className="rounded-full !w-fit mx-auto py-1.5 md:py-2 px-[10px] md:px-[14px] bg-obito-light-green flex items-center gap-[4px] md:gap-[6px]">
               <img
-                src="/assets/images/icons/crown-green.svg"
+                src="/obito/assets/images/icons/crown-green.svg"
                 alt="icon"
                 className="size-[16px] md:size-[18px] lg:size-[20px] shrink-0"
               />
@@ -33,7 +33,7 @@ export default function SuccessCheckout() {
           >
             <div className="flex items-center justify-center rounded-[12px] md:rounded-[14px] overflow-hidden w-[120px] md:w-[150px] lg:w-[180px] h-[90px] md:h-[110px] lg:h-[130px] shrink-0">
               <img
-                src="/assets/images/thumbnails/succes-checkout.png"
+                src="/obito/assets/images/thumbnails/succes-checkout.png"
                 alt="image"
                 className="w-full h-full object-cover"
               />
@@ -44,7 +44,7 @@ export default function SuccessCheckout() {
               </h2>
               <div className="flex items-center gap-[4px] md:gap-[6px]">
                 <img
-                  src="/assets/images/icons/calendar-green.svg"
+                  src="/obito/assets/images/icons/calendar-green.svg"
                   alt="icon"
                   className="size-[16px] md:size-[18px] lg:size-[20px] shrink-0"
                 />
@@ -54,7 +54,7 @@ export default function SuccessCheckout() {
               </div>
               <div className="flex items-center gap-[4px] md:gap-[6px]">
                 <img
-                  src="/assets/images/icons/briefcase-green.svg"
+                  src="/obito/assets/images/icons/briefcase-green.svg"
                   alt="icon"
                   className="size-[16px] md:size-[18px] lg:size-[20px] shrink-0"
                 />
@@ -64,7 +64,7 @@ export default function SuccessCheckout() {
               </div>
             </div>
             <img
-              src="/assets/images/icons/cup-green-fill.svg"
+              src="/obito/assets/images/icons/cup-green-fill.svg"
               alt="icon"
               className="hidden md:block absolute top-1/2 right-0 size-[35px] md:size-[42px] lg:size-[50px] shrink-0 -translate-y-1/2 translate-x-1/2"
             />

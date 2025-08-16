@@ -22,7 +22,7 @@ export default function Lessons() {
                   {section.title}
                 </p>
                 <img
-                  src="/assets/images/icons/arrow-circle-down.svg"
+                  src="/obito/assets/images/icons/arrow-circle-down.svg"
                   alt="icon"
                   className="size-6 shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180"
                 />
@@ -36,7 +36,7 @@ export default function Lessons() {
                     className="flex items-center rounded-[50px] gap-[10px] border border-obito-grey py-3 px-4 md:px-5 bg-white"
                   >
                     <img
-                      src="/assets/images/icons/menu-board.svg"
+                      src="/obito/assets/images/icons/menu-board.svg"
                       className="size-6 flex shrink-0"
                       alt="icon"
                     />

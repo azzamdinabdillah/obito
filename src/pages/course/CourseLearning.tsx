@@ -106,7 +106,7 @@ function CourseLearning() {
             <Link to="/course/catalog">
               <div className="flex items-center gap-2 py-[10px] px-[14px] rounded-full border border-obito-grey bg-white hover:border-obito-green transition-all duration-300">
                 <img
-                  src="/assets/images/icons/home-trend-up.svg"
+                  src="/obito/assets/images/icons/home-trend-up.svg"
                   alt="icon"
                   className="size-[20px] shrink-0"
                 />
@@ -149,7 +149,7 @@ function CourseLearning() {
                     <Accordion.Trigger className="flex w-full items-center justify-between hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
                       <h2 className="font-semibold">{section.title}</h2>
                       <img
-                        src="/assets/images/icons/arrow-circle-down.svg"
+                        src="/obito/assets/images/icons/arrow-circle-down.svg"
                         alt="icon"
                         className="size-6 shrink-0 transition-all duration-300"
                       />

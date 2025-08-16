@@ -111,7 +111,7 @@ export default function SignUp() {
             label="Complete Name"
             placeholder="Type your complete name"
             type="text"
-            icon="/assets/images/icons/profile.svg"
+            icon="/obito/assets/images/icons/profile.svg"
             iconAlt="profile icon"
             name="completeName"
             required
@@ -121,7 +121,7 @@ export default function SignUp() {
             label="Occupation"
             placeholder="Type your occupation"
             type="text"
-            icon="/assets/images/icons/briefcase.svg"
+            icon="/obito/assets/images/icons/briefcase.svg"
             iconAlt="briefcase icon"
             name="occupation"
             required
@@ -131,7 +131,7 @@ export default function SignUp() {
             label="Email Address"
             placeholder="Type your valid email address"
             type="email"
-            icon="/assets/images/icons/sms.svg"
+            icon="/obito/assets/images/icons/sms.svg"
             iconAlt="email icon"
             name="email"
             required
@@ -141,7 +141,7 @@ export default function SignUp() {
             label="Password"
             placeholder="Type your password"
             type="password"
-            icon="/assets/images/icons/shield-security.svg"
+            icon="/obito/assets/images/icons/shield-security.svg"
             iconAlt="security icon"
             name="password"
             required
@@ -151,7 +151,7 @@ export default function SignUp() {
             label="Confirm Password"
             placeholder="Type your password"
             type="password"
-            icon="/assets/images/icons/shield-security.svg"
+            icon="/obito/assets/images/icons/shield-security.svg"
             iconAlt="security icon"
             name="confirmPassword"
             required
@@ -180,7 +180,7 @@ export default function SignUp() {
           className="absolute flex w-full h-full overflow-hidden"
         >
           <img
-            src="/assets/images/backgrounds/banner-subscription.png"
+            src="/obito/assets/images/backgrounds/banner-subscription.png"
             className="w-full h-full object-cover"
             alt="banner"
           />

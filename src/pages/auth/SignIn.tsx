@@ -19,7 +19,7 @@ export default function SignIn() {
             label="Email Address"
             placeholder="Type your valid email address"
             type="email"
-            icon="/assets/images/icons/sms.svg"
+            icon="/obito/assets/images/icons/sms.svg"
             iconAlt="email icon"
             name="email"
             required
@@ -29,7 +29,7 @@ export default function SignIn() {
             label="Password"
             placeholder="Type your password"
             type="password"
-            icon="/assets/images/icons/shield-security.svg"
+            icon="/obito/assets/images/icons/shield-security.svg"
             iconAlt="security icon"
             name="password"
             required
@@ -58,7 +58,7 @@ export default function SignIn() {
           className="absolute flex w-full h-full overflow-hidden"
         >
           <img
-            src="/assets/images/backgrounds/banner-subscription.png"
+            src="/obito/assets/images/backgrounds/banner-subscription.png"
             className="w-full h-full object-cover"
             alt="banner"
           />

@@ -35,7 +35,7 @@ export default function InstructorCard({
           {[...Array(rating)].map((_, index) => (
             <img
               key={index}
-              src="/assets/images/icons/Star 1.svg"
+              src="/obito/assets/images/icons/Star 1.svg"
               className="w-5 flex shrink-0"
               alt="star icon"
             />

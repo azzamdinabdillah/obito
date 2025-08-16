@@ -88,13 +88,13 @@ function CourseDetails() {
             className="flex relative w-full h-[220px] md:w-[40%] md:h-[300px] lg:w-[500px] lg:h-[350px] shrink-0 rounded-[14px] overflow-hidden bg-obito-grey"
           >
             <img
-              src="/assets/images/thumbnails/thumbnail-5.png"
+              src="/obito/assets/images/thumbnails/thumbnail-5.png"
               className="w-full h-full object-cover"
               alt="thumbnail"
             />
             <p className="absolute bottom-[10px] left-[10px] w-fit h-fit flex flex-col items-center rounded-[14px] py-[6px] px-[10px] bg-white gap-0.5 z-10">
               <img
-                src="/assets/images/icons/like.svg"
+                src="/obito/assets/images/icons/like.svg"
                 className="w-5 h-5"
                 alt="icon"
               />
@@ -107,7 +107,7 @@ function CourseDetails() {
               className="absolute hover:scale-110 transition cursor-pointer transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10"
             >
               <img
-                src="/assets/images/icons/video-circle-green-fill.svg"
+                src="/obito/assets/images/icons/video-circle-green-fill.svg"
                 className="flex w-12 h-12 md:w-[60px] md:h-[60px] shrink-0 animate-pulse"
                 alt="icon"
               />
@@ -123,7 +123,7 @@ function CourseDetails() {
                 className="flex items-center bg-custom-gradient gap-[6px] rounded-[14px] py-[6px] px-2 md:py-2 md:px-3 w-fit"
               >
                 <img
-                  src="/assets/images/icons/cup-white.svg"
+                  src="/obito/assets/images/icons/cup-white.svg"
                   className="w-5 flex shrink-0"
                   alt="icon"
                 />
@@ -139,7 +139,7 @@ function CourseDetails() {
               <div className="flex flex-wrap gap-3 md:gap-4 items-center">
                 <p className="flex items-center gap-[6px]">
                   <img
-                    src="/assets/images/icons/crown-green.svg"
+                    src="/obito/assets/images/icons/crown-green.svg"
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
@@ -149,7 +149,7 @@ function CourseDetails() {
                 </p>
                 <p className="flex items-center gap-[6px]">
                   <img
-                    src="/assets/images/icons/menu-board-green.svg"
+                    src="/obito/assets/images/icons/menu-board-green.svg"
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
@@ -161,7 +161,7 @@ function CourseDetails() {
               <div className="flex flex-wrap gap-3 md:gap-4 items-center">
                 <p className="flex items-center gap-[6px]">
                   <img
-                    src="/assets/images/icons/briefcase-green.svg"
+                    src="/obito/assets/images/icons/briefcase-green.svg"
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
@@ -171,7 +171,7 @@ function CourseDetails() {
                 </p>
                 <p className="flex items-center gap-[6px]">
                   <img
-                    src="/assets/images/icons/briefcase-green.svg"
+                    src="/obito/assets/images/icons/briefcase-green.svg"
                     className="w-6 flex shrink-0"
                     alt="icon"
                   />
