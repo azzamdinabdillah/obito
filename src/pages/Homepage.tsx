@@ -13,7 +13,7 @@ export default function index() {
               <div className="flex flex-col gap-[10px] md:gap-[30px]">
                 <p className="flex items-center gap-2 md:gap-[6px] w-fit rounded-full py-2 px-[14px] bg-obito-light-green">
                   <img
-                    src="/src/assets/images/icons/crown-green.svg"
+                    src="/assets/images/icons/crown-green.svg"
                     className="flex shrink-0 w-4 md:w-5"
                     alt="icon"
                   />
@@ -84,7 +84,7 @@ export default function index() {
           </div>
           <div className="flex pl-4 lg:pl-0 overflow-visible shrink-0 w-full h-full md:max-h-[590px] md:max-w-[666px] justify-end">
             <img
-              src="/src/assets/images/backgrounds/hero-image.png"
+              src="/assets/images/backgrounds/hero-image.png"
               alt="hero-image"
               className="w-full h-full object-cover overflow-visible md:translate-x-[20%] lg:translate-x-[0%] lg:object-contain"
             />

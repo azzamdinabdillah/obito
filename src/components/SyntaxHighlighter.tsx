@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
-import "../assets/css/syntax-highlighter.css";
+// import "../assets/css/syntax-highlighter.css";
 
 interface SyntaxHighlighterProps {
   code: string;
