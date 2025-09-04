@@ -7,10 +7,10 @@ export default function index() {
     <div>
       <Navbar />
       <div className="bg-[#F8FAF9] pt-20 md:pt-20 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-[500px_1fr] gap-10 items-center py-8 md:py-12 lg:py-[70px] lg:max-w-[1240px] mx-auto md:max-w-[900px] lg:px-[75px]">
-          <div className="w-full px-4 lg:px-0 flex gap-[77px] justify-between items-center">
-            <div className="flex flex-col max-w-[500px] gap-[20px] md:gap-[30px] lg:gap-[50px]">
-              <div className="flex flex-col gap-[10px] md:gap-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-10 items-center py-8 md:py-12 lg:py-[70px] lg:max-w-[1240px] mx-auto md:max-w-[900px] lg:px-[75px]">
+          <div className="w-full px-4 lg:px-0 flex gap-[77px] md:justify-center lg:justify-between items-center">
+            <div className="flex flex-col max-w-[500px] gap-[20px] md:gap-[30px] lg:gap-[50px] md:text-center lg:text-left">
+              <div className="flex flex-col gap-[10px] md:gap-[30px] md:justify-center md:items-center lg:items-start">
                 <p className="flex items-center gap-2 md:gap-[6px] w-fit rounded-full py-2 px-[14px] bg-obito-light-green">
                   <img
                     src="/obito/assets/images/icons/crown-green.svg"
@@ -18,7 +18,7 @@ export default function index() {
                     alt="icon"
                   />
                   <span className="font-bold text-[10px] md:text-sm">
-                    TRUSTED BY 500 FORTUNE ANGGA COMPANIES
+                    TRUSTED BY 500 FORTUNE AZAM COMPANIES
                   </span>
                 </p>
                 <div>
@@ -31,7 +31,7 @@ export default function index() {
                     besar agar lebih sesuai kebutuhan dan anda lorem dolorsi.
                   </p>
                 </div>
-                <div className="flex items-stretch sm:items-center gap-2 sm:gap-[18px] w-full">
+                <div className="flex items-stretch sm:items-center md:justify-center lg:justify-start gap-2 sm:gap-[18px] w-full">
                   <Link to="/course/catalog" className="">
                     <Button
                       variant="green"
@@ -55,7 +55,7 @@ export default function index() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center gap-2 sm:gap-[14px]">
+              <div className="flex items-center gap-2 sm:gap-[14px] md:justify-center lg:justify-start">
                 <img
                   src="/obito/assets/images/photos/group.png"
                   className="flex shrink-0 h-[40px] md:h-[50px] lg:h-[60px]"
@@ -82,11 +82,11 @@ export default function index() {
               </div>
             </div>
           </div>
-          <div className="flex pl-4 lg:pl-0 overflow-visible shrink-0 w-full h-full md:max-h-[590px] md:max-w-[666px] justify-end">
+          <div className="flex pl-4 md:pl-0 overflow-visible shrink-0 w-full h-full md:max-h-[590px] lg:max-w-[666px] lg:justify-end">
             <img
               src="/obito/assets/images/backgrounds/hero-image.png"
               alt="hero-image"
-              className="w-full h-full object-cover overflow-visible md:translate-x-[20%] lg:translate-x-[0%] lg:object-contain"
+              className="w-full h-full object-cover overflow-visible lg:translate-x-[0%] md:object-contain mx-auto md:w-[75%] lg:w-full"
             />
           </div>
         </div>
